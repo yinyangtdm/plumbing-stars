@@ -1,18 +1,18 @@
 import Link from 'next/link'
-import Header from '@/components/Header'
+import Header from '@/components/HeaderWrapper'
 import Footer from '@/components/Footer'
 import MobileCallbar from '@/components/MobileCallbar'
 import ContactForm from './ContactForm'
 
 export const metadata = {
   title: 'Contact Us — The Plumbing Stars | Los Angeles',
-  description: 'Get in touch with The Plumbing Stars. Call (888) 555-7827 for 24/7 emergency drain & sewer service in Los Angeles and Ventura County.',
+  description: 'Get in touch with The Plumbing Stars. Call (747) 463-1853 for 24/7 emergency drain & sewer service in Los Angeles and Ventura County.',
 }
 
 export default function ContactPage() {
   return (
     <>
-      <Header />
+      <HeaderWrapper />
 
       <section className="page-hero">
         <div className="chev" />
@@ -45,7 +45,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4>24/7 Hotline</h4>
-                      <a href="tel:+18885557827">(888) 555-7827</a>
+                      <a href="tel:+17474631853">(747) 463-1853</a>
                     </div>
                   </div>
 

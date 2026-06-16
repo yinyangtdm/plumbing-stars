@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Header from '@/components/Header'
+import Header from '@/components/HeaderWrapper'
 import Footer from '@/components/Footer'
 import MobileCallbar from '@/components/MobileCallbar'
 
@@ -11,7 +11,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
-      <Header />
+      <HeaderWrapper />
 
       <section className="page-hero">
         <div className="chev" />
@@ -40,7 +40,7 @@ export default function AboutPage() {
                 Now expanding into Ventura County, we bring the same licensed, flat-rate, guarantee-backed service that made us a household name across LA.
               </p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-                <a href="tel:+18885557827" className="btn btn-red">Call (888) 555-7827</a>
+                <a href="tel:+17474631853" className="btn btn-red">Call (747) 463-1853</a>
                 <Link href="/booking" className="btn btn-blue">Book Online</Link>
               </div>
             </div>
@@ -117,7 +117,7 @@ export default function AboutPage() {
             Call for same-day service or book online. We serve all of Los Angeles and Ventura County.
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="tel:+18885557827" className="btn btn-red">Call (888) 555-7827</a>
+            <a href="tel:+17474631853" className="btn btn-red">Call (747) 463-1853</a>
             <Link href="/booking" className="btn btn-ghost">Book Online</Link>
           </div>
         </div>

@@ -53,7 +53,7 @@ export default function Footer() {
             <div>
               <h4>Contact Us</h4>
               <div className="lbl">24/7 Hotline</div>
-              <div className="v">(888) 555-7827</div>
+              <div className="v">(747) 463-1853</div>
               <div className="lbl">Email</div>
               <a href="mailto:info@theplumbingstars.com">info@theplumbingstars.com</a>
               <div className="lbl">Service Area</div>

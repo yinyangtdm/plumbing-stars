@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import Header from '@/components/Header'
+import Header from '@/components/HeaderWrapper'
 import Footer from '@/components/Footer'
 import MobileCallbar from '@/components/MobileCallbar'
 
@@ -63,7 +63,7 @@ export default function BookingPage() {
 
   return (
     <>
-      <Header />
+      <HeaderWrapper />
 
       {/* Hero */}
       <section className="booking-hero">
@@ -85,7 +85,7 @@ export default function BookingPage() {
 
               {status === 'success' ? (
                 <div className="form-msg success" style={{ marginTop: 0 }}>
-                  ✓ &nbsp;Request received! We&apos;ll call you back shortly. For emergencies call (888) 555-7827.
+                  ✓ &nbsp;Request received! We&apos;ll call you back shortly. For emergencies call (747) 463-1853.
                 </div>
               ) : (
                 <form onSubmit={handleSubmit}>
@@ -190,7 +190,7 @@ export default function BookingPage() {
 
               <div style={{ marginTop: 32, padding: '24px', background: 'var(--sky-2)', borderRadius: 8, borderLeft: '4px solid var(--blue)' }}>
                 <div style={{ fontFamily: 'var(--font-barlow-condensed)', textTransform: 'uppercase', letterSpacing: '.2em', fontSize: 11, color: 'var(--red)', fontWeight: 700, marginBottom: 6 }}>Emergency? Call Now</div>
-                <a href="tel:+18885557827" style={{ fontFamily: 'var(--font-anton)', fontSize: 28, color: 'var(--blue)', display: 'block' }}>(888) 555-7827</a>
+                <a href="tel:+17474631853" style={{ fontFamily: 'var(--font-anton)', fontSize: 28, color: 'var(--blue)', display: 'block' }}>(747) 463-1853</a>
                 <p style={{ fontSize: 13, color: '#5a6a86', margin: '8px 0 0' }}>Available 24 hours a day, 7 days a week.</p>
               </div>
             </div>

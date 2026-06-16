@@ -43,7 +43,7 @@ export default function ChoosePage() {
         </div>
 
         <p className="choose-phone">
-          <a href="tel:+18885557827">(888) 555-7827</a> · Available 24/7
+          <a href="tel:+17474631853">(747) 463-1853</a> · Available 24/7
         </p>
       </div>
     </div>

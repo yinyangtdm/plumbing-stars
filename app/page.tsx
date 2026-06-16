@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Header from '@/components/Header'
+import HeaderWrapper from '@/components/HeaderWrapper'
 import Footer from '@/components/Footer'
 import MobileCallbar from '@/components/MobileCallbar'
 import ServiceAreaMapClient from '@/components/ServiceAreaMapClient'
@@ -21,7 +21,7 @@ export default async function HomePage() {
 
   return (
     <>
-      <Header />
+      <HeaderWrapper />
 
       {/* Hero */}
       <section className="hero">
@@ -39,7 +39,7 @@ export default async function HomePage() {
                 Licensed technicians with 25 years on the job. We show up fast, quote flat rates, and back every job with a written guarantee.
               </p>
               <div className="hero-cta">
-                <a href="tel:+18885557827" className="btn btn-red">
+                <a href="tel:+17474631853" className="btn btn-red">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ width: 18, height: 18 }}>
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.1.78.27 1.55.5 2.3a2 2 0 0 1-.45 2.11L7.91 9.39a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.75.23 1.52.4 2.3.5A2 2 0 0 1 22 16.92z" />
                   </svg>
@@ -184,7 +184,7 @@ export default async function HomePage() {
               <h3>Drain cleared or<br />you <span className="accent">don&apos;t pay</span>.</h3>
               <p>Main-line drain cleaning for just $93 — and if we can&apos;t clear it, you owe us nothing. No fine print, no trip charge, no hassle.</p>
               <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-                <a href="tel:+18885557827" className="btn btn-red">Claim by Phone</a>
+                <a href="tel:+17474631853" className="btn btn-red">Claim by Phone</a>
                 <Link href="/booking" className="btn btn-ghost">Book Online</Link>
               </div>
             </div>
@@ -350,7 +350,7 @@ export default async function HomePage() {
               </Link>
               <div className="book-cta-or">— or —</div>
               <div className="phone-label">Call us anytime</div>
-              <a href="tel:+18885557827" className="phone-big">(888) 555-7827</a>
+              <a href="tel:+17474631853" className="phone-big">(747) 463-1853</a>
             </div>
           </div>
         </div>

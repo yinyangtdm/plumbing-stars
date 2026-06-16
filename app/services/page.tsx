@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Header from '@/components/Header'
+import Header from '@/components/HeaderWrapper'
 import Footer from '@/components/Footer'
 import MobileCallbar from '@/components/MobileCallbar'
 
@@ -56,7 +56,7 @@ const SERVICES = [
 export default function ServicesPage() {
   return (
     <>
-      <Header />
+      <HeaderWrapper />
 
       <section className="page-hero">
         <div className="chev" />
@@ -115,7 +115,7 @@ export default function ServicesPage() {
               <div className="price">$93</div>
               <div className="fine">If we can&apos;t unclog your drain, you pay nothing — no service fee, no trip charge. Applies to standard main-line drain cleaning. Limit one per household.</div>
               <div style={{ marginTop: 18 }}>
-                <a href="tel:+18885557827" className="btn btn-red" style={{ width: '100%' }}>Claim by Phone</a>
+                <a href="tel:+17474631853" className="btn btn-red" style={{ width: '100%' }}>Claim by Phone</a>
               </div>
             </div>
             <div className="promo-ticket" style={{ borderLeftColor: 'var(--blue)' }}>

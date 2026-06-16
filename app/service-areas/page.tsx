@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Header from '@/components/Header'
+import Header from '@/components/HeaderWrapper'
 import Footer from '@/components/Footer'
 import MobileCallbar from '@/components/MobileCallbar'
 
@@ -26,7 +26,7 @@ const VENTURA_AREAS = [
 export default function ServiceAreasPage() {
   return (
     <>
-      <Header />
+      <HeaderWrapper />
 
       <section className="page-hero">
         <div className="chev" />
@@ -75,7 +75,7 @@ export default function ServiceAreasPage() {
             In your neighborhood<br /><span style={{ color: 'var(--red)' }}>today.</span>
           </h2>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="tel:+18885557827" className="btn btn-red">Call (888) 555-7827</a>
+            <a href="tel:+17474631853" className="btn btn-red">Call (747) 463-1853</a>
             <Link href="/booking" className="btn btn-ghost">Book Online</Link>
           </div>
         </div>

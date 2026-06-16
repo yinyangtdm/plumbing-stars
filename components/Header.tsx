@@ -4,7 +4,11 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Header() {
+interface HeaderProps {
+  city?: string
+}
+
+export default function Header({ city = 'Los Angeles' }: HeaderProps) {
   const [drawerOpen, setDrawerOpen] = useState(false)
 
   return (
@@ -26,14 +30,6 @@ export default function Header() {
               </svg>
               Licensed · Bonded · Insured
             </span>
-          </div>
-          <div>
-            <a href="tel:+18885557827">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ width: 14, height: 14, display: 'inline-block', verticalAlign: 'middle', marginRight: 6 }}>
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.1.78.27 1.55.5 2.3a2 2 0 0 1-.45 2.11L7.91 9.39a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.75.23 1.52.4 2.3.5A2 2 0 0 1 22 16.92z" />
-              </svg>
-              (888) 555-7827
-            </a>
           </div>
         </div>
       </div>
@@ -62,13 +58,13 @@ export default function Header() {
             <div className="nav-mid">
               <Link href="/" className="emblem">
                 <Image src="/logo.svg" alt="The Plumbing Stars" width={96} height={96} priority />
-                <span className="emblem-city">Los Angeles</span>
+                <span className="emblem-city">{city}</span>
               </Link>
             </div>
 
             {/* Right: mobile call btn / desktop CTA */}
             <div className="nav-right">
-              <a className="call-btn" href="tel:+18885557827" aria-label="Call us">
+              <a className="call-btn" href="tel:+17474631853" aria-label="Call us">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.1.78.27 1.55.5 2.3a2 2 0 0 1-.45 2.11L7.91 9.39a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.75.23 1.52.4 2.3.5A2 2 0 0 1 22 16.92z" />
                 </svg>
@@ -76,7 +72,7 @@ export default function Header() {
               <div className="nav-cta">
                 <div className="phone">
                   <span>24/7 Hotline</span>
-                  (888) 555-7827
+                  (747) 463-1853
                 </div>
                 <Link href="/booking" className="btn btn-red">Book Now</Link>
               </div>
@@ -105,7 +101,7 @@ export default function Header() {
             <Link className="item" href="/booking" onClick={() => setDrawerOpen(false)}>Book Online <span>→</span></Link>
             <Link className="item" href="/contact" onClick={() => setDrawerOpen(false)}>Contact <span>→</span></Link>
             <div style={{ marginTop: 16, display: 'grid', gap: 10 }}>
-              <a href="tel:+18885557827" className="btn btn-blue" style={{ width: '100%' }}>Call (888) 555-7827</a>
+              <a href="tel:+17474631853" className="btn btn-blue" style={{ width: '100%' }}>Call (747) 463-1853</a>
               <Link href="/booking" className="btn btn-red" style={{ width: '100%' }} onClick={() => setDrawerOpen(false)}>Book Online</Link>
             </div>
           </div>

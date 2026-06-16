@@ -48,7 +48,7 @@ export default function ContactForm() {
         <div style={{ fontSize: 48, color: '#F5C518', marginBottom: 16 }}>★</div>
         <h3 style={{ fontSize: 28, color: 'var(--blue)', marginBottom: 10 }}>Message Received!</h3>
         <p style={{ color: '#3e4a66', fontSize: 16 }}>We&apos;ll get back to you within 1 business hour. For emergencies, call us directly.</p>
-        <a href="tel:+18885557827" className="btn btn-red" style={{ marginTop: 20 }}>Call (888) 555-7827</a>
+        <a href="tel:+17474631853" className="btn btn-red" style={{ marginTop: 20 }}>Call (747) 463-1853</a>
       </div>
     )
   }
