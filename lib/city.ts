@@ -12,12 +12,12 @@ const CITIES: CityConfig[] = [
   {
     name: 'Los Angeles',
     slug: 'los-angeles',
-    domains: ['localhost:3001', 'localhost:3000', 'plumbingstars-la.com', 'www.plumbingstars-la.com', 'theplumbingstars.com', 'www.theplumbingstars.com'],
+    domains: ['localhost:3001', 'localhost:3000', 'plumbingstarslosangeles.com', 'www.plumbingstarslosangeles.com'],
   },
   {
     name: 'Ventura',
     slug: 'ventura',
-    domains: ['plumbingstars-ventura.com', 'www.plumbingstars-ventura.com', 'ventura.theplumbingstars.com'],
+    domains: ['plumbingstarsventura.com', 'www.plumbingstarsventura.com'],
   },
 ]
 
