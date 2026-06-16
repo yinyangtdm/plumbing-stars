@@ -98,12 +98,12 @@ h1, h2, h3, h4 {
 .header { position: sticky; top: 0; z-index: 50; background: #fff; border-bottom: 3px solid var(--blue); }
 .nav { display: grid; grid-template-columns: 44px 1fr 44px; align-items: center; height: auto; padding: 12px 0; }
 .nav-left { display: flex; align-items: center; }
-.nav-mid { display: flex; justify-content: center; }
+.nav-mid { display: flex; justify-content: center; align-items: center; }
 .nav-right { display: flex; justify-content: flex-end; align-items: center; }
 
 /* Centered emblem */
 .emblem { display: flex; flex-direction: column; align-items: center; gap: 0; text-decoration: none; }
-.emblem img { height: 80px; width: auto; }
+.emblem img { height: 80px !important; width: auto !important; max-width: 100%; }
 .emblem-name {
   font-family: var(--font-anton), sans-serif;
   color: var(--blue);
@@ -171,7 +171,7 @@ h1, h2, h3, h4 {
   .nav-desk { display: flex; }
   .menu-btn, .call-btn { display: none; }
   .nav-cta { display: flex; }
-  .emblem img { height: 110px; width: auto; }
+  .emblem img { height: 110px !important; width: auto !important; }
   .emblem-name { font-size: 15px; }
   .emblem-city { font-size: 10px; }
 }
