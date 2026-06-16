@@ -1,19 +1,63 @@
+/* ============================================================================
+   GLOBAL STYLESHEET - The Plumbing Stars Website
+   ============================================================================
+
+   TABLE OF CONTENTS:
+   1. CSS Variables & Design System
+   2. Base Typography & Elements
+   3. Layout & Container
+   4. Buttons & Interactive Elements
+   5. Utility Bar (Top Info Bar)
+   6. Header & Navigation
+   7. Hero Section
+   8. Stats Strip
+   9. Services Section
+   10. Promo & CTA Sections
+   11. Why Us / Reasons Cards
+   12. Reviews Section
+   13. FAQ Section
+   14. Book CTA Section
+   15. Footer
+   16. Mobile Call Bar
+   17. Admin Panel
+   18. Inner Pages
+   19. Responsive Media Queries
+   ============================================================================ */
+
+/* ============================================================================
+   1. CSS VARIABLES & DESIGN SYSTEM
+   ============================================================================ */
 :root {
+  /* Primary Colors */
   --blue: #083E85;
   --blue-2: #062A70;
   --blue-3: #04173F;
   --blue-mid: #285596;
+
+  /* Text Colors */
   --ink: #0a1530;
+
+  /* Accent Colors */
   --red: #CB2431;
   --red-2: #A01020;
   --sky: #B4DAFB;
   --sky-2: #E6F1FE;
   --white: #ffffff;
+
+  /* Effects */
   --shadow: 0 16px 40px rgba(6, 30, 80, .22);
 }
 
+/* ============================================================================
+   2. BASE TYPOGRAPHY & ELEMENTS
+   ============================================================================ */
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: var(--font-barlow), system-ui, sans-serif;
   color: var(--ink);
@@ -21,8 +65,17 @@ body {
   -webkit-font-smoothing: antialiased;
   line-height: 1.55;
 }
-img, svg { display: block; max-width: 100%; }
-a { color: inherit; text-decoration: none; }
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 h1, h2, h3, h4 {
   font-family: var(--font-anton), sans-serif;
   font-weight: 400;
@@ -31,6 +84,8 @@ h1, h2, h3, h4 {
   line-height: 1;
   text-transform: uppercase;
 }
+
+/* Section eyebrow label - small uppercase text */
 .eyebrow {
   font-family: var(--font-barlow-condensed), sans-serif;
   text-transform: uppercase;
@@ -39,9 +94,22 @@ h1, h2, h3, h4 {
   font-weight: 700;
   color: var(--red);
 }
-.container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 22px; }
 
-/* Buttons */
+/* ============================================================================
+   3. LAYOUT & CONTAINER
+   ============================================================================ */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+/* ============================================================================
+   4. BUTTONS & INTERACTIVE ELEMENTS
+   ============================================================================ */
+
+/* Base button styles - all buttons inherit these */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -59,22 +127,62 @@ h1, h2, h3, h4 {
   transition: all .15s ease;
   clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
 }
-.btn:hover { transform: translateY(-2px); }
-.btn-red { background: var(--red); color: #fff; box-shadow: 0 6px 18px rgba(203,36,49,.45); }
-.btn-red:hover { background: var(--red-2); }
-.btn-blue { background: var(--blue); color: #fff; }
-.btn-blue:hover { background: var(--blue-2); }
-.btn-ghost { background: transparent; color: #fff; border-color: #fff; }
-.btn-ghost:hover { background: #fff; color: var(--blue); }
 
-/* Diagonal stripe overlay */
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Button variant: Red/Primary CTA */
+.btn-red {
+  background: var(--red);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(203, 36, 49, .45);
+}
+
+.btn-red:hover {
+  background: var(--red-2);
+}
+
+/* Button variant: Blue/Secondary */
+.btn-blue {
+  background: var(--blue);
+  color: #fff;
+}
+
+.btn-blue:hover {
+  background: var(--blue-2);
+}
+
+/* Button variant: Ghost/Outline */
+.btn-ghost {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-ghost:hover {
+  background: #fff;
+  color: var(--blue);
+}
+
+/* Diagonal stripe pattern overlay (used in dark sections) */
 .chev {
-  position: absolute; inset: 0; pointer-events: none;
-  background: repeating-linear-gradient(135deg, transparent 0 30px, rgba(255,255,255,.04) 30px 32px);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    135deg,
+    transparent 0 30px,
+    rgba(255, 255, 255, .04) 30px 32px
+  );
   mix-blend-mode: screen;
 }
 
-/* ===== UTIL BAR ===== */
+/* ============================================================================
+   5. UTILITY BAR (Top Info Bar)
+   ============================================================================ */
+
+/* Container for top utility bar with emergency info */
 .util {
   background: var(--blue-3);
   color: #fff;
@@ -86,24 +194,111 @@ h1, h2, h3, h4 {
   position: relative;
   overflow: hidden;
 }
-.util .chev { opacity: .4; }
-.util .container { display: flex; justify-content: space-between; align-items: center; height: 38px; position: relative; z-index: 1; }
-.util-left { display: flex; gap: 18px; align-items: center; }
-.util-left span { display: none; align-items: center; gap: 6px; }
-.util-left svg { width: 14px; height: 14px; }
-.util a { color: #fff; display: inline-flex; align-items: center; gap: 6px; font-weight: 700; }
-@media(min-width:780px) { .util-left span { display: inline-flex; } }
 
-/* ===== HEADER ===== */
-.header { position: sticky; top: 0; z-index: 50; background: #fff; border-bottom: 3px solid var(--blue); }
-.nav { display: grid; grid-template-columns: 44px 1fr 44px; align-items: center; height: auto; padding: 12px 0; }
-.nav-left { display: flex; align-items: center; }
-.nav-mid { display: flex; justify-content: center; align-items: center; }
-.nav-right { display: flex; justify-content: flex-end; align-items: center; }
+.util .chev {
+  opacity: .4;
+}
 
-/* Centered emblem */
-.emblem { display: flex; flex-direction: column; align-items: center; gap: 0; text-decoration: none; }
-.emblem img { height: 80px !important; width: auto !important; max-width: 100%; }
+/* Utility bar content wrapper */
+.util .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 38px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Left side utility items (24/7, Licensed/Bonded) */
+.util-left {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.util-left span {
+  display: none;
+  align-items: center;
+  gap: 6px;
+}
+
+.util-left svg {
+  width: 14px;
+  height: 14px;
+}
+
+.util a {
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+}
+
+@media (min-width: 780px) {
+  .util-left span {
+    display: inline-flex;
+  }
+}
+
+/* ============================================================================
+   6. HEADER & NAVIGATION
+   ============================================================================ */
+
+/* Sticky header container */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff;
+  border-bottom: 3px solid var(--blue);
+}
+
+/* Main navigation grid layout */
+.nav {
+  display: grid;
+  grid-template-columns: 44px 1fr 44px;
+  align-items: center;
+  height: auto;
+  padding: 12px 0;
+}
+
+/* Left nav section - mobile menu button / desktop nav links */
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Center nav section - company logo and city name */
+.nav-mid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Right nav section - call button / desktop CTA */
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Logo link wrapper */
+.emblem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  text-decoration: none;
+}
+
+/* Logo image - constrained to fixed height */
+.emblem img {
+  height: 80px !important;
+  width: auto !important;
+  max-width: 100%;
+}
+/* Company name text under logo */
 .emblem-name {
   font-family: var(--font-anton), sans-serif;
   color: var(--blue);
@@ -113,6 +308,8 @@ h1, h2, h3, h4 {
   line-height: 1;
   margin-top: 4px;
 }
+
+/* City name text under logo (Los Angeles / Ventura) */
 .emblem-city {
   font-family: var(--font-barlow-condensed), sans-serif;
   font-weight: 700;
@@ -123,16 +320,40 @@ h1, h2, h3, h4 {
   margin-top: 2px;
 }
 
-.menu-btn, .call-btn {
-  appearance: none; background: transparent; border: 0;
-  width: 44px; height: 44px; border-radius: 3px;
-  color: var(--blue); cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
+/* Mobile menu button and call button */
+.menu-btn,
+.call-btn {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 3px;
+  color: var(--blue);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.menu-btn:hover, .call-btn:hover { background: var(--sky-2); }
-.menu-btn svg, .call-btn svg { width: 26px; height: 26px; }
 
-.nav-desk { display: none; align-items: center; gap: 30px; }
+.menu-btn:hover,
+.call-btn:hover {
+  background: var(--sky-2);
+}
+
+.menu-btn svg,
+.call-btn svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* Desktop navigation links (hidden on mobile) */
+.nav-desk {
+  display: none;
+  align-items: center;
+  gap: 30px;
+}
+
 .nav-desk a {
   font-family: var(--font-barlow-condensed), sans-serif;
   text-transform: uppercase;
@@ -143,37 +364,92 @@ h1, h2, h3, h4 {
   padding: 6px 0;
   position: relative;
 }
+
+/* Animated underline on nav links */
 .nav-desk a::after {
   content: "";
-  position: absolute; left: 0; right: 0; bottom: -4px;
-  height: 3px; background: var(--red);
-  transform: scaleX(0); transform-origin: left;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 3px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
   transition: transform .2s ease;
 }
-.nav-desk a:hover::after { transform: scaleX(1); }
 
-.nav-cta { display: none; align-items: center; gap: 14px; }
+.nav-desk a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Right side CTA section (phone + book button) - hidden on mobile */
+.nav-cta {
+  display: none;
+  align-items: center;
+  gap: 14px;
+}
+
 .nav-cta .phone {
   font-family: var(--font-anton), sans-serif;
-  color: var(--blue); font-size: 22px; line-height: 1;
-  display: flex; flex-direction: column; align-items: flex-end;
-}
-.nav-cta .phone span {
-  font-family: var(--font-barlow-condensed), sans-serif;
-  font-weight: 700; font-size: 10px; letter-spacing: .28em;
-  color: var(--red); margin-bottom: 4px;
+  color: var(--blue);
+  font-size: 22px;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-@media(min-width:980px) {
-  .nav { grid-template-columns: 1fr auto 1fr; height: auto; padding: 16px 0; }
-  .nav-left { justify-content: flex-start; }
-  .nav-right { justify-content: flex-end; }
-  .nav-desk { display: flex; }
-  .menu-btn, .call-btn { display: none; }
-  .nav-cta { display: flex; }
-  .emblem img { height: 110px !important; width: auto !important; }
-  .emblem-name { font-size: 15px; }
-  .emblem-city { font-size: 10px; }
+.nav-cta .phone span {
+  font-family: var(--font-barlow-condensed), sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: .28em;
+  color: var(--red);
+  margin-bottom: 4px;
+}
+
+/* Desktop navigation - larger layout */
+@media (min-width: 980px) {
+  .nav {
+    grid-template-columns: 1fr auto 1fr;
+    height: auto;
+    padding: 16px 0;
+  }
+
+  .nav-left {
+    justify-content: flex-start;
+  }
+
+  .nav-right {
+    justify-content: flex-end;
+  }
+
+  .nav-desk {
+    display: flex;
+  }
+
+  .menu-btn,
+  .call-btn {
+    display: none;
+  }
+
+  .nav-cta {
+    display: flex;
+  }
+
+  .emblem img {
+    height: 110px !important;
+    width: auto !important;
+  }
+
+  .emblem-name {
+    font-size: 15px;
+  }
+
+  .emblem-city {
+    font-size: 10px;
+  }
 }
 
 /* ===== HERO ===== */
