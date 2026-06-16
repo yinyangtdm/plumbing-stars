@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Plumbing Stars — Sewer &amp; Drain Pros | MVP Varsity</title>
+<meta name="description" content="MVP-level sewer & drain service. Licensed pros, championship guarantees, 24/7 dispatch.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0A2A6F;
+  --navy-2:#061E54;
+  --navy-3:#04173F;
+  --ink:#0a1530;
+  --red:#D81F2A;
+  --red-2:#A4111E;
+  --sky:#B4DAFB;
+  --sky-2:#E6F1FE;
+  --white:#FFFFFF;
+  --gold:#F5C518;
+  --shadow:0 16px 40px rgba(8,30,84,.22);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:'Barlow',system-ui,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.55;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.01em;margin:0;line-height:1;text-transform:uppercase}
+.cond{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+.eyebrow{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.28em;font-size:13px;font-weight:700;color:var(--red)}
+.container{width:100%;max-width:1240px;margin:0 auto;padding:0 22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:16px;padding:15px 26px;border-radius:3px;border:2px solid transparent;cursor:pointer;transition:all .15s ease;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%)}
+.btn:hover{transform:translateY(-2px)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 6px 18px rgba(216,31,42,.45)}
+.btn-red:hover{background:var(--red-2)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-ghost{background:transparent;color:#fff;border-color:#fff}
+.btn-ghost:hover{background:#fff;color:var(--navy)}
+
+/* Chevron stripe element */
+.chev{position:absolute;inset:0;pointer-events:none;background:
+  repeating-linear-gradient(135deg,
+    transparent 0 30px,
+    rgba(255,255,255,.04) 30px 32px);
+  mix-blend-mode:screen}
+
+/* ===== UTILITY BAR ===== */
+.util{background:var(--red);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:13px;position:relative;overflow:hidden}
+.util .chev{opacity:.4}
+.util .container{display:flex;justify-content:space-between;align-items:center;height:38px;position:relative;z-index:1}
+.util-left{display:flex;gap:18px;align-items:center}
+.util-left span{display:none;align-items:center;gap:6px}
+.util-left svg{width:14px;height:14px}
+.util a{color:#fff;display:inline-flex;align-items:center;gap:6px;font-weight:700}
+@media(min-width:780px){.util-left span{display:inline-flex}}
+
+/* ===== HEADER ===== */
+.header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:3px solid var(--navy)}
+.header:before{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--red);transform:translateY(3px)}
+.nav{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;height:66px}
+.nav-mid{display:flex;justify-content:center}
+.nav-right{display:flex;justify-content:flex-end}
+.brand img{height:48px}
+.menu-btn,.call-btn{appearance:none;background:transparent;border:0;width:44px;height:44px;border-radius:3px;color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.menu-btn:hover,.call-btn:hover{background:var(--sky-2)}
+.menu-btn svg,.call-btn svg{width:26px;height:26px}
+.nav-desk{display:none;align-items:center;gap:30px}
+.nav-desk a{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--navy);font-size:16px;padding:6px 0;position:relative}
+.nav-desk a:after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .2s ease}
+.nav-desk a:hover:after{transform:scaleX(1)}
+.brand-left{display:none;align-items:center;gap:14px}
+.brand-left .name{font-family:'Anton',sans-serif;color:var(--navy);font-size:24px;line-height:1;letter-spacing:.02em}
+.brand-left .name small{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:.3em;color:var(--red);margin-top:6px}
+.nav-cta{display:none;align-items:center;gap:14px}
+.nav-cta .phone{font-family:'Anton',sans-serif;color:var(--navy);font-size:24px;line-height:1;display:flex;flex-direction:column;align-items:flex-end}
+.nav-cta .phone span{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:.28em;color:var(--red);margin-bottom:4px}
+@media(min-width:980px){
+  .nav{grid-template-columns:auto 1fr auto;height:92px}
+  .brand-left{display:flex}
+  .nav-mid{display:none}
+  .nav-desk{display:flex}
+  .menu-btn,.call-btn{display:none}
+  .nav-cta{display:flex}
+  .brand img{height:60px}
+}
+
+/* ===== HERO ===== */
+.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;padding:54px 0 120px}
+.hero .bgsvg{position:absolute;inset:0;width:100%;height:100%;opacity:.3}
+.hero:before{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(135deg,transparent 0 80px,rgba(255,255,255,.04) 80px 82px);
+}
+.hero:after{content:"";position:absolute;left:-10%;right:-10%;bottom:-40px;height:80px;background:var(--red);transform:skewY(-3deg);box-shadow:0 -30px 0 var(--white)}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:34px;position:relative;z-index:2}
+.tag{display:inline-flex;gap:0;align-items:center;background:var(--red);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.16em;font-size:12px;padding:8px 16px 8px 14px;clip-path:polygon(0 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+.tag .star{margin-right:6px;color:var(--gold)}
+.hero h1{font-size:clamp(48px,12vw,118px);margin:18px 0 18px;line-height:.92;letter-spacing:-.01em}
+.hero h1 span.line{display:block}
+.hero h1 .out{-webkit-text-stroke:2px #fff;color:transparent;font-family:'Anton',sans-serif}
+.hero h1 .red{color:var(--red)}
+.hero p.lede{font-size:18px;color:#cfdcef;max-width:520px;margin:0 0 28px;font-family:'Barlow',sans-serif;font-weight:400}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:560px;border-top:3px solid var(--red);padding-top:18px}
+.hero-stats .n{font-family:'Anton',sans-serif;font-size:38px;color:#fff;line-height:1;letter-spacing:.02em}
+.hero-stats .l{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.15em;font-size:11px;color:var(--sky);font-weight:700;margin-top:4px}
+
+.hero-jersey{position:relative;aspect-ratio:4/5;background:linear-gradient(180deg,var(--red) 0%,var(--red-2) 100%);border-radius:6px;overflow:hidden;box-shadow:var(--shadow);border:4px solid #fff;outline:4px solid var(--navy-3)}
+.hero-jersey:before{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(135deg,transparent 0 40px,rgba(255,255,255,.06) 40px 42px),
+  radial-gradient(circle at 50% 20%,rgba(255,255,255,.2),transparent 60%)}
+.jersey-svg{position:absolute;inset:0;width:100%;height:100%}
+.jersey-num{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);font-family:'Anton',sans-serif;font-size:38vw;color:#fff;line-height:1;text-shadow:0 0 0 #000;-webkit-text-stroke:8px var(--navy-3);font-weight:400}
+.jersey-name{position:absolute;left:0;right:0;top:14px;text-align:center;font-family:'Anton',sans-serif;font-size:24px;color:#fff;letter-spacing:.1em}
+.jersey-badge{position:absolute;left:14px;bottom:14px;background:#fff;color:var(--navy);padding:12px 14px;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:13px;line-height:1.05;border-left:4px solid var(--red);box-shadow:0 6px 16px rgba(0,0,0,.3)}
+.jersey-badge strong{font-family:'Anton',sans-serif;font-size:22px;display:block;letter-spacing:.04em;color:var(--red);margin-bottom:4px}
+.jersey-trophy{position:absolute;right:-18px;top:-18px;width:120px;height:120px;border-radius:50%;background:#fff;color:var(--navy);display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Anton',sans-serif;font-size:18px;line-height:1;border:6px solid var(--navy);box-shadow:0 10px 28px rgba(0,0,0,.4);transform:rotate(8deg)}
+.jersey-trophy small{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:9px;letter-spacing:.2em;color:var(--red);margin-bottom:4px}
+.jersey-trophy span{display:block;font-size:36px}
+
+@media(min-width:980px){
+  .hero{padding:90px 0 140px}
+  .hero-grid{grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+  .jersey-num{font-size:18vw}
+}
+
+/* ===== SCORE STRIP ===== */
+.score{background:#fff;padding:24px 0;border-bottom:4px solid var(--navy);position:relative}
+.score:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--red);transform:translateY(-4px)}
+.score-row{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;text-align:center}
+.score-item{padding:6px 0}
+.score-item .n{font-family:'Anton',sans-serif;font-size:38px;color:var(--navy);line-height:1}
+.score-item .n .star{color:var(--gold)}
+.score-item .l{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.15em;font-size:11px;color:#5a6a86;font-weight:700;margin-top:4px}
+@media(min-width:760px){.score-row{grid-template-columns:repeat(4,1fr)}}
+
+/* ===== SECTION ===== */
+.section{padding:80px 0;position:relative}
+.section.dark{background:var(--navy);color:#fff;overflow:hidden}
+.section.dark .chev{opacity:.6}
+.section.dark h2,.section.dark h3{color:#fff}
+.section.lt{background:#F5F7FB}
+.section-head{max-width:760px;margin:0 auto 50px;text-align:center;position:relative;z-index:1}
+.section-head h2{font-size:clamp(38px,7vw,72px);color:var(--navy);margin:14px 0 12px}
+.section-head h2 .red{color:var(--red)}
+.section-head p{font-size:17px;color:#3e4a66;max-width:600px;margin:0 auto;font-family:'Barlow',sans-serif}
+.section.dark .section-head p{color:#b6c6e3}
+
+/* ===== ROSTER (SERVICES) ===== */
+.roster{display:grid;grid-template-columns:1fr;gap:20px}
+.player{position:relative;background:#fff;border:1px solid #dde4f0;border-top:5px solid var(--red);padding:30px 26px;overflow:hidden;transition:all .2s ease}
+.player:nth-child(even){border-top-color:var(--navy)}
+.player:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.player .pos{position:absolute;top:14px;right:14px;font-family:'Anton',sans-serif;font-size:14px;color:#fff;background:var(--navy);padding:4px 8px;letter-spacing:.1em}
+.player .ico{width:60px;height:60px;border-radius:6px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:18px;position:relative}
+.player .ico:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 8px,rgba(255,255,255,.08) 8px 9px)}
+.player .ico svg{width:30px;height:30px;position:relative}
+.player:nth-child(even) .ico{background:var(--red)}
+.player h3{font-size:24px;color:var(--navy);margin-bottom:6px}
+.player p{color:#3e4a66;font-size:15px;margin:0 0 14px}
+.player .more{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--red);font-size:13px;display:inline-flex;align-items:center;gap:6px}
+@media(min-width:680px){.roster{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.roster{grid-template-columns:repeat(3,1fr)}}
+
+/* ===== COUPON ===== */
+.coupon-wrap{display:grid;grid-template-columns:1fr;gap:26px;align-items:center}
+.coupon-side h3{font-size:42px;line-height:1.02;margin-bottom:14px}
+.coupon-side h3 .red{color:var(--red)}
+.coupon-side p{color:#b6c6e3;margin-bottom:18px;font-family:'Barlow',sans-serif}
+.cticket{background:#fff;color:var(--ink);border-radius:6px;padding:30px;position:relative;border-left:8px solid var(--red);box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.cticket:before{content:"";position:absolute;top:0;left:0;right:0;height:8px;background:repeating-linear-gradient(90deg,var(--red) 0 12px,#fff 12px 24px);transform:translateY(-8px)}
+.cticket .ribbon{position:absolute;top:18px;right:-10px;background:var(--navy);color:#fff;padding:6px 14px 6px 12px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:.2em;clip-path:polygon(0 0,100% 0,calc(100% - 8px) 100%,0 100%)}
+.cticket .top{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:12px;font-weight:700;color:var(--red);margin-bottom:6px}
+.cticket h4{font-size:26px;color:var(--navy);margin-bottom:6px}
+.cticket .price{font-family:'Anton',sans-serif;font-size:80px;color:var(--red);line-height:.9;letter-spacing:.02em}
+.cticket .fine{margin-top:14px;color:#5a6a86;font-size:12px;border-top:1.5px dashed #dde4f0;padding-top:14px}
+@media(min-width:880px){.coupon-wrap{grid-template-columns:1fr 1fr;gap:60px}}
+
+/* ===== STARTING LINEUP / WHY ===== */
+.lineup{display:grid;grid-template-columns:1fr;gap:20px}
+.lcard{display:flex;gap:18px;background:#fff;border:1px solid #dde4f0;border-left:5px solid var(--red);padding:24px;border-radius:4px}
+.lcard:nth-child(even){border-left-color:var(--navy)}
+.lcard .num{font-family:'Anton',sans-serif;font-size:48px;color:var(--navy);line-height:1;min-width:60px}
+.lcard:nth-child(even) .num{color:var(--red)}
+.lcard h4{font-size:20px;color:var(--navy);margin-bottom:6px}
+.lcard p{color:#3e4a66;font-size:15px;margin:0}
+@media(min-width:760px){.lineup{grid-template-columns:repeat(2,1fr)}}
+
+/* ===== HALL OF FAME (TESTIMONIALS) ===== */
+.hof{display:grid;grid-template-columns:1fr;gap:18px}
+.tc{position:relative;background:#fff;border-radius:6px;padding:30px 24px;border-top:5px solid var(--red);overflow:hidden}
+.tc:before{content:"";position:absolute;right:-30px;bottom:-30px;width:120px;height:120px;border-radius:50%;background:repeating-linear-gradient(135deg,#F5F7FB 0 8px,#fff 8px 9px);opacity:.6}
+.tc .stars{color:var(--gold);letter-spacing:2px;margin-bottom:10px;font-size:18px}
+.tc p{font-family:'Barlow',sans-serif;color:var(--ink);font-size:16px;margin:0 0 18px;font-weight:500;line-height:1.55;position:relative;z-index:1}
+.tc footer{display:flex;align-items:center;gap:12px;border-top:1.5px dashed #dde4f0;padding-top:14px;position:relative;z-index:1}
+.tc .avatar{width:44px;height:44px;background:var(--navy);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Anton',sans-serif;font-size:18px;border:3px solid #fff;box-shadow:0 0 0 3px var(--red)}
+.tc .name{font-family:'Anton',sans-serif;color:var(--navy);font-size:18px;letter-spacing:.04em;line-height:1}
+.tc .meta{font-family:'Barlow Condensed',sans-serif;letter-spacing:.1em;font-size:11px;color:#5a6a86;text-transform:uppercase;font-weight:700;margin-top:4px}
+@media(min-width:880px){.hof{grid-template-columns:repeat(3,1fr)}}
+
+/* ===== BOOK ===== */
+.bookw{display:grid;grid-template-columns:1fr;gap:34px;align-items:stretch}
+.bookw-card{background:#fff;border-radius:8px;padding:30px;box-shadow:0 16px 40px rgba(0,0,0,.3);color:var(--ink);border-top:6px solid var(--red);position:relative;overflow:hidden}
+.bookw-card .top-tag{position:absolute;top:0;right:0;background:var(--navy);color:#fff;padding:6px 14px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;clip-path:polygon(8px 0,100% 0,100% 100%,0 100%)}
+.bookw-card h3{font-size:30px;color:var(--navy);margin-bottom:4px}
+.bookw-card .sub{color:#5a6a86;margin-bottom:18px}
+.bookw-card input,.bookw-card select{width:100%;padding:13px 14px;border:1.5px solid #dde4f0;border-radius:4px;font:inherit;background:#fff;margin-bottom:12px;font-family:'Barlow',sans-serif}
+.bookw-card input:focus,.bookw-card select:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(10,42,111,.1)}
+.bookw-side h2{font-size:clamp(36px,5.5vw,56px);margin-bottom:14px}
+.bookw-side h2 .red{color:var(--red)}
+.bookw-side h2 .out{-webkit-text-stroke:2px #fff;color:transparent}
+.bookw-side p{color:#b6c6e3;font-family:'Barlow',sans-serif;margin-bottom:18px}
+.bookw-side ul{list-style:none;padding:0;margin:0}
+.bookw-side li{display:flex;gap:12px;align-items:flex-start;color:#dde9fa;padding:10px 0;font-family:'Barlow Condensed',sans-serif;letter-spacing:.04em;text-transform:uppercase;font-weight:700;font-size:15px;border-bottom:1px solid rgba(255,255,255,.1)}
+.bookw-side li svg{width:18px;height:18px;color:var(--red);flex-shrink:0;margin-top:2px}
+@media(min-width:880px){.bookw{grid-template-columns:1fr 1fr;gap:50px}}
+
+/* ===== FOOTER ===== */
+.footer{background:var(--navy-3);color:#cfdcef;padding:60px 0 110px;position:relative;overflow:hidden}
+.footer:before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:repeating-linear-gradient(90deg,var(--red) 0 24px,#fff 24px 48px,var(--navy) 48px 72px)}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:30px;margin-top:14px}
+.footer h4{font-family:'Anton',sans-serif;color:#fff;font-size:18px;letter-spacing:.08em;margin-bottom:14px}
+.footer a{color:#cfdcef;font-family:'Barlow',sans-serif;display:block;padding:4px 0;font-size:14px}
+.footer a:hover{color:#fff}
+.footer .brand-name{font-family:'Anton',sans-serif;color:#fff;font-size:32px;letter-spacing:.02em;line-height:1}
+.footer .brand-name small{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:.3em;color:var(--red);margin-top:6px}
+.footer .lbl{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:11px;color:#7e94b6;margin-top:14px;margin-bottom:4px;font-weight:700}
+.footer .v{color:#fff;font-family:'Anton',sans-serif;font-size:24px;letter-spacing:.02em}
+.footer .social{display:flex;gap:10px;margin-top:18px}
+.footer .social a{width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:4px;display:flex;align-items:center;justify-content:center;padding:0;border:1px solid rgba(255,255,255,.1)}
+.footer .social svg{width:16px;height:16px}
+.footer-bottom{margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;font-family:'Barlow Condensed',sans-serif;letter-spacing:.06em;text-transform:uppercase;font-size:12px;color:#7e94b6}
+.footer-bottom a{display:inline-block;padding:0 10px;border-right:1px solid #2a3f64;color:#cfdcef}
+.footer-bottom a:last-child{border-right:0}
+@media(min-width:760px){.footer-grid{grid-template-columns:1.4fr 1fr 1fr 1.2fr}}
+
+/* ===== CALLBAR ===== */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr;background:var(--navy);border-top:3px solid var(--red);box-shadow:0 -12px 24px rgba(0,0,0,.3)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-weight:700;font-size:15px;color:#fff}
+.callbar a.book{background:var(--red)}
+.callbar svg{width:18px;height:18px}
+@media(min-width:980px){.callbar{display:none}}
+
+/* ===== DRAWER ===== */
+.drawer{position:fixed;inset:0;z-index:80;background:rgba(4,23,63,.7);display:none;align-items:flex-start;justify-content:center;padding:40px 16px;backdrop-filter:blur(6px)}
+.drawer .panel{background:#fff;width:100%;max-width:440px;border-radius:6px;padding:26px;position:relative;border-top:6px solid var(--red)}
+.drawer .logo-row{display:flex;justify-content:center;margin-bottom:14px}
+.drawer .logo-row img{height:74px}
+.drawer a.item{display:flex;justify-content:space-between;align-items:center;padding:14px 6px;border-bottom:1px dashed #dde4f0;font-family:'Anton',sans-serif;color:var(--navy);font-size:22px;letter-spacing:.04em}
+.drawer a.item:hover{color:var(--red)}
+.drawer .close{position:absolute;top:14px;right:14px;background:var(--navy);color:#fff;border:0;width:38px;height:38px;border-radius:4px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.drawer .close svg{width:16px;height:16px}
+.drawer.open{display:flex}
+</style>
+</head>
+<body>
+
+<!-- Util -->
+<div class="util">
+  <span class="chev"></span>
+  <div class="container">
+    <div class="util-left">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 24/7 Emergency Dispatch</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l4 4L21 4"/></svg> Licensed · Bonded · Insured</span>
+    </div>
+    <div><a href="tel:+18885557827"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.1.78.27 1.55.5 2.3a2 2 0 0 1-.45 2.11L7.91 9.39a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.75.23 1.52.4 2.3.5A2 2 0 0 1 22 16.92z"/></svg> (888) 555-STAR</a></div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <div class="nav">
+      <div>
+        <button class="menu-btn" onclick="document.getElementById('drawer').classList.add('open')" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+        <a class="brand-left" href="#">
+          <img src="logo.svg" alt="The Plumbing Stars">
+          <div class="name">The Plumbing Stars<small>MVP Sewer &amp; Drain</small></div>
+        </a>
+      </div>
+      <div class="nav-mid"><a class="brand" href="#"><img src="logo.svg" alt="The Plumbing Stars"></a></div>
+      <nav class="nav-desk">
+        <a href="#services">Roster</a>
+        <a href="#about">Team</a>
+        <a href="#reviews">Hall of Fame</a>
+        <a href="#area">Coverage</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <a class="call-btn" href="tel:+18885557827"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.1.78.27 1.55.5 2.3a2 2 0 0 1-.45 2.11L7.91 9.39a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.75.23 1.52.4 2.3.5A2 2 0 0 1 22 16.92z"/></svg></a>
+        <div class="nav-cta">
+          <div class="phone"><span>24/7 Hotline</span>(888) 555-STAR</div>
+          <a class="btn btn-red" href="#book">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="chev"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="tag"><span class="star">★</span> MVP-Level Sewer &amp; Drain Service</span>
+        <h1>
+          <span class="line">Champion-</span>
+          <span class="line out">Ship</span>
+          <span class="line">Drain <span class="red">Pros.</span></span>
+        </h1>
+        <p class="lede">When your sewer line is on the ropes, you don't want a rookie. You want the team with 25 years on the field, 2,400+ wins, and a guarantee in writing on every job.</p>
+        <div class="hero-cta">
+          <a href="tel:+18885557827" class="btn btn-red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.1.78.27 1.55.5 2.3a2 2 0 0 1-.45 2.11L7.91 9.39a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.75.23 1.52.4 2.3.5A2 2 0 0 1 22 16.92z"/></svg>
+            Call MVP Now
+          </a>
+          <a href="#book" class="btn btn-ghost">Book Online</a>
+        </div>
+        <div class="hero-stats">
+          <div><div class="n">25</div><div class="l">Seasons in</div></div>
+          <div><div class="n">2.4K</div><div class="l">5-Star wins</div></div>
+          <div><div class="n">60′</div><div class="l">Avg. arrival</div></div>
+        </div>
+      </div>
+
+      <div class="hero-jersey">
+        <svg class="jersey-svg" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+          <g fill="none" stroke="rgba(255,255,255,.15)" stroke-width="2">
+            <path d="M0 100 L400 100"/>
+            <path d="M0 400 L400 400"/>
+          </g>
+          <g fill="rgba(255,255,255,.06)">
+            <polygon points="0,250 60,200 0,150"/>
+            <polygon points="400,250 340,200 400,150"/>
+            <polygon points="0,350 60,300 0,250"/>
+            <polygon points="400,350 340,300 400,250"/>
+          </g>
+        </svg>
+        <div class="jersey-name">PLUMBING STARS</div>
+        <div class="jersey-num">01</div>
+        <div class="jersey-trophy">
+          <div>
+            <small>OFFICIAL</small>
+            <span>★</span>
+            <div style="font-size:11px;letter-spacing:.18em;margin-top:2px">MVP</div>
+          </div>
+        </div>
+        <div class="jersey-badge">
+          <strong>$93 SPECIAL</strong>
+          New-customer<br>drain cleaning
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Score Strip -->
+<section class="score">
+  <div class="container">
+    <div class="score-row">
+      <div class="score-item"><div class="n"><span class="star">★★★★★</span></div><div class="l">4.9 / 2,400 Reviews</div></div>
+      <div class="score-item"><div class="n">25+</div><div class="l">Seasons On The Field</div></div>
+      <div class="score-item"><div class="n">24/7</div><div class="l">Game-Day Dispatch</div></div>
+      <div class="score-item"><div class="n">A+</div><div class="l">BBB Accredited</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Roster (Services) -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Today's Roster</div>
+      <h2>Every <span class="red">play</span> in the playbook.</h2>
+      <p>From routine drain cleanings to a full sewer-main replacement, every job comes with a flat price up front and a written guarantee at the end.</p>
+    </div>
+    <div class="roster">
+      <article class="player">
+        <span class="pos">SVC 01</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c3 4 5 7 5 11a5 5 0 1 1-10 0c0-4 2-7 5-11z"/></svg></div>
+        <h3>Drain Cleaning</h3>
+        <p>Kitchen, bath, laundry &amp; main lines cleared at a flat price — guaranteed 30 days or it's free.</p>
+        <a class="more" href="#">View play →</a>
+      </article>
+      <article class="player">
+        <span class="pos">SVC 02</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M5 12v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6M5 12V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"/></svg></div>
+        <h3>Sewer Line Repair</h3>
+        <p>Spot fixes &amp; full replacements done by techs with two decades on the field.</p>
+        <a class="more" href="#">View play →</a>
+      </article>
+      <article class="player">
+        <span class="pos">SVC 03</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12c4-8 12-8 16 0M4 17c4-8 12-8 16 0M4 7c4-8 12-8 16 0"/></svg></div>
+        <h3>Hydro Jetting</h3>
+        <p>High-pressure water that powers through roots, grease &amp; scale until pipes look new.</p>
+        <a class="more" href="#">View play →</a>
+      </article>
+      <article class="player">
+        <span class="pos">SVC 04</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg></div>
+        <h3>Camera Inspection</h3>
+        <p>HD video down your line so you call the shots with full info, not guesses.</p>
+        <a class="more" href="#">View play →</a>
+      </article>
+      <article class="player">
+        <span class="pos">SVC 05</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19l6-6 4 4 6-8"/><path d="M14 5h6v6"/></svg></div>
+        <h3>Trenchless Replacement</h3>
+        <p>No-dig pipe bursting &amp; lining. Saves the yard, the driveway, and the weekend.</p>
+        <a class="more" href="#">View play →</a>
+      </article>
+      <article class="player">
+        <span class="pos">SVC 06</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h6"/></svg></div>
+        <h3>Water Heaters</h3>
+        <p>Install, repair, or flush tank &amp; tankless systems — same-day on most calls.</p>
+        <a class="more" href="#">View play →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Coupon -->
+<section class="section dark">
+  <div class="chev"></div>
+  <div class="container">
+    <div class="coupon-wrap">
+      <div class="coupon-side">
+        <div class="eyebrow" style="color:var(--sky)">Limited-Time Pickup</div>
+        <h3>Rookies, take<br>the <span class="red">$93 deal</span>.</h3>
+        <p>New customers get our championship main-line drain cleaning at MVP prices. Includes a free camera scope if the clog returns within 30 days.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a href="tel:+18885557827" class="btn btn-red">Claim My $93 Special</a>
+          <a href="#book" class="btn btn-ghost">Book Online</a>
+        </div>
+      </div>
+      <div class="cticket">
+        <div class="ribbon">VALID 30 DAYS</div>
+        <div class="top">New Customer Offer</div>
+        <h4>Main-Line Drain Cleaning</h4>
+        <div class="price">$93*</div>
+        <div class="fine">*With accessible cleanout. Some restrictions apply. Limit one per household. Cannot be combined with other offers. Expires 30 days from booking.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Starting Lineup / Why -->
+<section class="section lt" id="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Starting Lineup</div>
+      <h2>Why we keep <span class="red">winning</span>.</h2>
+      <p>Four reasons we've been the home team's first call for sewer &amp; drain work since 1998.</p>
+    </div>
+    <div class="lineup">
+      <div class="lcard"><div class="num">01</div><div><h4>Flat-Rate Pricing</h4><p>You see the number in writing before any wrench moves. No surprise add-ons.</p></div></div>
+      <div class="lcard"><div class="num">02</div><div><h4>Game-Day Dispatch</h4><p>24/7 emergency crews. No holiday surcharges. No "next available Tuesday."</p></div></div>
+      <div class="lcard"><div class="num">03</div><div><h4>Tape Doesn't Lie</h4><p>Photo &amp; HD-camera footage of every job — yours to keep for your records.</p></div></div>
+      <div class="lcard"><div class="num">04</div><div><h4>Written Guarantee</h4><p>Workmanship backed up to 5 years. If it breaks, we make it right.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Hall of Fame / Testimonials -->
+<section class="section" id="reviews">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Hall of Fame</div>
+      <h2>Neighbors are calling the <span class="red">play-by-play</span>.</h2>
+    </div>
+    <div class="hof">
+      <article class="tc">
+        <div class="stars">★★★★★</div>
+        <p>"Showed up 45 minutes after I called. Quoted a flat rate, showed me the camera footage of the root in my main line, cleared it before dinner. I will never call anyone else."</p>
+        <footer><div class="avatar">MR</div><div><div class="name">Maria R.</div><div class="meta">Los Angeles · Google</div></div></footer>
+      </article>
+      <article class="tc">
+        <div class="stars">★★★★★</div>
+        <p>"Three plumbers tried to sell me a $14k dig. The Plumbing Stars hydro-jetted it for $480 and it's been perfect two years running. Genuinely honest people."</p>
+        <footer><div class="avatar">DK</div><div><div class="name">David K.</div><div class="meta">Pasadena · Yelp</div></div></footer>
+      </article>
+      <article class="tc">
+        <div class="stars">★★★★★</div>
+        <p>"Saturday night, sewer backing up into the basement. They were the only ones to answer. Two guys, two hours — problem gone. Worth every penny."</p>
+        <footer><div class="avatar">JL</div><div><div class="name">Jennifer L.</div><div class="meta">Burbank · Google</div></div></footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Book -->
+<section class="section dark" id="book">
+  <div class="chev"></div>
+  <div class="container">
+    <div class="bookw">
+      <div class="bookw-side">
+        <div class="eyebrow" style="color:var(--sky)">Get on the schedule</div>
+        <h2>Send us in — <br><span class="red">we'll take the field.</span></h2>
+        <p>Tell us what's going on. A real human follows up in under five minutes during business hours, and crews go out 24/7.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 12l4 4L21 4"/></svg>Free estimates, every visit</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 12l4 4L21 4"/></svg>2-hour arrival windows</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 12l4 4L21 4"/></svg>No trip charges, ever</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 12l4 4L21 4"/></svg>Up to 5-year written guarantee</li>
+        </ul>
+      </div>
+      <div class="bookw-card">
+        <div class="top-tag">Quick Quote</div>
+        <h3>Request a visit</h3>
+        <div class="sub">No spam, no upsells, no robocalls.</div>
+        <form onsubmit="event.preventDefault();alert('Thanks — booking is just for show in this mockup.')">
+          <input type="text" placeholder="Full name" required>
+          <input type="tel" placeholder="Mobile number" required>
+          <input type="text" placeholder="Service address or ZIP" required>
+          <select required>
+            <option value="">What do you need help with?</option>
+            <option>Clogged drain</option>
+            <option>Sewer line</option>
+            <option>Hydro jetting</option>
+            <option>Camera inspection</option>
+            <option>Water heater</option>
+            <option>Other</option>
+          </select>
+          <button class="btn btn-red" type="submit" style="width:100%">Send The Team</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:14px">
+          <img src="logo.svg" alt="The Plumbing Stars" style="height:64px;filter:brightness(0) invert(1)">
+          <div class="brand-name">Plumbing<br>Stars<small>MVP Sewer &amp; Drain</small></div>
+        </div>
+        <p style="margin:20px 0;color:#cfdcef;max-width:300px;font-family:'Barlow',sans-serif">Family-owned. 25 years on the job. Licensed, insured, and proudly serving the whole valley.</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5C10.5 7 12 5.7 14.2 5.7c1 0 2.1.2 2.1.2V8h-1.2c-1.2 0-1.6.7-1.6 1.5V12h2.7l-.4 3h-2.3v7A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+          <a href="#" aria-label="Google"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.5-6.3 4.5 2.3-7.2-6-4.4h7.6z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>The Roster</h4>
+        <a href="#">Drain Cleaning</a>
+        <a href="#">Sewer Line Repair</a>
+        <a href="#">Hydro Jetting</a>
+        <a href="#">Camera Inspection</a>
+        <a href="#">Trenchless Replacement</a>
+        <a href="#">Water Heaters</a>
+      </div>
+      <div>
+        <h4>The Team</h4>
+        <a href="#">About</a>
+        <a href="#">Why MVP</a>
+        <a href="#">Coverage Area</a>
+        <a href="#">Hall of Fame</a>
+        <a href="#">Financing</a>
+        <a href="#">Careers</a>
+      </div>
+      <div>
+        <h4>Game Day Line</h4>
+        <div class="lbl">24/7 Hotline</div>
+        <div class="v">(888) 555-STAR</div>
+        <div class="lbl">Email</div>
+        <a href="mailto:dispatch@plumbingstars.example">dispatch@plumbingstars.example</a>
+        <div class="lbl">Address</div>
+        <div class="v" style="font-size:14px;font-family:'Barlow',sans-serif">123 Main Street<br>Los Angeles, USA</div>
+        <div style="margin-top:18px"><a class="btn btn-red" href="#book">Book Now</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 The Plumbing Stars · Lic #998456</div>
+      <div>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Accessibility</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Callbar -->
+<div class="callbar">
+  <a class="call" href="tel:+18885557827"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.1.78.27 1.55.5 2.3a2 2 0 0 1-.45 2.11L7.91 9.39a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.75.23 1.52.4 2.3.5A2 2 0 0 1 22 16.92z"/></svg> Call MVP</a>
+  <a class="book" href="#book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Book Now</a>
+</div>
+
+<!-- Drawer -->
+<div class="drawer" id="drawer">
+  <div class="panel" onclick="event.stopPropagation()">
+    <button class="close" onclick="document.getElementById('drawer').classList.remove('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div class="logo-row"><img src="logo.svg" alt="The Plumbing Stars"></div>
+    <a class="item" href="#">Home <span>→</span></a>
+    <a class="item" href="#services">Roster <span>→</span></a>
+    <a class="item" href="#about">Team <span>→</span></a>
+    <a class="item" href="#reviews">Hall of Fame <span>→</span></a>
+    <a class="item" href="#book">Book Online <span>→</span></a>
+    <a class="item" href="#contact">Contact <span>→</span></a>
+    <a class="item" href="#">Privacy &amp; Terms <span>→</span></a>
+    <div style="margin-top:16px;display:grid;gap:10px">
+      <a href="tel:+18885557827" class="btn btn-navy" style="width:100%">Call (888) 555-STAR</a>
+      <a href="#book" class="btn btn-red" style="width:100%">Book Online</a>
+    </div>
+  </div>
+</div>
+<script>document.getElementById('drawer').addEventListener('click',e=>{if(e.target.id==='drawer')e.target.classList.remove('open')})</script>
+</body>
+</html>
