@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Plumbing Stars — Homepage Mockups</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4EFE4;
+  --ink:#0C1B30;
+  --navy:#082F6E;
+  --red:#CB2431;
+  --line:rgba(12,27,48,.12);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Manrope',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.container{max-width:1220px;margin:0 auto;padding:0 22px}
+header{padding:36px 0 16px;border-bottom:1px solid var(--line);background:var(--paper)}
+.head-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{height:60px}
+.brand .name{font-family:'DM Serif Display',serif;font-size:28px;color:var(--navy);line-height:1}
+.brand .name small{display:block;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--red);margin-top:6px;font-weight:600;font-family:'Manrope',sans-serif}
+.kicker{font-family:'Manrope',sans-serif;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink);opacity:.7;font-weight:600}
+h1{font-family:'DM Serif Display',serif;font-size:clamp(36px,6vw,60px);margin:24px 0 14px;color:var(--navy);font-weight:400;line-height:1.05}
+h1 em{font-style:italic;color:var(--red)}
+.lede{font-family:'DM Serif Display',serif;font-style:italic;font-size:20px;color:#374762;max-width:780px;margin:0 0 30px}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:10px 0 30px;border-bottom:1px solid var(--line);margin-bottom:30px}
+.toolbar .btn{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;font-size:13px;font-weight:600;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;border-radius:999px;letter-spacing:.04em}
+.toolbar .btn.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.toolbar label{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#374762;font-weight:500}
+
+.grid{display:grid;grid-template-columns:1fr;gap:30px;padding-bottom:80px}
+@media(min-width:780px){.grid{grid-template-columns:1fr 1fr}}
+
+.card{background:#fff;border:1px solid var(--line);border-radius:0;overflow:hidden;display:flex;flex-direction:column}
+.card-head{padding:22px 24px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+.card-head .num{font-family:'DM Serif Display',serif;font-style:italic;font-size:36px;color:var(--red);line-height:1}
+.card-head h3{font-family:'DM Serif Display',serif;font-size:24px;color:var(--navy);margin:0 0 4px;font-weight:400}
+.card-head p{font-size:13px;color:#374762;margin:0;line-height:1.4}
+.swatches{display:flex;gap:6px;margin-top:10px}
+.swatches span{width:18px;height:18px;border-radius:50%;border:1px solid rgba(0,0,0,.1)}
+.preview-wrap{position:relative;background:#dde4ee;border-bottom:1px solid var(--line)}
+.preview-wrap .iframe-mobile{display:none}
+.preview-wrap iframe{width:100%;height:680px;border:0;background:#fff;display:block}
+.card-foot{padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:14px;background:#fafafa}
+.card-foot .tags{display:flex;gap:6px;flex-wrap:wrap;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#5a6a86;font-weight:600}
+.card-foot .tag{background:#fff;border:1px solid var(--line);padding:4px 8px;border-radius:999px}
+.card-foot .open{font-weight:600;font-size:13px;color:#fff;background:var(--red);padding:10px 16px;text-decoration:none;letter-spacing:.06em;border-radius:0}
+.card-foot .open:hover{background:#A4111E}
+
+/* mobile preview frame */
+.mobile-mode .iframe-mobile{display:block}
+.mobile-mode .iframe-desk{display:none}
+.iframe-mobile{display:flex;justify-content:center;padding:20px;background:repeating-linear-gradient(45deg,#e8edf5 0 12px,#dde4ee 12px 13px)}
+.iframe-mobile .device{width:380px;max-width:100%;background:#0C1B30;padding:14px;border-radius:36px;box-shadow:0 30px 60px rgba(0,0,0,.18)}
+.iframe-mobile .device .screen{border-radius:24px;overflow:hidden;background:#fff;position:relative}
+.iframe-mobile iframe{width:100%;height:720px;border:0}
+.iframe-mobile .device .notch{position:absolute;top:6px;left:50%;transform:translateX(-50%);width:100px;height:18px;background:#0C1B30;border-radius:0 0 12px 12px;z-index:5}
+
+footer{padding:30px 0 50px;border-top:1px solid var(--line);font-size:12px;color:#5a6a86;letter-spacing:.05em}
+footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="head-row">
+      <div class="brand">
+        <img src="logo.svg" alt="The Plumbing Stars">
+        <div class="name">The Plumbing Stars<small>Homepage mockups</small></div>
+      </div>
+      <div class="kicker">Four directions · prepared for your review</div>
+    </div>
+    <h1>Four <em>distinct</em> takes on the homepage.</h1>
+    <p class="lede">Each mockup uses your logo's palette — navy, light blue, red, and white — paired with a different typography and layout system. The colors lean different directions, but red, white, and blue show up in all four.</p>
+  </div>
+</header>
+
+<div class="container">
+  <div class="toolbar">
+    <div style="font-size:13px;color:#374762;font-weight:600;margin-right:6px">Preview at:</div>
+    <button class="btn active" id="desk-btn" onclick="setMode('desk')">⌘ Desktop</button>
+    <button class="btn" id="mobile-btn" onclick="setMode('mobile')">📱 Mobile</button>
+    <div style="flex:1"></div>
+    <div style="font-size:12px;color:#5a6a86">Click any mockup's red button to open it full-screen.</div>
+  </div>
+
+  <div class="grid" id="grid">
+
+    <!-- 1 -->
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <h3>Heroic</h3>
+          <p>Bold civic energy — big slab type, $93 ribbon, diagonal red slash. Closest to Rooter Hero.</p>
+          <div class="swatches">
+            <span style="background:#082F6E"></span>
+            <span style="background:#CB2431"></span>
+            <span style="background:#B4DAFB"></span>
+            <span style="background:#FFFFFF"></span>
+          </div>
+        </div>
+        <div class="num">01</div>
+      </div>
+      <div class="preview-wrap">
+        <div class="iframe-desk"><iframe src="mockup-1-heroic.html" title="Heroic"></iframe></div>
+        <div class="iframe-mobile"><div class="device"><div class="screen"><div class="notch"></div><iframe src="mockup-1-heroic.html" title="Heroic mobile"></iframe></div></div></div>
+      </div>
+      <div class="card-foot">
+        <div class="tags">
+          <span class="tag">Oswald</span>
+          <span class="tag">Civic</span>
+          <span class="tag">Bold CTA</span>
+        </div>
+        <a class="open" href="mockup-1-heroic.html" target="_blank">Open ↗</a>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <h3>Coastal Modern</h3>
+          <p>Light, airy, editorial. Soft sky &amp; cream washes, big serif headline. Closest to West Hills.</p>
+          <div class="swatches">
+            <span style="background:#0E2A55"></span>
+            <span style="background:#C71E2C"></span>
+            <span style="background:#B4DAFB"></span>
+            <span style="background:#FAF6EC"></span>
+          </div>
+        </div>
+        <div class="num">02</div>
+      </div>
+      <div class="preview-wrap">
+        <div class="iframe-desk"><iframe src="mockup-2-coastal.html" title="Coastal"></iframe></div>
+        <div class="iframe-mobile"><div class="device"><div class="screen"><div class="notch"></div><iframe src="mockup-2-coastal.html" title="Coastal mobile"></iframe></div></div></div>
+      </div>
+      <div class="card-foot">
+        <div class="tags">
+          <span class="tag">Fraunces</span>
+          <span class="tag">Editorial</span>
+          <span class="tag">Asymmetric</span>
+        </div>
+        <a class="open" href="mockup-2-coastal.html" target="_blank">Open ↗</a>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <h3>MVP Varsity</h3>
+          <p>Sport jersey energy — chevron stripes, jersey #01, "MVP" trophy badge. Closest to MVP Plumbing.</p>
+          <div class="swatches">
+            <span style="background:#0A2A6F"></span>
+            <span style="background:#D81F2A"></span>
+            <span style="background:#FFFFFF"></span>
+            <span style="background:#F5C518"></span>
+          </div>
+        </div>
+        <div class="num">03</div>
+      </div>
+      <div class="preview-wrap">
+        <div class="iframe-desk"><iframe src="mockup-3-varsity.html" title="MVP Varsity"></iframe></div>
+        <div class="iframe-mobile"><div class="device"><div class="screen"><div class="notch"></div><iframe src="mockup-3-varsity.html" title="Varsity mobile"></iframe></div></div></div>
+      </div>
+      <div class="card-foot">
+        <div class="tags">
+          <span class="tag">Anton</span>
+          <span class="tag">Sport</span>
+          <span class="tag">Chevrons</span>
+        </div>
+        <a class="open" href="mockup-3-varsity.html" target="_blank">Open ↗</a>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <h3>Premium Editorial</h3>
+          <p>Cream paper feel, big italic display, magazine sections — refined, quietly excellent. Outlier of the four.</p>
+          <div class="swatches">
+            <span style="background:#0B2A55"></span>
+            <span style="background:#B81F2A"></span>
+            <span style="background:#92B7E2"></span>
+            <span style="background:#F4EFE4"></span>
+          </div>
+        </div>
+        <div class="num">04</div>
+      </div>
+      <div class="preview-wrap">
+        <div class="iframe-desk"><iframe src="mockup-4-editorial.html" title="Editorial"></iframe></div>
+        <div class="iframe-mobile"><div class="device"><div class="screen"><div class="notch"></div><iframe src="mockup-4-editorial.html" title="Editorial mobile"></iframe></div></div></div>
+      </div>
+      <div class="card-foot">
+        <div class="tags">
+          <span class="tag">DM Serif</span>
+          <span class="tag">Magazine</span>
+          <span class="tag">Refined</span>
+        </div>
+        <a class="open" href="mockup-4-editorial.html" target="_blank">Open ↗</a>
+      </div>
+    </article>
+
+  </div>
+
+  <footer>
+    <div class="row">
+      <div>© 2026 The Plumbing Stars · Concept mockups for client review</div>
+      <div>Logo, color palette, and content placeholders are easy to swap once a direction is chosen.</div>
+    </div>
+  </footer>
+</div>
+
+<script>
+function setMode(m){
+  document.getElementById('grid').classList.toggle('mobile-mode', m==='mobile');
+  document.getElementById('desk-btn').classList.toggle('active', m==='desk');
+  document.getElementById('mobile-btn').classList.toggle('active', m==='mobile');
+}
+</script>
+</body>
+</html>
