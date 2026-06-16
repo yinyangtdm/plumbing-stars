@@ -2,7 +2,7 @@ import Link from 'next/link'
 import HeaderWrapper from '@/components/HeaderWrapper'
 import Footer from '@/components/Footer'
 import MobileCallbar from '@/components/MobileCallbar'
-import ServiceAreaMapClient from '@/components/ServiceAreaMapClient'
+import ServiceAreaMapClientWrapper from '@/components/ServiceAreaMapClientWrapper'
 import { getDb } from '@/lib/db'
 
 async function getFaqs() {
@@ -310,7 +310,7 @@ export default async function HomePage() {
             <h2>Serving <span className="accent">LA &amp; Ventura</span> Counties.</h2>
             <p>From the San Fernando Valley to Oxnard — if you&apos;re in our service area, we&apos;re on our way.</p>
           </div>
-          <ServiceAreaMapClient />
+          <ServiceAreaMapClientWrapper />
         </div>
       </section>
 

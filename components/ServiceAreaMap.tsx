@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useRef } from 'react'
+import { City } from '@/lib/city'
 
 // Simplified county boundary polygons [lat, lng]
 const LA_COUNTY: [number, number][] = [
@@ -13,7 +14,11 @@ const VENTURA_COUNTY: [number, number][] = [
   [34.02, -119.12], [34.18, -119.48], [34.42, -119.72], [34.65, -120.00],
 ]
 
-export default function ServiceAreaMap() {
+interface ServiceAreaMapProps {
+  city?: City
+}
+
+export default function ServiceAreaMap({ city = 'los-angeles' }: ServiceAreaMapProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const mapRef = useRef<ReturnType<typeof import('leaflet')['map']> | null>(null)
 
@@ -40,19 +45,23 @@ export default function ServiceAreaMap() {
         maxZoom: 14,
       }).addTo(map)
 
-      L.polygon(LA_COUNTY, {
-        color: '#083E85',
-        fillColor: '#083E85',
-        fillOpacity: 0.28,
-        weight: 2,
-      }).addTo(map).bindTooltip('Los Angeles County', { permanent: false, className: 'map-tooltip' })
-
-      L.polygon(VENTURA_COUNTY, {
-        color: '#CB2431',
-        fillColor: '#CB2431',
-        fillOpacity: 0.22,
-        weight: 2,
-      }).addTo(map).bindTooltip('Ventura County', { permanent: false, className: 'map-tooltip' })
+      if (city === 'los-angeles' || city === 'ventura') {
+        if (city === 'los-angeles') {
+          L.polygon(LA_COUNTY, {
+            color: '#083E85',
+            fillColor: '#083E85',
+            fillOpacity: 0.28,
+            weight: 2,
+          }).addTo(map).bindTooltip('Los Angeles County', { permanent: false, className: 'map-tooltip' })
+        } else {
+          L.polygon(VENTURA_COUNTY, {
+            color: '#CB2431',
+            fillColor: '#CB2431',
+            fillOpacity: 0.22,
+            weight: 2,
+          }).addTo(map).bindTooltip('Ventura County', { permanent: false, className: 'map-tooltip' })
+        }
+      }
 
       mapRef.current = map
     })
@@ -68,8 +77,16 @@ export default function ServiceAreaMap() {
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
       <div ref={containerRef} className="service-map" />
       <div className="map-legend">
-        <span className="legend-dot" style={{ background: '#083E85' }} /> Los Angeles County
-        <span className="legend-dot" style={{ background: '#CB2431', marginLeft: 16 }} /> Ventura County
+        {city === 'los-angeles' && (
+          <>
+            <span className="legend-dot" style={{ background: '#083E85' }} /> Los Angeles County
+          </>
+        )}
+        {city === 'ventura' && (
+          <>
+            <span className="legend-dot" style={{ background: '#CB2431' }} /> Ventura County
+          </>
+        )}
       </div>
     </div>
   )
