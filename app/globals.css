@@ -726,8 +726,13 @@ h1, h2, h3, h4 {
 .footer h4 { font-family: var(--font-anton), sans-serif; color: #fff; font-size: 18px; letter-spacing: .08em; margin-bottom: 14px; }
 .footer a { color: #cfdcef; display: block; padding: 4px 0; font-size: 14px; }
 .footer a:hover { color: #fff; }
+.footer-brand { display: flex; align-items: center; gap: 14px; }
+.footer-logo { filter: brightness(0) invert(1); }
+.footer-blurb { margin: 20px 0; color: #cfdcef; max-width: 300px; font-family: var(--font-barlow), sans-serif; }
 .footer .brand-name { font-family: var(--font-anton), sans-serif; color: #fff; font-size: 30px; letter-spacing: .02em; line-height: 1; }
 .footer .brand-city { display: block; font-family: var(--font-barlow-condensed), sans-serif; font-weight: 700; font-size: 11px; letter-spacing: .3em; color: var(--red); margin-top: 6px; }
+.footer-area { font-size: 14px; font-family: var(--font-barlow), sans-serif; }
+.footer-cta { margin-top: 18px; }
 .footer .lbl { font-family: var(--font-barlow-condensed), sans-serif; text-transform: uppercase; letter-spacing: .22em; font-size: 11px; color: #7e94b6; margin-top: 14px; margin-bottom: 4px; font-weight: 700; }
 .footer .v { color: #fff; font-family: var(--font-anton), sans-serif; font-size: 22px; }
 .footer .social { display: flex; gap: 10px; margin-top: 18px; }

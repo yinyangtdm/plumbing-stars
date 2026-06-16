@@ -2,10 +2,14 @@ import Link from 'next/link'
 import HeaderWrapper from '@/components/HeaderWrapper'
 import Footer from '@/components/Footer'
 import MobileCallbar from '@/components/MobileCallbar'
+import { pageMetadata } from '@/lib/metadata'
+import { SITE } from '@/lib/site'
 
-export const metadata = {
-  title: 'Drain & Sewer Services — The Plumbing Stars | Los Angeles',
-  description: 'Drain cleaning, sewer line repair, hydro jetting, camera inspection, pipe lining & trenchless replacement. Flat-rate pricing, written guarantee.',
+export function generateMetadata() {
+  return pageMetadata(city => ({
+    title: `Drain & Sewer Services — The Plumbing Stars | ${city}`,
+    description: 'Drain cleaning, sewer line repair, hydro jetting, camera inspection, pipe lining & trenchless replacement. Flat-rate pricing, written guarantee.',
+  }))
 }
 
 const SERVICES = [
@@ -115,7 +119,7 @@ export default function ServicesPage() {
               <div className="price">$93</div>
               <div className="fine">If we can&apos;t unclog your drain, you pay nothing — no service fee, no trip charge. Applies to standard main-line drain cleaning. Limit one per household.</div>
               <div style={{ marginTop: 18 }}>
-                <a href="tel:+17474631853" className="btn btn-red" style={{ width: '100%' }}>Claim by Phone</a>
+                <a href={SITE.phone.href} className="btn btn-red" style={{ width: '100%' }}>Claim by Phone</a>
               </div>
             </div>
             <div className="promo-ticket" style={{ borderLeftColor: 'var(--blue)' }}>

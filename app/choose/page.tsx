@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { SITE } from '@/lib/site'
 
 export const metadata = {
   title: 'The Plumbing Stars — Choose Your Location',
@@ -43,7 +44,7 @@ export default function ChoosePage() {
         </div>
 
         <p className="choose-phone">
-          <a href="tel:+17474631853">(747) 463-1853</a> · Available 24/7
+          <a href={SITE.phone.href}>{SITE.phone.display}</a> · Available 24/7
         </p>
       </div>
     </div>

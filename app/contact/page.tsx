@@ -3,10 +3,14 @@ import HeaderWrapper from '@/components/HeaderWrapper'
 import Footer from '@/components/Footer'
 import MobileCallbar from '@/components/MobileCallbar'
 import ContactForm from './ContactForm'
+import { pageMetadata } from '@/lib/metadata'
+import { SITE } from '@/lib/site'
 
-export const metadata = {
-  title: 'Contact Us — The Plumbing Stars | Los Angeles',
-  description: 'Get in touch with The Plumbing Stars. Call (747) 463-1853 for 24/7 emergency drain & sewer service in Los Angeles and Ventura County.',
+export function generateMetadata() {
+  return pageMetadata(city => ({
+    title: `Contact Us — The Plumbing Stars | ${city}`,
+    description: `Get in touch with The Plumbing Stars. Call ${SITE.phone.display} for 24/7 emergency drain & sewer service in ${city} County.`,
+  }))
 }
 
 export default function ContactPage() {
@@ -45,7 +49,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4>24/7 Hotline</h4>
-                      <a href="tel:+17474631853">(747) 463-1853</a>
+                      <a href={SITE.phone.href}>{SITE.phone.display}</a>
                     </div>
                   </div>
 
@@ -58,7 +62,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4>Email</h4>
-                      <a href="mailto:info@theplumbingstars.com">info@theplumbingstars.com</a>
+                      <a href={SITE.email.href}>{SITE.email.display}</a>
                     </div>
                   </div>
 
@@ -70,7 +74,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4>Hours</h4>
-                      <p>24 / 7 · 365 Days a Year</p>
+                      <p>{SITE.hours}</p>
                     </div>
                   </div>
 
@@ -98,7 +102,7 @@ export default function ContactPage() {
               <div style={{ marginTop: 20, padding: '20px 24px', background: 'var(--sky-2)', borderRadius: 6, borderLeft: '5px solid var(--blue)' }}>
                 <div className="eyebrow" style={{ marginBottom: 6 }}>License</div>
                 <p style={{ margin: 0, fontFamily: 'var(--font-barlow-condensed)', fontWeight: 700, fontSize: 16, color: 'var(--blue)', textTransform: 'uppercase', letterSpacing: '.06em' }}>
-                  CA Contractor Lic. #998456
+                  CA Contractor Lic. #{SITE.license}
                 </p>
                 <p style={{ margin: '6px 0 0', fontSize: 13, color: '#5a6a86' }}>Licensed · Bonded · Insured — State of California</p>
               </div>

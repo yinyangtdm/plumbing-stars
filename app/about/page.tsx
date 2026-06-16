@@ -2,10 +2,14 @@ import Link from 'next/link'
 import HeaderWrapper from '@/components/HeaderWrapper'
 import Footer from '@/components/Footer'
 import MobileCallbar from '@/components/MobileCallbar'
+import { pageMetadata } from '@/lib/metadata'
+import { SITE } from '@/lib/site'
 
-export const metadata = {
-  title: 'About Us — The Plumbing Stars | Los Angeles Sewer & Drain',
-  description: 'Family-owned drain & sewer specialists serving Los Angeles for 25+ years. CA Contractor License #998456. Licensed, bonded & insured.',
+export function generateMetadata() {
+  return pageMetadata(city => ({
+    title: `About Us — The Plumbing Stars | ${city} Sewer & Drain`,
+    description: `Family-owned drain & sewer specialists serving ${city} for ${SITE.yearsInBusiness} years. CA Contractor License #${SITE.license}. Licensed, bonded & insured.`,
+  }))
 }
 
 export default function AboutPage() {
@@ -40,7 +44,7 @@ export default function AboutPage() {
                 Now expanding into Ventura County, we bring the same licensed, flat-rate, guarantee-backed service that made us a household name across LA.
               </p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-                <a href="tel:+17474631853" className="btn btn-red">Call (747) 463-1853</a>
+                <a href={SITE.phone.href} className="btn btn-red">Call {SITE.phone.display}</a>
                 <Link href="/booking" className="btn btn-blue">Book Online</Link>
               </div>
             </div>
@@ -50,7 +54,7 @@ export default function AboutPage() {
                   <div className="eyebrow" style={{ color: 'var(--sky)', marginBottom: 16 }}>License &amp; Credentials</div>
                   <ul className="cred-list">
                     {[
-                      'CA Contractor License #998456',
+                      `CA Contractor License #${SITE.license}`,
                       'Licensed & Bonded — State of California',
                       '25+ Years Serving Los Angeles',
                       '24/7 Emergency Dispatch',
@@ -117,7 +121,7 @@ export default function AboutPage() {
             Call for same-day service or book online. We serve all of Los Angeles and Ventura County.
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="tel:+17474631853" className="btn btn-red">Call (747) 463-1853</a>
+            <a href={SITE.phone.href} className="btn btn-red">Call {SITE.phone.display}</a>
             <Link href="/booking" className="btn btn-ghost">Book Online</Link>
           </div>
         </div>

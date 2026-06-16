@@ -4,10 +4,14 @@ import Footer from '@/components/Footer'
 import MobileCallbar from '@/components/MobileCallbar'
 import ServiceAreaMapClientWrapper from '@/components/ServiceAreaMapClientWrapper'
 import { getCurrentCity } from '@/lib/city'
+import { pageMetadata } from '@/lib/metadata'
+import { SITE } from '@/lib/site'
 
-export const metadata = {
-  title: 'Service Areas — The Plumbing Stars | LA & Ventura County',
-  description: 'The Plumbing Stars serves all of Los Angeles and Ventura County. Drain cleaning, sewer repair, hydro jetting — same-day available.',
+export function generateMetadata() {
+  return pageMetadata(city => ({
+    title: `Service Areas — The Plumbing Stars | ${city} County`,
+    description: `The Plumbing Stars serves all of ${city} County. Drain cleaning, sewer repair, hydro jetting — same-day available.`,
+  }))
 }
 
 const LA_AREAS = [
@@ -78,7 +82,7 @@ export default async function ServiceAreasPage() {
             In your neighborhood<br /><span style={{ color: 'var(--red)' }}>today.</span>
           </h2>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="tel:+17474631853" className="btn btn-red">Call (747) 463-1853</a>
+            <a href={SITE.phone.href} className="btn btn-red">Call {SITE.phone.display}</a>
             <Link href="/booking" className="btn btn-ghost">Book Online</Link>
           </div>
         </div>

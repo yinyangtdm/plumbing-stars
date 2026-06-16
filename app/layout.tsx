@@ -1,5 +1,5 @@
-import type { Metadata } from 'next'
 import { Anton, Barlow, Barlow_Condensed } from 'next/font/google'
+import { pageMetadata } from '@/lib/metadata'
 import './globals.css'
 
 const anton = Anton({
@@ -21,10 +21,13 @@ const barlowCondensed = Barlow_Condensed({
   display: 'swap',
 })
 
-export const metadata: Metadata = {
-  title: 'The Plumbing Stars — Drain & Sewer Experts | Los Angeles',
-  description:
-    'Licensed drain and sewer specialists serving Los Angeles. 25+ years experience, 24/7 emergency service, flat-rate pricing, written guarantee on every job.',
+export function generateMetadata() {
+  return pageMetadata(city => ({
+    title: `The Plumbing Stars — Drain & Sewer Experts | ${city}`,
+    description:
+      `Licensed drain and sewer specialists serving ${city}. 25+ years experience, ` +
+      '24/7 emergency service, flat-rate pricing, written guarantee on every job.',
+  }))
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

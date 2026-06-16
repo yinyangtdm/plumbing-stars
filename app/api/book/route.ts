@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 import { getDb, initDb } from '@/lib/db'
+import { SITE } from '@/lib/site'
 
 export async function POST(request: Request) {
   let body: Record<string, string>
@@ -33,7 +34,7 @@ export async function POST(request: Request) {
   // Send email notification
   const gmailUser = process.env.GMAIL_USER
   const gmailPass = process.env.GMAIL_APP_PASSWORD
-  const bookingTo = process.env.BOOKING_TO || 'info@theplumbingstars.com'
+  const bookingTo = process.env.BOOKING_TO || SITE.email.display
 
   if (gmailUser && gmailPass) {
     try {

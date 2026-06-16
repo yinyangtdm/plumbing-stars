@@ -14,6 +14,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { SITE } from '@/lib/site'
 
 interface HeaderProps {
   city?: string
@@ -88,7 +89,7 @@ export default function Header({ city = 'Los Angeles' }: HeaderProps) {
                 ============================================= */}
             <div className="nav-right">
               {/* Mobile call button (hidden on desktop) */}
-              <a className="call-btn" href="tel:+17474631853" aria-label="Call us">
+              <a className="call-btn" href={SITE.phone.href} aria-label="Call us">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.1.78.27 1.55.5 2.3a2 2 0 0 1-.45 2.11L7.91 9.39a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.75.23 1.52.4 2.3.5A2 2 0 0 1 22 16.92z" />
                 </svg>
@@ -98,7 +99,7 @@ export default function Header({ city = 'Los Angeles' }: HeaderProps) {
               <div className="nav-cta">
                 <div className="phone">
                   <span>24/7 Hotline</span>
-                  (747) 463-1853
+                  {SITE.phone.display}
                 </div>
                 <Link href="/booking" className="btn btn-red">Book Now</Link>
               </div>
@@ -136,7 +137,7 @@ export default function Header({ city = 'Los Angeles' }: HeaderProps) {
 
             {/* Action buttons section */}
             <div style={{ marginTop: 16, display: 'grid', gap: 10 }}>
-              <a href="tel:+17474631853" className="btn btn-blue" style={{ width: '100%' }}>Call (747) 463-1853</a>
+              <a href={SITE.phone.href} className="btn btn-blue" style={{ width: '100%' }}>Call {SITE.phone.display}</a>
               <Link href="/booking" className="btn btn-red" style={{ width: '100%' }} onClick={() => setDrawerOpen(false)}>Book Online</Link>
             </div>
           </div>
