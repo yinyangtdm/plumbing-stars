@@ -3,12 +3,13 @@ import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import MobileCallbar from '@/components/MobileCallbar'
+import ServiceAreaMapClient from '@/components/ServiceAreaMapClient'
 import { getDb } from '@/lib/db'
 
-function getFaqs() {
+async function getFaqs() {
   try {
     const db = getDb()
-    return db.prepare('SELECT * FROM faqs ORDER BY display_order ASC, id ASC').all() as {
+    return await db`SELECT * FROM faqs ORDER BY display_order ASC, id ASC` as {
       id: number; question: string; answer: string
     }[]
   } catch {
@@ -16,8 +17,8 @@ function getFaqs() {
   }
 }
 
-export default function HomePage() {
-  const faqs = getFaqs()
+export default async function HomePage() {
+  const faqs = await getFaqs()
 
   return (
     <>
@@ -151,14 +152,14 @@ export default function HomePage() {
                 icon: <><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M2 12h2M20 12h2" /></>,
               },
               {
-                num: '05', title: 'Trenchless Replacement',
-                desc: 'No-dig pipe bursting &amp; lining. Saves your yard, driveway, and weekend.',
+                num: '05', title: 'Pipe Lining',
+                desc: 'Trenchless CIPP lining creates a new pipe inside your old one — no excavation required.',
                 icon: <><path d="M4 19l6-6 4 4 6-8" /><path d="M14 5h6v6" /></>,
               },
               {
-                num: '06', title: 'Water Heaters',
-                desc: 'Install, repair, or flush tank &amp; tankless systems — same-day service on most calls.',
-                icon: <><rect x="6" y="3" width="12" height="18" rx="2" /><path d="M9 8h6M9 12h6M9 16h6" /></>,
+                num: '06', title: 'Trenchless Replacement',
+                desc: 'No-dig pipe bursting and lining. Your lawn and driveway stay untouched.',
+                icon: <><path d="M4 19l6-6 4 4 6-8" /><path d="M14 5h6v6" /></>,
               },
             ].map(svc => (
               <article className="service-card" key={svc.num}>
@@ -183,20 +184,20 @@ export default function HomePage() {
         <div className="container">
           <div className="promo-wrap">
             <div className="promo-side">
-              <div className="eyebrow" style={{ color: 'var(--sky)' }}>Limited-Time Offer</div>
-              <h3>New customer?<br />Get the <span className="accent">$93 special</span>.</h3>
-              <p>New customers get our main-line drain cleaning at an unbeatable price. Includes a free camera scope if the clog returns within 30 days.</p>
+              <div className="eyebrow" style={{ color: 'var(--sky)' }}>Special Offer</div>
+              <h3>Drain cleared or<br />you <span className="accent">don&apos;t pay</span>.</h3>
+              <p>Main-line drain cleaning for just $93 — and if we can&apos;t clear it, you owe us nothing. No fine print, no trip charge, no hassle.</p>
               <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
                 <a href="tel:+18885557827" className="btn btn-red">Claim by Phone</a>
                 <Link href="/booking" className="btn btn-ghost">Book Online</Link>
               </div>
             </div>
             <div className="promo-ticket">
-              <div className="ribbon">VALID 30 DAYS</div>
-              <div className="ptop">New Customer Offer</div>
+              <div className="ribbon">NO CLEAR = NO CHARGE</div>
+              <div className="ptop">Drain Cleaning Guarantee</div>
               <h4>Main-Line Drain Cleaning</h4>
-              <div className="price">$93*</div>
-              <div className="fine">*With accessible cleanout. Some restrictions apply. Limit one per household. Cannot be combined with other offers. Expires 30 days from first contact.</div>
+              <div className="price">$93</div>
+              <div className="fine">If we can&apos;t unclog your drain, you pay nothing — no service fee, no trip charge. Applies to standard main-line drain cleaning. Limit one per household.</div>
             </div>
           </div>
         </div>
@@ -302,6 +303,18 @@ export default function HomePage() {
               </>
             )}
           </div>
+        </div>
+      </section>
+
+      {/* Service Area */}
+      <section className="section lt" id="service-area">
+        <div className="container">
+          <div className="section-head">
+            <div className="eyebrow">Where We Work</div>
+            <h2>Serving <span className="accent">LA &amp; Ventura</span> Counties.</h2>
+            <p>From the San Fernando Valley to Oxnard — if you&apos;re in our service area, we&apos;re on our way.</p>
+          </div>
+          <ServiceAreaMapClient />
         </div>
       </section>
 

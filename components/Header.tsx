@@ -50,19 +50,18 @@ export default function Header() {
                 </svg>
               </button>
               <nav className="nav-desk">
-                <Link href="/#services">Services</Link>
-                <Link href="/#about">About</Link>
-                <Link href="/#reviews">Reviews</Link>
+                <Link href="/services">Services</Link>
+                <Link href="/about">About</Link>
+                <Link href="/service-areas">Areas</Link>
                 <Link href="/#faq">FAQ</Link>
-                <Link href="/#contact">Contact</Link>
+                <Link href="/contact">Contact</Link>
               </nav>
             </div>
 
             {/* Center: emblem */}
             <div className="nav-mid">
               <Link href="/" className="emblem">
-                <Image src="/logo.svg" alt="The Plumbing Stars" width={68} height={68} priority />
-                <span className="emblem-name">The Plumbing Stars</span>
+                <Image src="/logo.svg" alt="The Plumbing Stars" width={96} height={96} priority />
                 <span className="emblem-city">Los Angeles</span>
               </Link>
             </div>
@@ -99,12 +98,12 @@ export default function Header() {
               <Image src="/logo.svg" alt="The Plumbing Stars" width={74} height={74} />
             </div>
             <Link className="item" href="/" onClick={() => setDrawerOpen(false)}>Home <span>→</span></Link>
-            <Link className="item" href="/#services" onClick={() => setDrawerOpen(false)}>Services <span>→</span></Link>
-            <Link className="item" href="/#about" onClick={() => setDrawerOpen(false)}>About <span>→</span></Link>
-            <Link className="item" href="/#reviews" onClick={() => setDrawerOpen(false)}>Reviews <span>→</span></Link>
+            <Link className="item" href="/services" onClick={() => setDrawerOpen(false)}>Services <span>→</span></Link>
+            <Link className="item" href="/about" onClick={() => setDrawerOpen(false)}>About <span>→</span></Link>
+            <Link className="item" href="/service-areas" onClick={() => setDrawerOpen(false)}>Service Areas <span>→</span></Link>
             <Link className="item" href="/#faq" onClick={() => setDrawerOpen(false)}>FAQ <span>→</span></Link>
             <Link className="item" href="/booking" onClick={() => setDrawerOpen(false)}>Book Online <span>→</span></Link>
-            <Link className="item" href="/#contact" onClick={() => setDrawerOpen(false)}>Contact <span>→</span></Link>
+            <Link className="item" href="/contact" onClick={() => setDrawerOpen(false)}>Contact <span>→</span></Link>
             <div style={{ marginTop: 16, display: 'grid', gap: 10 }}>
               <a href="tel:+18885557827" className="btn btn-blue" style={{ width: '100%' }}>Call (888) 555-7827</a>
               <Link href="/booking" className="btn btn-red" style={{ width: '100%' }} onClick={() => setDrawerOpen(false)}>Book Online</Link>

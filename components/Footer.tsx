@@ -33,21 +33,21 @@ export default function Footer() {
 
             <div>
               <h4>Services</h4>
-              <Link href="/#services">Drain Cleaning</Link>
-              <Link href="/#services">Sewer Line Repair</Link>
-              <Link href="/#services">Hydro Jetting</Link>
-              <Link href="/#services">Camera Inspection</Link>
-              <Link href="/#services">Trenchless Replacement</Link>
-              <Link href="/#services">Water Heaters</Link>
+              <Link href="/services">Drain Cleaning</Link>
+              <Link href="/services">Sewer Line Repair</Link>
+              <Link href="/services">Hydro Jetting</Link>
+              <Link href="/services">Pipe Lining</Link>
+              <Link href="/services">Camera Inspection</Link>
+              <Link href="/services">Trenchless Replacement</Link>
             </div>
 
             <div>
               <h4>Company</h4>
-              <Link href="/#about">About Us</Link>
-              <Link href="/#reviews">Reviews</Link>
+              <Link href="/about">About Us</Link>
+              <Link href="/service-areas">Service Areas</Link>
               <Link href="/#faq">FAQ</Link>
               <Link href="/booking">Book Appointment</Link>
-              <Link href="/#contact">Contact</Link>
+              <Link href="/contact">Contact</Link>
             </div>
 
             <div>
