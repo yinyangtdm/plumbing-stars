@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import Header from '@/components/HeaderWrapper'
+import HeaderWrapper from '@/components/HeaderWrapper'
 import Footer from '@/components/Footer'
 import MobileCallbar from '@/components/MobileCallbar'
 
