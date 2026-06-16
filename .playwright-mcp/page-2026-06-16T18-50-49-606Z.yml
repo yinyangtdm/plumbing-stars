@@ -1,0 +1,331 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - img [ref=e6]
+        - text: 24/7 Emergency Dispatch
+      - generic [ref=e9]:
+        - img [ref=e10]
+        - text: Licensed · Bonded · Insured
+    - link "(888) 555-7827" [ref=e13] [cursor=pointer]:
+      - /url: tel:+18885557827
+      - img [ref=e14]
+      - text: (888) 555-7827
+  - banner [ref=e16]:
+    - generic [ref=e18]:
+      - navigation [ref=e20]:
+        - link "Services" [ref=e21] [cursor=pointer]:
+          - /url: /services
+        - link "About" [ref=e22] [cursor=pointer]:
+          - /url: /about
+        - link "Areas" [ref=e23] [cursor=pointer]:
+          - /url: /service-areas
+        - link "FAQ" [ref=e24] [cursor=pointer]:
+          - /url: /#faq
+        - link "Contact" [ref=e25] [cursor=pointer]:
+          - /url: /contact
+      - link "The Plumbing Stars Los Angeles" [ref=e27] [cursor=pointer]:
+        - /url: /
+        - img "The Plumbing Stars" [ref=e28]
+        - generic [ref=e29]: Los Angeles
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]: 24/7 Hotline
+          - text: (888) 555-7827
+        - link "Book Now" [ref=e34] [cursor=pointer]:
+          - /url: /booking
+  - generic [ref=e37]:
+    - generic [ref=e38]:
+      - generic [ref=e39]: ⭐ Drain & Sewer Specialists — Los Angeles
+      - heading "Expert Drain & Sewer Pros." [level=1] [ref=e40]:
+        - generic [ref=e41]: Expert
+        - generic [ref=e42]: Drain &
+        - generic [ref=e43]: Sewer Pros.
+      - paragraph [ref=e44]: Licensed technicians with 25 years on the job. We show up fast, quote flat rates, and back every job with a written guarantee.
+      - generic [ref=e45]:
+        - link "Call Now" [ref=e46] [cursor=pointer]:
+          - /url: tel:+18885557827
+          - img [ref=e47]
+          - text: Call Now
+        - link "Book Online" [ref=e49] [cursor=pointer]:
+          - /url: /booking
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - generic [ref=e52]: 25+
+          - generic [ref=e53]: Years Experience
+        - generic [ref=e54]:
+          - generic [ref=e55]: 2.4K
+          - generic [ref=e56]: 5-Star Reviews
+        - generic [ref=e57]:
+          - generic [ref=e58]: 60 min
+          - generic [ref=e59]: Avg. Arrival
+    - generic [ref=e61]:
+      - img "The Plumbing Stars" [ref=e63]
+      - list [ref=e65]:
+        - listitem [ref=e66]:
+          - img [ref=e67]
+          - text: Licensed & Bonded — State of California
+        - listitem [ref=e69]:
+          - img [ref=e70]
+          - text: 25+ Years Serving Los Angeles
+        - listitem [ref=e72]:
+          - img [ref=e73]
+          - text: 24 / 7 Emergency Service
+        - listitem [ref=e75]:
+          - img [ref=e76]
+          - text: 5-Year Written Guarantee
+        - listitem [ref=e78]:
+          - img [ref=e79]
+          - text: Flat-Rate Pricing — No Surprises
+      - generic [ref=e81]:
+        - generic [ref=e82]: ★★★★★
+        - generic [ref=e83]:
+          - strong [ref=e84]: "4.9"
+          - text: 2,400+ Google Reviews
+  - generic [ref=e87]:
+    - generic [ref=e88]:
+      - generic [ref=e89]: ★★★★★
+      - generic [ref=e90]: 4.9 / 2,400 Reviews
+    - generic [ref=e91]:
+      - generic [ref=e92]: 25+
+      - generic [ref=e93]: Years in Business
+    - generic [ref=e94]:
+      - generic [ref=e95]: 24/7
+      - generic [ref=e96]: Emergency Dispatch
+    - generic [ref=e97]:
+      - generic [ref=e98]: A+
+      - generic [ref=e99]: BBB Accredited
+  - generic [ref=e101]:
+    - generic [ref=e102]:
+      - generic [ref=e103]: What We Do
+      - heading "Every drain & sewer service you need." [level=2] [ref=e104]
+      - paragraph [ref=e105]: From a simple clogged drain to a full sewer main replacement — flat-rate pricing and a written guarantee on every job.
+    - generic [ref=e106]:
+      - article [ref=e107]:
+        - generic [ref=e108]: SVC 01
+        - img [ref=e110]
+        - heading "Drain Cleaning" [level=3] [ref=e112]
+        - paragraph [ref=e113]: Kitchen, bath, laundry & main lines cleared at a flat price — guaranteed 30 days or it's free.
+        - link "Book This Service →" [ref=e114] [cursor=pointer]:
+          - /url: /booking
+      - article [ref=e115]:
+        - generic [ref=e116]: SVC 02
+        - img [ref=e118]
+        - heading "Sewer Line Repair" [level=3] [ref=e120]
+        - paragraph [ref=e121]: Spot fixes and full replacements done by techs with two decades of hands-on experience.
+        - link "Book This Service →" [ref=e122] [cursor=pointer]:
+          - /url: /booking
+      - article [ref=e123]:
+        - generic [ref=e124]: SVC 03
+        - img [ref=e126]
+        - heading "Hydro Jetting" [level=3] [ref=e128]
+        - paragraph [ref=e129]: High-pressure water that powers through roots, grease and scale until pipes run like new.
+        - link "Book This Service →" [ref=e130] [cursor=pointer]:
+          - /url: /booking
+      - article [ref=e131]:
+        - generic [ref=e132]: SVC 04
+        - img [ref=e134]
+        - heading "Camera Inspection" [level=3] [ref=e138]
+        - paragraph [ref=e139]: HD video down your line so you know exactly what's going on before any work begins.
+        - link "Book This Service →" [ref=e140] [cursor=pointer]:
+          - /url: /booking
+      - article [ref=e141]:
+        - generic [ref=e142]: SVC 05
+        - img [ref=e144]
+        - heading "Pipe Lining" [level=3] [ref=e147]
+        - paragraph [ref=e148]: Trenchless CIPP lining creates a new pipe inside your old one — no excavation required.
+        - link "Book This Service →" [ref=e149] [cursor=pointer]:
+          - /url: /booking
+      - article [ref=e150]:
+        - generic [ref=e151]: SVC 06
+        - img [ref=e153]
+        - heading "Trenchless Replacement" [level=3] [ref=e156]
+        - paragraph [ref=e157]: No-dig pipe bursting and lining. Your lawn and driveway stay untouched.
+        - link "Book This Service →" [ref=e158] [cursor=pointer]:
+          - /url: /booking
+  - generic [ref=e161]:
+    - generic [ref=e162]:
+      - generic [ref=e163]: Special Offer
+      - heading "Drain cleared or you don't pay." [level=3] [ref=e164]:
+        - text: Drain cleared or
+        - text: you don't pay.
+      - paragraph [ref=e165]: Main-line drain cleaning for just $93 — and if we can't clear it, you owe us nothing. No fine print, no trip charge, no hassle.
+      - generic [ref=e166]:
+        - link "Claim by Phone" [ref=e167] [cursor=pointer]:
+          - /url: tel:+18885557827
+        - link "Book Online" [ref=e168] [cursor=pointer]:
+          - /url: /booking
+    - generic [ref=e169]:
+      - generic [ref=e170]: NO CLEAR = NO CHARGE
+      - generic [ref=e171]: Drain Cleaning Guarantee
+      - heading "Main-Line Drain Cleaning" [level=4] [ref=e172]
+      - generic [ref=e173]: $93
+      - generic [ref=e174]: If we can't unclog your drain, you pay nothing — no service fee, no trip charge. Applies to standard main-line drain cleaning. Limit one per household.
+  - generic [ref=e176]:
+    - generic [ref=e177]:
+      - generic [ref=e178]: Why Choose Us
+      - heading "Four reasons Los Angeles calls us first." [level=2] [ref=e179]
+      - paragraph [ref=e180]: We've been the first call for drain and sewer problems across the greater LA area since 1998.
+    - generic [ref=e181]:
+      - generic [ref=e182]:
+        - generic [ref=e183]: "01"
+        - generic [ref=e184]:
+          - heading "Flat-Rate Pricing" [level=4] [ref=e185]
+          - paragraph [ref=e186]: You see the price in writing before any work begins. No surprise add-ons, no hourly billing traps.
+      - generic [ref=e187]:
+        - generic [ref=e188]: "02"
+        - generic [ref=e189]:
+          - heading "True 24/7 Response" [level=4] [ref=e190]
+          - paragraph [ref=e191]: Emergency crews available every night, weekend, and holiday — no surcharges, no waiting until Tuesday.
+      - generic [ref=e192]:
+        - generic [ref=e193]: "03"
+        - generic [ref=e194]:
+          - heading "HD Camera Documentation" [level=4] [ref=e195]
+          - paragraph [ref=e196]: Photo and video footage of every job — yours to keep. You know exactly what was done and why.
+      - generic [ref=e197]:
+        - generic [ref=e198]: "04"
+        - generic [ref=e199]:
+          - heading "Written Guarantee" [level=4] [ref=e200]
+          - paragraph [ref=e201]: All workmanship backed up to 5 years. If it fails, we come back and make it right — no arguments.
+  - generic [ref=e203]:
+    - generic [ref=e204]:
+      - generic [ref=e205]: Customer Reviews
+      - heading "What your neighbors are saying." [level=2] [ref=e206]
+    - generic [ref=e207]:
+      - article [ref=e208]:
+        - generic [ref=e209]: ★★★★★
+        - paragraph [ref=e210]: “Showed up 45 minutes after I called. Gave me a flat quote, showed me the camera footage of the root in my main line, and had it cleared before dinner. I will never call anyone else.”
+        - generic [ref=e211]:
+          - generic [ref=e212]: MR
+          - generic [ref=e213]:
+            - generic [ref=e214]: Maria R.
+            - generic [ref=e215]: Los Angeles · Google
+      - article [ref=e216]:
+        - generic [ref=e217]: ★★★★★
+        - paragraph [ref=e218]: “Three other plumbers tried to sell me a $14k excavation. The Plumbing Stars hydro-jetted it for $480 and it's been running perfectly for two years. Genuinely honest people.”
+        - generic [ref=e219]:
+          - generic [ref=e220]: DK
+          - generic [ref=e221]:
+            - generic [ref=e222]: David K.
+            - generic [ref=e223]: Pasadena · Yelp
+      - article [ref=e224]:
+        - generic [ref=e225]: ★★★★★
+        - paragraph [ref=e226]: “Saturday night, sewer backing up into the basement. They were the only company to answer. Two techs, two hours — problem completely gone. Worth every penny.”
+        - generic [ref=e227]:
+          - generic [ref=e228]: JL
+          - generic [ref=e229]:
+            - generic [ref=e230]: Jennifer L.
+            - generic [ref=e231]: Burbank · Google
+  - generic [ref=e233]:
+    - generic [ref=e234]:
+      - generic [ref=e235]: FAQ
+      - heading "Common questions." [level=2] [ref=e236]
+    - generic [ref=e237]:
+      - group [ref=e238]:
+        - generic "How quickly can you get to me? +" [ref=e239] [cursor=pointer]
+      - group [ref=e240]:
+        - generic "Do you charge for estimates? +" [ref=e241] [cursor=pointer]
+      - group [ref=e242]:
+        - generic "What areas do you serve? +" [ref=e243] [cursor=pointer]
+      - group [ref=e244]:
+        - generic "What is your guarantee? +" [ref=e245] [cursor=pointer]
+      - group [ref=e246]:
+        - generic "Can you work on a weekend or holiday? +" [ref=e247] [cursor=pointer]
+  - generic [ref=e250]:
+    - generic [ref=e251]: Where We Work
+    - heading "Serving LA & Ventura Counties." [level=2] [ref=e252]
+    - paragraph [ref=e253]: From the San Fernando Valley to Oxnard — if you're in our service area, we're on our way.
+  - generic [ref=e256]:
+    - generic [ref=e257]:
+      - generic [ref=e258]: Get On The Schedule
+      - heading "Ready to get it fixed?" [level=2] [ref=e259]
+      - paragraph [ref=e260]: Tell us what's going on. A real person follows up in under 5 minutes during business hours — crews go out 24/7.
+      - list [ref=e261]:
+        - listitem [ref=e262]:
+          - img [ref=e263]
+          - text: Free estimates, every visit
+        - listitem [ref=e265]:
+          - img [ref=e266]
+          - text: 2-hour arrival windows
+        - listitem [ref=e268]:
+          - img [ref=e269]
+          - text: No trip charges, ever
+        - listitem [ref=e271]:
+          - img [ref=e272]
+          - text: Up to 5-year written guarantee
+    - generic [ref=e274]:
+      - heading "Book An Appointment" [level=3] [ref=e275]
+      - paragraph [ref=e276]: Fill out our quick form and we'll be in touch right away.
+      - link "Schedule My Visit" [ref=e277] [cursor=pointer]:
+        - /url: /booking
+      - generic [ref=e278]: — or —
+      - generic [ref=e279]: Call us anytime
+      - link "(888) 555-7827" [ref=e280] [cursor=pointer]:
+        - /url: tel:+18885557827
+  - contentinfo [ref=e281]:
+    - generic [ref=e282]:
+      - generic [ref=e283]:
+        - generic [ref=e284]:
+          - generic [ref=e285]:
+            - img "The Plumbing Stars" [ref=e286]
+            - generic [ref=e287]:
+              - text: The Plumbing
+              - text: Stars
+              - generic [ref=e288]: Los Angeles
+          - paragraph [ref=e289]: Family-owned. 25 years on the job. Licensed, insured, and proudly serving the greater Los Angeles area.
+          - generic [ref=e290]:
+            - link "Facebook" [ref=e291] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e292]
+            - link "Instagram" [ref=e294] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e295]
+            - link "Google Reviews" [ref=e298] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e299]
+        - generic [ref=e301]:
+          - heading "Services" [level=4] [ref=e302]
+          - link "Drain Cleaning" [ref=e303] [cursor=pointer]:
+            - /url: /services
+          - link "Sewer Line Repair" [ref=e304] [cursor=pointer]:
+            - /url: /services
+          - link "Hydro Jetting" [ref=e305] [cursor=pointer]:
+            - /url: /services
+          - link "Pipe Lining" [ref=e306] [cursor=pointer]:
+            - /url: /services
+          - link "Camera Inspection" [ref=e307] [cursor=pointer]:
+            - /url: /services
+          - link "Trenchless Replacement" [ref=e308] [cursor=pointer]:
+            - /url: /services
+        - generic [ref=e309]:
+          - heading "Company" [level=4] [ref=e310]
+          - link "About Us" [ref=e311] [cursor=pointer]:
+            - /url: /about
+          - link "Service Areas" [ref=e312] [cursor=pointer]:
+            - /url: /service-areas
+          - link "FAQ" [ref=e313] [cursor=pointer]:
+            - /url: /#faq
+          - link "Book Appointment" [ref=e314] [cursor=pointer]:
+            - /url: /booking
+          - link "Contact" [ref=e315] [cursor=pointer]:
+            - /url: /contact
+        - generic [ref=e316]:
+          - heading "Contact Us" [level=4] [ref=e317]
+          - generic [ref=e318]: 24/7 Hotline
+          - generic [ref=e319]: (888) 555-7827
+          - generic [ref=e320]: Email
+          - link "info@theplumbingstars.com" [ref=e321] [cursor=pointer]:
+            - /url: mailto:info@theplumbingstars.com
+          - generic [ref=e322]: Service Area
+          - generic [ref=e323]: Los Angeles & Surrounding Cities
+          - link "Book Now" [ref=e325] [cursor=pointer]:
+            - /url: /booking
+      - generic [ref=e326]:
+        - generic [ref=e327]: "© 2026 The Plumbing Stars · Lic #998456"
+        - generic [ref=e328]:
+          - link "Privacy" [ref=e329] [cursor=pointer]:
+            - /url: "#"
+          - link "Terms" [ref=e330] [cursor=pointer]:
+            - /url: "#"
+          - link "Accessibility" [ref=e331] [cursor=pointer]:
+            - /url: "#"

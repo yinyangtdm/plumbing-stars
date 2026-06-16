@@ -103,7 +103,7 @@ h1, h2, h3, h4 {
 
 /* Centered emblem */
 .emblem { display: flex; flex-direction: column; align-items: center; gap: 0; text-decoration: none; }
-.emblem img { height: 54px; }
+.emblem img { height: 54px; width: auto; }
 .emblem-name {
   font-family: var(--font-anton), sans-serif;
   color: var(--blue);
@@ -171,7 +171,7 @@ h1, h2, h3, h4 {
   .nav-desk { display: flex; }
   .menu-btn, .call-btn { display: none; }
   .nav-cta { display: flex; }
-  .emblem img { height: 68px; }
+  .emblem img { height: 68px; width: auto; }
   .emblem-name { font-size: 15px; }
   .emblem-city { font-size: 10px; }
 }

@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import MobileCallbar from '@/components/MobileCallbar'
@@ -58,9 +57,6 @@ export default async function HomePage() {
             {/* Credential card */}
             <div className="cred-card">
               <div className="cred-inner">
-                <div className="cred-logo">
-                  <Image src="/logo.svg" alt="The Plumbing Stars" width={80} height={80} />
-                </div>
                 <div className="cred-divider" />
                 <ul className="cred-list">
                   <li>
