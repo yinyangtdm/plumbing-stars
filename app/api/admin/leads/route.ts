@@ -24,6 +24,6 @@ export async function PUT(request: Request) {
   if (!id) return NextResponse.json({ error: 'ID required.' }, { status: 400 })
   await initDb()
   const db = getDb()
-  const [lead] = await db`UPDATE bookings SET status = ${status}, notes = ${notes ?? ''} WHERE id = ${id} RETURNING *`
-  return NextResponse.json(lead)
+  const rows = await db`UPDATE bookings SET status = ${status}, notes = ${notes ?? ''} WHERE id = ${id} RETURNING *` as Record<string, unknown>[]
+  return NextResponse.json(rows[0])
 }

@@ -24,8 +24,8 @@ export async function POST(request: Request) {
   if (!question?.trim() || !answer?.trim()) return NextResponse.json({ error: 'Question and answer required.' }, { status: 400 })
   await initDb()
   const db = getDb()
-  const [faq] = await db`INSERT INTO faqs (question, answer, display_order) VALUES (${question.trim()}, ${answer.trim()}, ${display_order ?? 0}) RETURNING *`
-  return NextResponse.json(faq, { status: 201 })
+  const rows = await db`INSERT INTO faqs (question, answer, display_order) VALUES (${question.trim()}, ${answer.trim()}, ${display_order ?? 0}) RETURNING *` as Record<string, unknown>[]
+  return NextResponse.json(rows[0], { status: 201 })
 }
 
 export async function PUT(request: Request) {
@@ -35,8 +35,8 @@ export async function PUT(request: Request) {
   if (!id || !question?.trim() || !answer?.trim()) return NextResponse.json({ error: 'ID, question, and answer required.' }, { status: 400 })
   await initDb()
   const db = getDb()
-  const [faq] = await db`UPDATE faqs SET question = ${question.trim()}, answer = ${answer.trim()}, display_order = ${display_order ?? 0} WHERE id = ${id} RETURNING *`
-  return NextResponse.json(faq)
+  const rows = await db`UPDATE faqs SET question = ${question.trim()}, answer = ${answer.trim()}, display_order = ${display_order ?? 0} WHERE id = ${id} RETURNING *` as Record<string, unknown>[]
+  return NextResponse.json(rows[0])
 }
 
 export async function DELETE(request: Request) {

@@ -10,6 +10,8 @@ const SERVICES = [
   'Drain Cleaning',
   'Sewer Line Repair',
   'Hydro Jetting',
+  'Pipe Lining',
+  'Epoxy Brush Coating',
   'Camera Inspection',
   'Trenchless Replacement',
   'Water Heater',
