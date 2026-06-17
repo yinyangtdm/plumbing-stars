@@ -1,19 +1,18 @@
 import type { Metadata } from 'next'
-import { Anton, Barlow, Barlow_Condensed } from 'next/font/google'
+import { DM_Serif_Display, Manrope } from 'next/font/google'
 import '../globals.css'
 import AdminSidebar from '@/components/admin/AdminSidebar'
 import { SessionProvider } from 'next-auth/react'
 
-const anton = Anton({ weight: '400', subsets: ['latin'], variable: '--font-anton', display: 'swap' })
-const barlow = Barlow({ weight: ['400', '500', '600', '700'], subsets: ['latin'], variable: '--font-barlow', display: 'swap' })
-const barlowCondensed = Barlow_Condensed({ weight: ['500', '600', '700', '800'], subsets: ['latin'], variable: '--font-barlow-condensed', display: 'swap' })
+const dmSerif = DM_Serif_Display({ weight: '400', subsets: ['latin'], variable: '--font-display', display: 'swap' })
+const manrope = Manrope({ subsets: ['latin'], variable: '--font-body', display: 'swap' })
 
 export const metadata: Metadata = { title: 'Admin — The Plumbing Stars' }
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`admin-body ${anton.variable} ${barlow.variable} ${barlowCondensed.variable}`}>
+      <body className={`admin-body ${dmSerif.variable} ${manrope.variable}`}>
         <SessionProvider>
           <AdminSidebar />
           <main className="admin-main">{children}</main>

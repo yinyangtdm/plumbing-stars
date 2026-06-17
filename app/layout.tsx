@@ -1,23 +1,18 @@
-import { Anton, Barlow, Barlow_Condensed } from 'next/font/google'
+import { DM_Serif_Display, Manrope } from 'next/font/google'
 import { pageMetadata } from '@/lib/metadata'
 import './globals.css'
 
-const anton = Anton({
+// Headings — elegant editorial serif
+const dmSerif = DM_Serif_Display({
   weight: '400',
   subsets: ['latin'],
-  variable: '--font-anton',
+  variable: '--font-display',
   display: 'swap',
 })
-const barlow = Barlow({
-  weight: ['400', '500', '600', '700'],
+// Body, labels, buttons — clean sans
+const manrope = Manrope({
   subsets: ['latin'],
-  variable: '--font-barlow',
-  display: 'swap',
-})
-const barlowCondensed = Barlow_Condensed({
-  weight: ['500', '600', '700', '800'],
-  subsets: ['latin'],
-  variable: '--font-barlow-condensed',
+  variable: '--font-body',
   display: 'swap',
 })
 
@@ -33,7 +28,7 @@ export function generateMetadata() {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${anton.variable} ${barlow.variable} ${barlowCondensed.variable}`}>
+      <body className={`${dmSerif.variable} ${manrope.variable}`}>
         {children}
       </body>
     </html>
