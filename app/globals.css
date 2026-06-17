@@ -250,7 +250,7 @@ h1, h2, h3, h4 {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: #fff;
+  background: #f9f8f9;
   border-bottom: 3px solid var(--blue);
 }
 
@@ -1102,3 +1102,4 @@ h1, h2, h3, h4 {
 .mb-40 { margin-bottom: 40px; }
 .area-note { margin-top: 20px; font-size: 13px; color: #5a6a86; font-style: italic; }
 .info-callout-note { margin: 6px 0 0; font-size: 13px; color: #5a6a86; }
+

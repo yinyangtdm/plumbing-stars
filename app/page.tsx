@@ -5,7 +5,7 @@ import MobileCallbar from '@/components/MobileCallbar'
 import ServiceAreaMapClientWrapper from '@/components/ServiceAreaMapClientWrapper'
 import { getDb, isDbConfigured } from '@/lib/db'
 import { SITE } from '@/lib/site'
-import { getCurrentCity } from '@/lib/city'
+import { CITY } from '@/lib/city'
 
 async function getFaqs() {
   if (!isDbConfigured()) return []
@@ -21,7 +21,7 @@ async function getFaqs() {
 
 export default async function HomePage() {
   const faqs = await getFaqs()
-  const city = await getCurrentCity()
+  const city = CITY
 
   return (
     <>

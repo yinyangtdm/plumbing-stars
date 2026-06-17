@@ -5,8 +5,6 @@
  * - Sticky top bar with utility information (24/7, licensing)
  * - Navigation with logo centered on desktop
  * - Mobile menu drawer for navigation
- *
- * @param city - City name to display under logo (Los Angeles or Ventura)
  */
 
 'use client'
@@ -15,12 +13,10 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { SITE } from '@/lib/site'
+import { CITY } from '@/lib/city'
 
-interface HeaderProps {
-  city?: string
-}
-
-export default function Header({ city = 'Los Angeles' }: HeaderProps) {
+export default function Header() {
+  const city = CITY.name
   const [drawerOpen, setDrawerOpen] = useState(false)
 
   return (

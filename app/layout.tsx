@@ -2,14 +2,13 @@ import { DM_Serif_Display, Manrope } from 'next/font/google'
 import { pageMetadata } from '@/lib/metadata'
 import './globals.css'
 
-// Headings — elegant editorial serif
 const dmSerif = DM_Serif_Display({
   weight: '400',
   subsets: ['latin'],
   variable: '--font-display',
   display: 'swap',
 })
-// Body, labels, buttons — clean sans
+
 const manrope = Manrope({
   subsets: ['latin'],
   variable: '--font-body',

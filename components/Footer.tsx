@@ -8,11 +8,11 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { getCurrentCity } from '@/lib/city'
+import { CITY } from '@/lib/city'
 import { SITE } from '@/lib/site'
 
-export default async function Footer() {
-  const city = await getCurrentCity()
+export default function Footer() {
+  const city = CITY
 
   return (
     <footer className="footer" id="contact">

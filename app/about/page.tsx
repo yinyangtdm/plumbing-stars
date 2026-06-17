@@ -4,7 +4,7 @@ import Footer from '@/components/Footer'
 import MobileCallbar from '@/components/MobileCallbar'
 import { pageMetadata } from '@/lib/metadata'
 import { SITE } from '@/lib/site'
-import { getCurrentCity } from '@/lib/city'
+import { CITY } from '@/lib/city'
 
 export function generateMetadata() {
   return pageMetadata(city => ({
@@ -13,8 +13,8 @@ export function generateMetadata() {
   }))
 }
 
-export default async function AboutPage() {
-  const city = await getCurrentCity()
+export default function AboutPage() {
+  const city = CITY
   return (
     <>
       <HeaderWrapper />

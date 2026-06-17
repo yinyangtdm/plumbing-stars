@@ -3,7 +3,7 @@ import HeaderWrapper from '@/components/HeaderWrapper'
 import Footer from '@/components/Footer'
 import MobileCallbar from '@/components/MobileCallbar'
 import ServiceAreaMapClientWrapper from '@/components/ServiceAreaMapClientWrapper'
-import { getCurrentCity } from '@/lib/city'
+import { CITY } from '@/lib/city'
 import { pageMetadata } from '@/lib/metadata'
 import { SITE } from '@/lib/site'
 
@@ -23,16 +23,8 @@ const LA_AREAS = [
   'Covina', 'West Covina', 'Whittier', 'Norwalk', 'Downey',
 ]
 
-const VENTURA_AREAS = [
-  'Oxnard', 'Ventura', 'Thousand Oaks', 'Camarillo', 'Simi Valley',
-  'Moorpark', 'Newbury Park', 'Westlake Village', 'Oak Park', 'Agoura Hills',
-  'Port Hueneme', 'Santa Paula', 'Fillmore', 'Ojai', 'Calabasas',
-]
-
-export default async function ServiceAreasPage() {
-  const city = await getCurrentCity()
-  const isLA = city.slug === 'los-angeles'
-  const areas = isLA ? LA_AREAS : VENTURA_AREAS
+export default function ServiceAreasPage() {
+  const city = CITY
 
   return (
     <>
@@ -41,7 +33,7 @@ export default async function ServiceAreasPage() {
       <section className="page-hero">
         <div className="chev" />
         <div className="container">
-          <div className="eyebrow eyebrow-light">{isLA ? 'Los Angeles County' : 'Ventura County'}</div>
+          <div className="eyebrow eyebrow-light">Los Angeles County</div>
           <h1>We Come <span className="out">To</span><br />You.</h1>
           <p className="page-hero-sub">Serving {city.name} County — same-day available, no extra charge for most zip codes.</p>
         </div>
@@ -57,10 +49,10 @@ export default async function ServiceAreasPage() {
 
           <div className="areas-grid">
             <div className="area-card">
-              <h3>{isLA ? 'Los Angeles' : 'Ventura'} County</h3>
-              <div className="area-sub">plumbingstars{isLA ? 'losangeles' : 'ventura'}.com</div>
+              <h3>Los Angeles County</h3>
+              <div className="area-sub">plumbingstarslosangeles.com</div>
               <ul className="area-neighborhoods">
-                {areas.map(area => <li key={area}>{area}</li>)}
+                {LA_AREAS.map(area => <li key={area}>{area}</li>)}
               </ul>
               <p className="area-note">
                 Don&apos;t see your city? Call us — our coverage is always expanding.

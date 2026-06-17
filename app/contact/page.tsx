@@ -5,7 +5,7 @@ import MobileCallbar from '@/components/MobileCallbar'
 import ContactForm from './ContactForm'
 import { pageMetadata } from '@/lib/metadata'
 import { SITE } from '@/lib/site'
-import { getCurrentCity } from '@/lib/city'
+import { CITY } from '@/lib/city'
 
 export function generateMetadata() {
   return pageMetadata(city => ({
@@ -14,8 +14,8 @@ export function generateMetadata() {
   }))
 }
 
-export default async function ContactPage() {
-  const city = await getCurrentCity()
+export default function ContactPage() {
+  const city = CITY
   return (
     <>
       <HeaderWrapper />
