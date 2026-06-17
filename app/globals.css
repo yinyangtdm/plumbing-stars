@@ -944,3 +944,154 @@ h1, h2, h3, h4 {
 /* ===== DEALS GRID (two promo tickets side by side) ===== */
 .deals-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
 @media(min-width:760px) { .deals-grid { grid-template-columns: 1fr 1fr; } }
+
+/* ============================================================================
+   20. UTILITIES & MIGRATED COMPONENT CLASSES
+   ----------------------------------------------------------------------------
+   Classes extracted from former inline style={{}} props so markup stays clean
+   and styling lives in one place. Grouped: shared utilities first, then
+   page/component-specific classes.
+   ============================================================================ */
+
+/* --- Icon sizing ------------------------------------------------------------ */
+.icon-16 { width: 16px; height: 16px; }
+.icon-18 { width: 18px; height: 18px; }
+
+/* --- Spacing scale (named by pixel value for exact, predictable matches) ---- */
+.mt-0 { margin-top: 0; }
+.mt-8 { margin-top: 8px; }
+.mt-18 { margin-top: 18px; }
+.mt-20 { margin-top: 20px; }
+.mt-24 { margin-top: 24px; }
+.mt-50 { margin-top: 50px; }
+.mb-6 { margin-bottom: 6px; }
+.mb-10 { margin-bottom: 10px; }
+.mb-12 { margin-bottom: 12px; }
+.mb-14 { margin-bottom: 14px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-24 { margin-bottom: 24px; }
+
+/* --- Common helpers --------------------------------------------------------- */
+.eyebrow-light { color: var(--sky); }                 /* eyebrow on dark/blue bg */
+.btn-full { width: 100%; justify-content: center; }   /* full-width button */
+.text-outline { -webkit-text-stroke: 2px #fff; color: transparent; }
+.above-chev { position: relative; z-index: 1; }       /* sit above .chev overlay */
+
+/* Button groups */
+.btn-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-row-sm { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-row-center { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn-stack { margin-top: 16px; display: grid; gap: 10px; }
+
+/* --- Home page -------------------------------------------------------------- */
+.hero-line { display: block; }                        /* stacked <h1> lines */
+
+/* --- Services page ---------------------------------------------------------- */
+.svc-intro { font-weight: 600; color: #1a2a4a; }
+.svc-how-label {
+  font-family: var(--font-barlow-condensed), sans-serif;
+  text-transform: uppercase; letter-spacing: .1em; font-size: 13px; color: var(--blue);
+}
+/* Blue variant of the promo ticket (second deal card) */
+.promo-ticket--blue { border-left-color: var(--blue); }
+.promo-ticket--blue .ribbon { background: var(--red); }
+.promo-ticket--blue .ptop,
+.promo-ticket--blue .price { color: var(--blue); }
+
+/* --- About page ------------------------------------------------------------- */
+.about-story-title { font-size: clamp(34px, 5vw, 56px); color: var(--blue); margin: 12px 0; }
+.story-text { font-size: 17px; color: #3e4a66; line-height: 1.7; margin-bottom: 14px; }
+
+/* --- Dark CTA section (about, service-areas) -------------------------------- */
+.section-cta-center { text-align: center; position: relative; z-index: 1; }
+.cta-title { font-size: clamp(36px, 6vw, 64px); color: #fff; margin: 12px 0 14px; }
+.cta-sub { color: #b6c6e3; max-width: 480px; margin: 0 auto 28px; }
+
+/* --- Info callout boxes (contact license, booking emergency) ---------------- */
+.info-callout {
+  margin-top: 20px; padding: 20px 24px; background: var(--sky-2);
+  border-radius: 6px; border-left: 5px solid var(--blue);
+}
+.info-callout-title {
+  margin: 0; font-family: var(--font-barlow-condensed), sans-serif; font-weight: 700;
+  font-size: 16px; color: var(--blue); text-transform: uppercase; letter-spacing: .06em;
+}
+.emergency-callout {
+  margin-top: 32px; padding: 24px; background: var(--sky-2);
+  border-radius: 8px; border-left: 4px solid var(--blue);
+}
+.emergency-callout-label {
+  font-family: var(--font-barlow-condensed), sans-serif; text-transform: uppercase;
+  letter-spacing: .2em; font-size: 11px; color: var(--red); font-weight: 700; margin-bottom: 6px;
+}
+.emergency-callout-phone {
+  font-family: var(--font-anton), sans-serif; font-size: 28px; color: var(--blue); display: block;
+}
+.emergency-callout-note { font-size: 13px; color: #5a6a86; margin: 8px 0 0; }
+
+/* --- Contact form success screen -------------------------------------------- */
+.form-success { padding: 60px 40px; text-align: center; }
+.form-success-star { font-size: 48px; color: #F5C518; margin-bottom: 16px; }
+.form-success-title { font-size: 28px; color: var(--blue); margin-bottom: 10px; }
+.form-success-text { color: #3e4a66; font-size: 16px; }
+
+/* --- Service area map legend dots ------------------------------------------- */
+.legend-dot--la { background: var(--blue); }
+.legend-dot--ventura { background: var(--red); }
+
+/* ============================================================================
+   21. ADMIN UTILITIES (migrated from inline styles)
+   ============================================================================ */
+
+/* Table cell + link helpers */
+.table-scroll { overflow-x: auto; }
+.cell-strong { font-weight: 600; }
+.cell-muted { color: #7e94b6; font-size: 13px; }
+.cell-answer { color: #5a6a86; font-size: 14px; max-width: 340px; }
+.cell-w280 { max-width: 280px; }
+.text-muted { color: #7e94b6; }
+.link-blue { color: var(--blue); }
+.row-clickable { cursor: pointer; }
+.flex-1 { flex: 1; }
+.flex-gap-8 { display: flex; gap: 8px; }
+.flex-gap-10 { display: flex; gap: 10px; }
+
+/* Leads page: filter bar + status pills */
+.admin-filter-bar { display: flex; gap: 8px; align-items: center; }
+.admin-filter-label {
+  font-family: var(--font-barlow-condensed), sans-serif; font-size: 12px;
+  text-transform: uppercase; letter-spacing: .1em; color: #7e94b6;
+}
+.filter-pill {
+  padding: 5px 14px; border-radius: 20px; border: none; cursor: pointer; font-size: 12px;
+  font-family: var(--font-barlow-condensed), sans-serif; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .06em; background: #eef0f6; color: #5a6a86;
+}
+.filter-pill.active { background: var(--blue); color: #fff; }
+
+/* Leads page: responsive list/detail layout */
+.leads-layout { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.leads-layout--detail { grid-template-columns: 1fr 380px; }
+.lead-detail { align-self: start; position: sticky; top: 24px; }
+.lead-field-value { font-size: 15px; color: var(--ink); }
+.lead-message {
+  margin-bottom: 16px; padding: 14px; background: #f5f7fb;
+  border-radius: 4px; border-left: 3px solid var(--blue);
+}
+.lead-message p { margin: 0; font-size: 14px; color: #3e4a66; line-height: 1.6; }
+.icon-btn { background: none; border: none; cursor: pointer; color: #7e94b6; font-size: 20px; }
+
+/* Admin button color variants */
+.admin-btn-call { background: #e6f4ea; color: #065f46; }
+.admin-btn-neutral { background: #eef0f6; color: var(--ink); }
+
+/* Admin form helpers */
+.admin-form-msg {
+  color: var(--red); font-family: var(--font-barlow-condensed), sans-serif;
+  font-size: 13px; margin-bottom: 12px;
+}
+.textarea-tall { min-height: 120px; }
+
+/* Sidebar sign-out button reset (link styling already on .admin-sidebar-footer a) */
+.signout-btn { background: none; border: none; cursor: pointer; width: 100%; text-align: left; padding: 0; }
