@@ -3,11 +3,12 @@ import HeaderWrapper from '@/components/HeaderWrapper'
 import Footer from '@/components/Footer'
 import MobileCallbar from '@/components/MobileCallbar'
 import ServiceAreaMapClientWrapper from '@/components/ServiceAreaMapClientWrapper'
-import { getDb } from '@/lib/db'
+import { getDb, isDbConfigured } from '@/lib/db'
 import { SITE } from '@/lib/site'
 import { getCurrentCity } from '@/lib/city'
 
 async function getFaqs() {
+  if (!isDbConfigured()) return []
   try {
     const db = getDb()
     return await db`SELECT * FROM faqs ORDER BY display_order ASC, id ASC` as {

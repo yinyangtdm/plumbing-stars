@@ -1,7 +1,8 @@
-import { getDb, initDb } from '@/lib/db'
+import { getDb, initDb, isDbConfigured } from '@/lib/db'
 import Link from 'next/link'
 
 async function getStats() {
+  if (!isDbConfigured()) return { total: 0, newLeads: 0, booked: 0, completed: 0, recent: [] }
   try {
     await initDb()
     const db = getDb()

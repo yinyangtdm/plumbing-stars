@@ -2,6 +2,16 @@ import { neon } from '@neondatabase/serverless'
 
 let sql: ReturnType<typeof neon> | null = null
 
+/**
+ * True only when a real database connection string is configured. The repo
+ * ships with a placeholder (host.neon.tech); until that's replaced with a real
+ * Neon endpoint, the site runs fine in email-only mode (no database).
+ */
+export function isDbConfigured(): boolean {
+  const url = process.env.DATABASE_URL
+  return Boolean(url && !url.includes('host.neon.tech'))
+}
+
 export function getDb() {
   if (!sql) {
     const url = process.env.DATABASE_URL
