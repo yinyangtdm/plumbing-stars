@@ -45,11 +45,11 @@ export default function ContactForm() {
 
   if (status === 'ok') {
     return (
-      <div style={{ padding: '60px 40px', textAlign: 'center' }}>
-        <div style={{ fontSize: 48, color: '#F5C518', marginBottom: 16 }}>★</div>
-        <h3 style={{ fontSize: 28, color: 'var(--blue)', marginBottom: 10 }}>Message Received!</h3>
-        <p style={{ color: '#3e4a66', fontSize: 16 }}>We&apos;ll get back to you within 1 business hour. For emergencies, call us directly.</p>
-        <a href={SITE.phone.href} className="btn btn-red" style={{ marginTop: 20 }}>Call {SITE.phone.display}</a>
+      <div className="form-success">
+        <div className="form-success-star">★</div>
+        <h3 className="form-success-title">Message Received!</h3>
+        <p className="form-success-text">We&apos;ll get back to you within 1 business hour. For emergencies, call us directly.</p>
+        <a href={SITE.phone.href} className="btn btn-red mt-20">Call {SITE.phone.display}</a>
       </div>
     )
   }
@@ -87,7 +87,7 @@ export default function ContactForm() {
         />
       </div>
       {status === 'err' && <div className="form-msg error">{errMsg}</div>}
-      <button type="submit" className="btn btn-red" style={{ width: '100%' }} disabled={status === 'sending'}>
+      <button type="submit" className="btn btn-red btn-full" disabled={status === 'sending'}>
         {status === 'sending' ? 'Sending…' : 'Send Message'}
       </button>
     </form>

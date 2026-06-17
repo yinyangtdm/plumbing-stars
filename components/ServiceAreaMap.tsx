@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useRef } from 'react'
-import { City } from '@/lib/city'
+import type { City } from '@/lib/city'
 
 // Simplified county boundary polygons [lat, lng]
 const LA_COUNTY: [number, number][] = [
@@ -79,12 +79,12 @@ export default function ServiceAreaMap({ city = 'los-angeles' }: ServiceAreaMapP
       <div className="map-legend">
         {city === 'los-angeles' && (
           <>
-            <span className="legend-dot" style={{ background: '#083E85' }} /> Los Angeles County
+            <span className="legend-dot legend-dot--la" /> Los Angeles County
           </>
         )}
         {city === 'ventura' && (
           <>
-            <span className="legend-dot" style={{ background: '#CB2431' }} /> Ventura County
+            <span className="legend-dot legend-dot--ventura" /> Ventura County
           </>
         )}
       </div>

@@ -959,6 +959,7 @@ h1, h2, h3, h4 {
 
 /* --- Spacing scale (named by pixel value for exact, predictable matches) ---- */
 .mt-0 { margin-top: 0; }
+.mt-4 { margin-top: 4px; }
 .mt-8 { margin-top: 8px; }
 .mt-18 { margin-top: 18px; }
 .mt-20 { margin-top: 20px; }
@@ -1095,3 +1096,9 @@ h1, h2, h3, h4 {
 
 /* Sidebar sign-out button reset (link styling already on .admin-sidebar-footer a) */
 .signout-btn { background: none; border: none; cursor: pointer; width: 100%; text-align: left; padding: 0; }
+
+/* --- Small leftovers -------------------------------------------------------- */
+.text-red { color: var(--red); }            /* inline accent spans */
+.mb-40 { margin-bottom: 40px; }
+.area-note { margin-top: 20px; font-size: 13px; color: #5a6a86; font-style: italic; }
+.info-callout-note { margin: 6px 0 0; font-size: 13px; color: #5a6a86; }

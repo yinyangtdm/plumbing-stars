@@ -65,7 +65,7 @@ export default function ServicesPage() {
       <section className="page-hero">
         <div className="chev" />
         <div className="container">
-          <div className="eyebrow" style={{ color: 'var(--sky)' }}>What We Do</div>
+          <div className="eyebrow eyebrow-light">What We Do</div>
           <h1>Every drain &amp; sewer<br /><span className="out">service</span> you need.</h1>
           <p className="page-hero-sub">Flat-rate pricing. Written guarantee. Same-day available. Licensed tech every time.</p>
         </div>
@@ -79,14 +79,14 @@ export default function ServicesPage() {
                 <div className="service-detail-body">
                   <span className="svc-num">SVC {svc.num}</span>
                   <h3>{svc.title}</h3>
-                  <p style={{ fontWeight: 600, color: '#1a2a4a' }}>{svc.intro}</p>
+                  <p className="svc-intro">{svc.intro}</p>
                   <p>
-                    <strong style={{ fontFamily: 'var(--font-barlow-condensed)', textTransform: 'uppercase', letterSpacing: '.1em', fontSize: 13, color: 'var(--blue)' }}>
+                    <strong className="svc-how-label">
                       How It Works
                     </strong>
                     <br />{svc.how}
                   </p>
-                  <Link href="/booking" className="btn btn-red" style={{ marginTop: 8 }}>Book This Service</Link>
+                  <Link href="/booking" className="btn btn-red mt-8">Book This Service</Link>
                 </div>
                 <div className="service-detail-meta">
                   {svc.tags.map(tag => (
@@ -106,10 +106,10 @@ export default function ServicesPage() {
 
       <section className="section dark">
         <div className="chev" />
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="section-head" style={{ marginBottom: 40 }}>
-            <div className="eyebrow" style={{ color: 'var(--sky)' }}>Special Offers</div>
-            <h2 style={{ color: '#fff' }}>Flat rates. <span style={{ color: 'var(--red)' }}>Real guarantees.</span></h2>
+        <div className="container above-chev">
+          <div className="section-head mb-40">
+            <div className="eyebrow eyebrow-light">Special Offers</div>
+            <h2>Flat rates. <span className="text-red">Real guarantees.</span></h2>
           </div>
           <div className="deals-grid">
             <div className="promo-ticket">
@@ -118,18 +118,18 @@ export default function ServicesPage() {
               <h4>Main-Line Drain Cleaning</h4>
               <div className="price">$93</div>
               <div className="fine">If we can&apos;t unclog your drain, you pay nothing — no service fee, no trip charge. Applies to standard main-line drain cleaning. Limit one per household.</div>
-              <div style={{ marginTop: 18 }}>
-                <a href={SITE.phone.href} className="btn btn-red" style={{ width: '100%' }}>Claim by Phone</a>
+              <div className="mt-18">
+                <a href={SITE.phone.href} className="btn btn-red btn-full">Claim by Phone</a>
               </div>
             </div>
-            <div className="promo-ticket" style={{ borderLeftColor: 'var(--blue)' }}>
-              <div className="ribbon" style={{ background: 'var(--red)' }}>HD VIDEO INCLUDED</div>
-              <div className="ptop" style={{ color: 'var(--blue)' }}>Sewer Camera Inspection</div>
+            <div className="promo-ticket promo-ticket--blue">
+              <div className="ribbon">HD VIDEO INCLUDED</div>
+              <div className="ptop">Sewer Camera Inspection</div>
               <h4>Full Sewer Line Inspection</h4>
-              <div className="price" style={{ color: 'var(--blue)' }}>$250</div>
+              <div className="price">$250</div>
               <div className="fine">HD video down your entire sewer line — we record it and send you the footage. Know exactly what&apos;s wrong before you spend a dollar on repairs. Includes written findings report.</div>
-              <div style={{ marginTop: 18 }}>
-                <Link href="/booking" className="btn btn-blue" style={{ width: '100%' }}>Book Inspection</Link>
+              <div className="mt-18">
+                <Link href="/booking" className="btn btn-blue btn-full">Book Inspection</Link>
               </div>
             </div>
           </div>

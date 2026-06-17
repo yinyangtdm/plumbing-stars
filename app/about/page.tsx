@@ -4,6 +4,7 @@ import Footer from '@/components/Footer'
 import MobileCallbar from '@/components/MobileCallbar'
 import { pageMetadata } from '@/lib/metadata'
 import { SITE } from '@/lib/site'
+import { getCurrentCity } from '@/lib/city'
 
 export function generateMetadata() {
   return pageMetadata(city => ({
@@ -12,7 +13,8 @@ export function generateMetadata() {
   }))
 }
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const city = await getCurrentCity()
   return (
     <>
       <HeaderWrapper />
@@ -20,7 +22,7 @@ export default function AboutPage() {
       <section className="page-hero">
         <div className="chev" />
         <div className="container">
-          <div className="eyebrow" style={{ color: 'var(--sky)' }}>Est. 2001 · Los Angeles</div>
+          <div className="eyebrow eyebrow-light">Est. 2001 · {city.name}</div>
           <h1>The Stars <span className="out">Behind</span><br />The Drain.</h1>
           <p className="page-hero-sub">Family-owned. California-licensed. 25 years fixing the drains other plumbers won&apos;t touch.</p>
         </div>
@@ -31,19 +33,19 @@ export default function AboutPage() {
           <div className="about-story-grid">
             <div>
               <div className="eyebrow">Our Story</div>
-              <h2 style={{ fontSize: 'clamp(34px, 5vw, 56px)', color: 'var(--blue)', margin: '12px 0' }}>
-                Built on the <span style={{ color: 'var(--red)' }}>streets of LA.</span>
+              <h2 className="about-story-title">
+                Built on the <span className="text-red">streets of LA.</span>
               </h2>
-              <p style={{ fontSize: 17, color: '#3e4a66', marginBottom: 14, lineHeight: 1.7 }}>
+              <p className="story-text">
                 The Plumbing Stars started in 2001 with one truck and one promise: show up on time, fix it right, and never leave a homeowner guessing about the price. Two and a half decades later, that&apos;s still how we run every job.
               </p>
-              <p style={{ fontSize: 17, color: '#3e4a66', marginBottom: 14, lineHeight: 1.7 }}>
+              <p className="story-text">
                 We specialize in drain and sewer work — the dirty jobs most plumbers would rather skip. It&apos;s not glamorous, but when your main line backs up at midnight, you want someone who has seen it a thousand times. We have.
               </p>
-              <p style={{ fontSize: 17, color: '#3e4a66', marginBottom: 24, lineHeight: 1.7 }}>
+              <p className="story-text mb-24">
                 Now expanding into Ventura County, we bring the same licensed, flat-rate, guarantee-backed service that made us a household name across LA.
               </p>
-              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+              <div className="btn-row">
                 <a href={SITE.phone.href} className="btn btn-red">Call {SITE.phone.display}</a>
                 <Link href="/booking" className="btn btn-blue">Book Online</Link>
               </div>
@@ -51,12 +53,12 @@ export default function AboutPage() {
             <div>
               <div className="cred-card">
                 <div className="cred-inner">
-                  <div className="eyebrow" style={{ color: 'var(--sky)', marginBottom: 16 }}>License &amp; Credentials</div>
+                  <div className="eyebrow eyebrow-light mb-16">License &amp; Credentials</div>
                   <ul className="cred-list">
                     {[
                       `CA Contractor License #${SITE.license}`,
                       'Licensed & Bonded — State of California',
-                      '25+ Years Serving Los Angeles',
+                      `25+ Years Serving ${city.name}`,
                       '24/7 Emergency Dispatch',
                       'BBB Accredited — A+ Rating',
                       'Flat-Rate Pricing — No Surprises',
@@ -112,15 +114,15 @@ export default function AboutPage() {
 
       <section className="section dark">
         <div className="chev" />
-        <div className="container" style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
-          <div className="eyebrow" style={{ color: 'var(--sky)' }}>Ready to book?</div>
-          <h2 style={{ fontSize: 'clamp(36px, 6vw, 64px)', color: '#fff', margin: '12px 0 14px' }}>
+        <div className="container section-cta-center">
+          <div className="eyebrow eyebrow-light">Ready to book?</div>
+          <h2 className="cta-title">
             Let the Stars handle it.
           </h2>
-          <p style={{ color: '#b6c6e3', maxWidth: 480, margin: '0 auto 28px' }}>
+          <p className="cta-sub">
             Call for same-day service or book online. We serve all of Los Angeles and Ventura County.
           </p>
-          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <div className="btn-row-center">
             <a href={SITE.phone.href} className="btn btn-red">Call {SITE.phone.display}</a>
             <Link href="/booking" className="btn btn-ghost">Book Online</Link>
           </div>

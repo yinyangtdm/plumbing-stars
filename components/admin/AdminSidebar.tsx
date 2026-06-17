@@ -63,10 +63,10 @@ export default function AdminSidebar() {
       <div className="admin-sidebar-footer">
         <button
           onClick={() => signOut({ callbackUrl: '/admin/login' })}
-          style={{ background: 'none', border: 'none', cursor: 'pointer', width: '100%', textAlign: 'left', padding: 0 }}
+          className="signout-btn"
         >
-          <a style={{ display: 'flex', alignItems: 'center', gap: 10, color: '#7e94b6', fontFamily: 'var(--font-barlow-condensed)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.08em', fontSize: 13 }}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ width: 16, height: 16 }}>
+          <a>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="icon-16">
               <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" />
             </svg>
             Sign Out

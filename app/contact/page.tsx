@@ -5,6 +5,7 @@ import MobileCallbar from '@/components/MobileCallbar'
 import ContactForm from './ContactForm'
 import { pageMetadata } from '@/lib/metadata'
 import { SITE } from '@/lib/site'
+import { getCurrentCity } from '@/lib/city'
 
 export function generateMetadata() {
   return pageMetadata(city => ({
@@ -13,7 +14,8 @@ export function generateMetadata() {
   }))
 }
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const city = await getCurrentCity()
   return (
     <>
       <HeaderWrapper />
@@ -21,7 +23,7 @@ export default function ContactPage() {
       <section className="page-hero">
         <div className="chev" />
         <div className="container">
-          <div className="eyebrow" style={{ color: 'var(--sky)' }}>24/7 Emergency Service</div>
+          <div className="eyebrow eyebrow-light">24/7 Emergency Service</div>
           <h1>Let&apos;s fix <span className="out">your</span><br />drain.</h1>
           <p className="page-hero-sub">Call for same-day service or send us a message — we respond within 1 business hour.</p>
         </div>
@@ -39,7 +41,7 @@ export default function ContactPage() {
             <div>
               <div className="contact-info-card">
                 <div className="inner">
-                  <div className="eyebrow" style={{ color: 'var(--sky)', marginBottom: 20 }}>Contact Info</div>
+                  <div className="eyebrow eyebrow-light mb-20">Contact Info</div>
 
                   <div className="contact-info-item">
                     <div className="icon">
@@ -87,24 +89,24 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4>Service Area</h4>
-                      <p>Los Angeles &amp; Ventura County</p>
+                      <p>{city.name} County &amp; Surrounding Areas</p>
                     </div>
                   </div>
 
-                  <div style={{ marginTop: 24 }}>
-                    <Link href="/booking" className="btn btn-red" style={{ width: '100%' }}>
+                  <div className="mt-24">
+                    <Link href="/booking" className="btn btn-red btn-full">
                       Book Online Instead
                     </Link>
                   </div>
                 </div>
               </div>
 
-              <div style={{ marginTop: 20, padding: '20px 24px', background: 'var(--sky-2)', borderRadius: 6, borderLeft: '5px solid var(--blue)' }}>
-                <div className="eyebrow" style={{ marginBottom: 6 }}>License</div>
-                <p style={{ margin: 0, fontFamily: 'var(--font-barlow-condensed)', fontWeight: 700, fontSize: 16, color: 'var(--blue)', textTransform: 'uppercase', letterSpacing: '.06em' }}>
+              <div className="info-callout">
+                <div className="eyebrow mb-6">License</div>
+                <p className="info-callout-title">
                   CA Contractor Lic. #{SITE.license}
                 </p>
-                <p style={{ margin: '6px 0 0', fontSize: 13, color: '#5a6a86' }}>Licensed · Bonded · Insured — State of California</p>
+                <p className="info-callout-note">Licensed · Bonded · Insured — State of California</p>
               </div>
             </div>
           </div>

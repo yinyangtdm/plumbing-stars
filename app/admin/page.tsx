@@ -33,7 +33,7 @@ export default async function AdminDashboard() {
       <div className="admin-topbar">
         <h1>Dashboard</h1>
         <Link href="/booking" className="admin-btn admin-btn-primary" target="_blank">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ width: 16, height: 16 }}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="icon-16">
             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" />
           </svg>
           View Booking Page
@@ -64,7 +64,7 @@ export default async function AdminDashboard() {
           <h2>Recent Leads</h2>
           <Link href="/admin/leads" className="admin-btn admin-btn-primary admin-btn-sm">View All →</Link>
         </div>
-        <div style={{ overflowX: 'auto' }}>
+        <div className="table-scroll">
           {stats.recent.length === 0 ? (
             <div className="admin-empty">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -87,11 +87,11 @@ export default async function AdminDashboard() {
               <tbody>
                 {stats.recent.map(lead => (
                   <tr key={lead.id}>
-                    <td style={{ fontWeight: 600 }}>{lead.name}</td>
-                    <td><a href={`tel:${lead.phone}`} style={{ color: 'var(--blue)' }}>{lead.phone}</a></td>
+                    <td className="cell-strong">{lead.name}</td>
+                    <td><a href={`tel:${lead.phone}`} className="link-blue">{lead.phone}</a></td>
                     <td>{lead.service}</td>
                     <td><span className={`badge ${STATUS_BADGE[lead.status] || 'badge-new'}`}>{lead.status}</span></td>
-                    <td style={{ color: '#7e94b6', fontSize: 13 }}>{new Date(lead.created_at).toLocaleDateString()}</td>
+                    <td className="cell-muted">{new Date(lead.created_at).toLocaleDateString()}</td>
                     <td><Link href={`/admin/leads?id=${lead.id}`} className="admin-btn admin-btn-primary admin-btn-sm">View</Link></td>
                   </tr>
                 ))}

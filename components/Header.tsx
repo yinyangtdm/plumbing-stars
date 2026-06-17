@@ -136,9 +136,9 @@ export default function Header({ city = 'Los Angeles' }: HeaderProps) {
             <Link className="item" href="/contact" onClick={() => setDrawerOpen(false)}>Contact <span>→</span></Link>
 
             {/* Action buttons section */}
-            <div style={{ marginTop: 16, display: 'grid', gap: 10 }}>
-              <a href={SITE.phone.href} className="btn btn-blue" style={{ width: '100%' }}>Call {SITE.phone.display}</a>
-              <Link href="/booking" className="btn btn-red" style={{ width: '100%' }} onClick={() => setDrawerOpen(false)}>Book Online</Link>
+            <div className="btn-stack">
+              <a href={SITE.phone.href} className="btn btn-blue btn-full">Call {SITE.phone.display}</a>
+              <Link href="/booking" className="btn btn-red btn-full" onClick={() => setDrawerOpen(false)}>Book Online</Link>
             </div>
           </div>
         </div>

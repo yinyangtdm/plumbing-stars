@@ -6,3 +6,8 @@ data/
 .DS_Store
 Thumbs.db
 .superpowers/
+
+# Playwright MCP scratch artifacts
+.playwright-mcp/
+verify-*.jpeg
+verify-*.png

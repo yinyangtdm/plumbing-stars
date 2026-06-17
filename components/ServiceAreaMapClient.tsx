@@ -1,7 +1,7 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import { City } from '@/lib/city'
+import type { City } from '@/lib/city'
 
 const ServiceAreaMap = dynamic(() => import('./ServiceAreaMap'), { ssr: false })
 

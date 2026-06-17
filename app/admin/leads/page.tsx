@@ -55,18 +55,13 @@ export default function LeadsPage() {
     <>
       <div className="admin-topbar">
         <h1>Leads / CRM</h1>
-        <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
-          <span style={{ fontFamily: 'var(--font-barlow-condensed)', fontSize: 12, textTransform: 'uppercase', letterSpacing: '.1em', color: '#7e94b6' }}>Filter:</span>
+        <div className="admin-filter-bar">
+          <span className="admin-filter-label">Filter:</span>
           {['all', ...STATUSES].map(s => (
             <button
               key={s}
               onClick={() => setFilter(s)}
-              style={{
-                padding: '5px 14px', borderRadius: 20, border: 'none', cursor: 'pointer', fontSize: 12,
-                fontFamily: 'var(--font-barlow-condensed)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.06em',
-                background: filter === s ? 'var(--blue)' : '#eef0f6',
-                color: filter === s ? '#fff' : '#5a6a86',
-              }}
+              className={`filter-pill ${filter === s ? 'active' : ''}`}
             >
               {s}
             </button>
@@ -74,7 +69,7 @@ export default function LeadsPage() {
         </div>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: selected ? '1fr 380px' : '1fr', gap: 20 }}>
+      <div className={`leads-layout ${selected ? 'leads-layout--detail' : ''}`}>
         {/* List */}
         <div className="admin-card">
           <div className="admin-card-header">
@@ -88,7 +83,7 @@ export default function LeadsPage() {
               <p>No leads {filter !== 'all' ? `with status "${filter}"` : 'yet'}.</p>
             </div>
           ) : (
-            <div style={{ overflowX: 'auto' }}>
+            <div className="table-scroll">
               <table className="admin-table">
                 <thead>
                   <tr>
@@ -97,13 +92,13 @@ export default function LeadsPage() {
                 </thead>
                 <tbody>
                   {filtered.map(lead => (
-                    <tr key={lead.id} style={{ cursor: 'pointer' }} onClick={() => openLead(lead)}>
-                      <td style={{ fontWeight: 600 }}>{lead.name}</td>
-                      <td><a href={`tel:${lead.phone}`} onClick={e => e.stopPropagation()} style={{ color: 'var(--blue)' }}>{lead.phone}</a></td>
+                    <tr key={lead.id} className="row-clickable" onClick={() => openLead(lead)}>
+                      <td className="cell-strong">{lead.name}</td>
+                      <td><a href={`tel:${lead.phone}`} onClick={e => e.stopPropagation()} className="link-blue">{lead.phone}</a></td>
                       <td>{lead.service}</td>
-                      <td style={{ fontSize: 13, color: '#7e94b6' }}>{lead.preferred_date || '—'}</td>
+                      <td className="cell-muted">{lead.preferred_date || '—'}</td>
                       <td><span className={`badge ${STATUS_BADGE[lead.status] || 'badge-new'}`}>{lead.status}</span></td>
-                      <td style={{ fontSize: 13, color: '#7e94b6' }}>{new Date(lead.created_at).toLocaleDateString()}</td>
+                      <td className="cell-muted">{new Date(lead.created_at).toLocaleDateString()}</td>
                       <td><button className="admin-btn admin-btn-primary admin-btn-sm">Open</button></td>
                     </tr>
                   ))}
@@ -115,14 +110,14 @@ export default function LeadsPage() {
 
         {/* Detail panel */}
         {selected && (
-          <div className="admin-card" style={{ alignSelf: 'start', position: 'sticky', top: 24 }}>
+          <div className="admin-card lead-detail">
             <div className="admin-card-header">
               <h2>{selected.name}</h2>
-              <button onClick={() => setSelected(null)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#7e94b6', fontSize: 20 }}>✕</button>
+              <button onClick={() => setSelected(null)} className="icon-btn">✕</button>
             </div>
             <div className="admin-card-body">
               {[
-                ['Phone', <a href={`tel:${selected.phone}`} style={{ color: 'var(--blue)' }}>{selected.phone}</a>],
+                ['Phone', <a href={`tel:${selected.phone}`} className="link-blue">{selected.phone}</a>],
                 ['Email', selected.email || '—'],
                 ['Address', selected.address],
                 ['Service', selected.service],
@@ -130,36 +125,36 @@ export default function LeadsPage() {
                 ['Preferred Time', selected.preferred_time || '—'],
                 ['Received', new Date(selected.created_at).toLocaleString()],
               ].map(([label, value]) => (
-                <div key={String(label)} style={{ marginBottom: 12 }}>
+                <div key={String(label)} className="mb-12">
                   <div className="admin-label">{label}</div>
-                  <div style={{ fontSize: 15, color: 'var(--ink)' }}>{value}</div>
+                  <div className="lead-field-value">{value}</div>
                 </div>
               ))}
 
               {selected.message && (
-                <div style={{ marginBottom: 16, padding: 14, background: '#f5f7fb', borderRadius: 4, borderLeft: '3px solid var(--blue)' }}>
+                <div className="lead-message">
                   <div className="admin-label">Customer Message</div>
-                  <p style={{ margin: 0, fontSize: 14, color: '#3e4a66', lineHeight: 1.6 }}>{selected.message}</p>
+                  <p>{selected.message}</p>
                 </div>
               )}
 
-              <div style={{ marginBottom: 14 }}>
+              <div className="mb-14">
                 <label className="admin-label">Status</label>
                 <select className="admin-select" value={status} onChange={e => setStatus(e.target.value)}>
                   {STATUSES.map(s => <option key={s} value={s}>{s.charAt(0).toUpperCase() + s.slice(1)}</option>)}
                 </select>
               </div>
 
-              <div style={{ marginBottom: 16 }}>
+              <div className="mb-16">
                 <label className="admin-label">Internal Notes</label>
                 <textarea className="admin-textarea" value={notes} onChange={e => setNotes(e.target.value)} placeholder="Add notes about this customer…" />
               </div>
 
-              <div style={{ display: 'flex', gap: 10 }}>
-                <button className="admin-btn admin-btn-primary" onClick={saveLead} disabled={saving} style={{ flex: 1 }}>
+              <div className="flex-gap-10">
+                <button className="admin-btn admin-btn-primary flex-1" onClick={saveLead} disabled={saving}>
                   {saving ? 'Saving…' : 'Save Changes'}
                 </button>
-                <a href={`tel:${selected.phone}`} className="admin-btn" style={{ background: '#e6f4ea', color: '#065f46' }}>
+                <a href={`tel:${selected.phone}`} className="admin-btn admin-btn-call">
                   📞 Call
                 </a>
               </div>

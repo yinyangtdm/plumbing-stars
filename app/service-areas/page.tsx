@@ -41,7 +41,7 @@ export default async function ServiceAreasPage() {
       <section className="page-hero">
         <div className="chev" />
         <div className="container">
-          <div className="eyebrow" style={{ color: 'var(--sky)' }}>{isLA ? 'Los Angeles County' : 'Ventura County'}</div>
+          <div className="eyebrow eyebrow-light">{isLA ? 'Los Angeles County' : 'Ventura County'}</div>
           <h1>We Come <span className="out">To</span><br />You.</h1>
           <p className="page-hero-sub">Serving {city.name} County — same-day available, no extra charge for most zip codes.</p>
         </div>
@@ -62,13 +62,13 @@ export default async function ServiceAreasPage() {
               <ul className="area-neighborhoods">
                 {areas.map(area => <li key={area}>{area}</li>)}
               </ul>
-              <p style={{ marginTop: 20, fontSize: 13, color: '#5a6a86', fontStyle: 'italic' }}>
+              <p className="area-note">
                 Don&apos;t see your city? Call us — our coverage is always expanding.
               </p>
             </div>
           </div>
 
-          <div style={{ marginTop: 50 }}>
+          <div className="mt-50">
             <ServiceAreaMapClientWrapper />
           </div>
         </div>
@@ -76,12 +76,12 @@ export default async function ServiceAreasPage() {
 
       <section className="section dark">
         <div className="chev" />
-        <div className="container" style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
-          <div className="eyebrow" style={{ color: 'var(--sky)' }}>Same-Day Service</div>
-          <h2 style={{ fontSize: 'clamp(36px, 6vw, 64px)', color: '#fff', margin: '12px 0 14px' }}>
-            In your neighborhood<br /><span style={{ color: 'var(--red)' }}>today.</span>
+        <div className="container section-cta-center">
+          <div className="eyebrow eyebrow-light">Same-Day Service</div>
+          <h2 className="cta-title">
+            In your neighborhood<br /><span className="text-red">today.</span>
           </h2>
-          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <div className="btn-row-center">
             <a href={SITE.phone.href} className="btn btn-red">Call {SITE.phone.display}</a>
             <Link href="/booking" className="btn btn-ghost">Book Online</Link>
           </div>

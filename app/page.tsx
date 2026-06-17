@@ -5,6 +5,7 @@ import MobileCallbar from '@/components/MobileCallbar'
 import ServiceAreaMapClientWrapper from '@/components/ServiceAreaMapClientWrapper'
 import { getDb } from '@/lib/db'
 import { SITE } from '@/lib/site'
+import { getCurrentCity } from '@/lib/city'
 
 async function getFaqs() {
   try {
@@ -19,6 +20,7 @@ async function getFaqs() {
 
 export default async function HomePage() {
   const faqs = await getFaqs()
+  const city = await getCurrentCity()
 
   return (
     <>
@@ -30,18 +32,18 @@ export default async function HomePage() {
         <div className="container">
           <div className="hero-grid">
             <div>
-              <div className="hero-tag">⭐ Drain &amp; Sewer Specialists — Los Angeles</div>
+              <div className="hero-tag">⭐ Drain &amp; Sewer Specialists — {city.name}</div>
               <h1>
-                <span style={{ display: 'block' }}>Expert</span>
-                <span style={{ display: 'block' }} className="out">Drain &amp;</span>
-                <span style={{ display: 'block' }}>Sewer <span className="accent">Pros.</span></span>
+                <span className="hero-line">Expert</span>
+                <span className="hero-line out">Drain &amp;</span>
+                <span className="hero-line">Sewer <span className="accent">Pros.</span></span>
               </h1>
               <p className="lede">
                 Licensed technicians with 25 years on the job. We show up fast, quote flat rates, and back every job with a written guarantee.
               </p>
               <div className="hero-cta">
                 <a href={SITE.phone.href} className="btn btn-red">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ width: 18, height: 18 }}>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="icon-18">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.1.78.27 1.55.5 2.3a2 2 0 0 1-.45 2.11L7.91 9.39a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.75.23 1.52.4 2.3.5A2 2 0 0 1 22 16.92z" />
                   </svg>
                   Call Now
@@ -66,7 +68,7 @@ export default async function HomePage() {
                   </li>
                   <li>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M3 12l4 4L21 4" /></svg>
-                    25+ Years Serving Los Angeles
+                    25+ Years Serving {city.name}
                   </li>
                   <li>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M3 12l4 4L21 4" /></svg>
@@ -181,10 +183,10 @@ export default async function HomePage() {
         <div className="container">
           <div className="promo-wrap">
             <div className="promo-side">
-              <div className="eyebrow" style={{ color: 'var(--sky)' }}>Special Offer</div>
+              <div className="eyebrow eyebrow-light">Special Offer</div>
               <h3>Drain cleared or<br />you <span className="accent">don&apos;t pay</span>.</h3>
               <p>Main-line drain cleaning for just $93 — and if we can&apos;t clear it, you owe us nothing. No fine print, no trip charge, no hassle.</p>
-              <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+              <div className="btn-row-sm">
                 <a href={SITE.phone.href} className="btn btn-red">Claim by Phone</a>
                 <Link href="/booking" className="btn btn-ghost">Book Online</Link>
               </div>
@@ -286,9 +288,9 @@ export default async function HomePage() {
             )) : (
               <>
                 {[
-                  { q: 'How quickly can you get to me?', a: 'We typically arrive within 60 minutes for emergency calls in the Los Angeles area. For scheduled appointments we offer 2-hour arrival windows at a time that works for you.' },
+                  { q: 'How quickly can you get to me?', a: `We typically arrive within 60 minutes for emergency calls in the ${city.name} area. For scheduled appointments we offer 2-hour arrival windows at a time that works for you.` },
                   { q: 'Do you charge for estimates?', a: 'No — estimates are always free. We\'ll diagnose the problem, explain what we found, and give you a flat-rate quote before any work begins.' },
-                  { q: 'What areas do you serve?', a: 'We serve the greater Los Angeles area including Burbank, Pasadena, Glendale, Van Nuys, Sherman Oaks, Studio City, and surrounding communities.' },
+                  { q: 'What areas do you serve?', a: `We serve the greater ${city.name} area and surrounding communities.` },
                   { q: 'What is your guarantee?', a: 'All labor is backed by a written workmanship guarantee of up to 5 years. If the same issue returns within the guarantee period, we come back and fix it at no charge.' },
                   { q: 'Can you work on a weekend or holiday?', a: 'Yes. We operate 24 hours a day, 7 days a week, 365 days a year — including all holidays — with no additional surcharges for after-hours or weekend service.' },
                 ].map(item => (
@@ -321,7 +323,7 @@ export default async function HomePage() {
         <div className="container">
           <div className="book-cta-wrap">
             <div className="book-cta-side">
-              <div className="eyebrow" style={{ color: 'var(--sky)' }}>Get On The Schedule</div>
+              <div className="eyebrow eyebrow-light">Get On The Schedule</div>
               <h2>Ready to <span className="accent">get it fixed</span>?</h2>
               <p>Tell us what&apos;s going on. A real person follows up in under 5 minutes during business hours — crews go out 24/7.</p>
               <ul>
@@ -346,7 +348,7 @@ export default async function HomePage() {
             <div className="book-cta-card">
               <h3>Book An Appointment</h3>
               <p>Fill out our quick form and we&apos;ll be in touch right away.</p>
-              <Link href="/booking" className="btn btn-red" style={{ width: '100%', justifyContent: 'center' }}>
+              <Link href="/booking" className="btn btn-red btn-full">
                 Schedule My Visit
               </Link>
               <div className="book-cta-or">— or —</div>

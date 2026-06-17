@@ -65,40 +65,40 @@ export default function FaqManagerPage() {
         <h1>FAQ Manager</h1>
         {!editing && (
           <button className="admin-btn admin-btn-primary" onClick={startNew}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ width: 16, height: 16 }}><path d="M12 5v14M5 12h14" /></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="icon-16"><path d="M12 5v14M5 12h14" /></svg>
             Add FAQ
           </button>
         )}
       </div>
 
       {editing && (
-        <div className="admin-card" style={{ marginBottom: 24 }}>
+        <div className="admin-card mb-24">
           <div className="admin-card-header">
             <h2>{form.id ? 'Edit FAQ' : 'New FAQ'}</h2>
           </div>
           <div className="admin-card-body">
-            <div className="admin-form-row" style={{ marginBottom: 16 }}>
+            <div className="admin-form-row mb-16">
               <div>
                 <label className="admin-label">Question</label>
                 <input className="admin-input" value={form.question} onChange={e => setForm(f => ({ ...f, question: e.target.value }))} placeholder="e.g. How quickly can you get to me?" />
               </div>
             </div>
-            <div className="admin-form-row" style={{ marginBottom: 16 }}>
+            <div className="admin-form-row mb-16">
               <div>
                 <label className="admin-label">Answer</label>
-                <textarea className="admin-textarea" value={form.answer} onChange={e => setForm(f => ({ ...f, answer: e.target.value }))} placeholder="Write your answer here…" style={{ minHeight: 120 }} />
+                <textarea className="admin-textarea textarea-tall" value={form.answer} onChange={e => setForm(f => ({ ...f, answer: e.target.value }))} placeholder="Write your answer here…" />
               </div>
             </div>
-            <div className="admin-form-row two" style={{ marginBottom: 16 }}>
+            <div className="admin-form-row two mb-16">
               <div>
                 <label className="admin-label">Display Order (lower = first)</label>
                 <input className="admin-input" type="number" value={form.display_order} onChange={e => setForm(f => ({ ...f, display_order: Number(e.target.value) }))} />
               </div>
             </div>
-            {msg && <p style={{ color: 'var(--red)', fontFamily: 'var(--font-barlow-condensed)', fontSize: 13, marginBottom: 12 }}>{msg}</p>}
-            <div style={{ display: 'flex', gap: 10 }}>
+            {msg && <p className="admin-form-msg">{msg}</p>}
+            <div className="flex-gap-10">
               <button className="admin-btn admin-btn-primary" onClick={save} disabled={saving}>{saving ? 'Saving…' : 'Save FAQ'}</button>
-              <button className="admin-btn" onClick={cancel} style={{ background: '#eef0f6', color: 'var(--ink)' }}>Cancel</button>
+              <button className="admin-btn admin-btn-neutral" onClick={cancel}>Cancel</button>
             </div>
           </div>
         </div>
@@ -127,12 +127,12 @@ export default function FaqManagerPage() {
             <tbody>
               {faqs.map((faq, i) => (
                 <tr key={faq.id}>
-                  <td style={{ color: '#7e94b6', fontSize: 13 }}>{i + 1}</td>
-                  <td style={{ fontWeight: 600, maxWidth: 280 }}>{faq.question}</td>
-                  <td style={{ color: '#5a6a86', fontSize: 14, maxWidth: 340 }}>{faq.answer.length > 100 ? faq.answer.slice(0, 100) + '…' : faq.answer}</td>
-                  <td style={{ color: '#7e94b6' }}>{faq.display_order}</td>
+                  <td className="cell-muted">{i + 1}</td>
+                  <td className="cell-strong cell-w280">{faq.question}</td>
+                  <td className="cell-answer">{faq.answer.length > 100 ? faq.answer.slice(0, 100) + '…' : faq.answer}</td>
+                  <td className="text-muted">{faq.display_order}</td>
                   <td>
-                    <div style={{ display: 'flex', gap: 8 }}>
+                    <div className="flex-gap-8">
                       <button className="admin-btn admin-btn-primary admin-btn-sm" onClick={() => startEdit(faq)}>Edit</button>
                       <button className="admin-btn admin-btn-danger admin-btn-sm" onClick={() => deleteFaq(faq.id)}>Delete</button>
                     </div>

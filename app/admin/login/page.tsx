@@ -49,7 +49,7 @@ export default function AdminLoginPage() {
         {error && <div className="error-msg">{error}</div>}
 
         <form onSubmit={handleSubmit}>
-          <div className="form-field" style={{ marginBottom: 16 }}>
+          <div className="form-field mb-16">
             <label className="admin-label" htmlFor="email">Email Address</label>
             <input
               className="admin-input"
@@ -62,7 +62,7 @@ export default function AdminLoginPage() {
               autoComplete="username"
             />
           </div>
-          <div className="form-field" style={{ marginBottom: 24 }}>
+          <div className="form-field mb-24">
             <label className="admin-label" htmlFor="password">Password</label>
             <input
               className="admin-input"
