@@ -97,6 +97,54 @@ Direct port of `mockup-4-editorial.html`:
   The mockup's placeholder `(888) 555·STAR` and
   `hello@plumbingstars.example` are replaced with the real `SITE` values.
 
+### Motion design — "The press run"
+
+The mockup's design direction is fixed (editorial/broadsheet, DM Serif Display
++ Manrope, paper-cream / navy / muted-red). Motion does not change that look —
+it makes it feel expensive. One coherent metaphor drawn from the subject's own
+world: the page behaves like a periodical being typeset and inked in front of
+you ("VOL. XXVI"). The hero is the single bold moment; everything after is
+quiet. Performance rule: **transforms/opacity only, no animation libraries, no
+constant-repaint effects.** Coming off WordPress this must feel instantly
+snappy — speed is itself a selling point.
+
+**Hero load sequence (the signature moment, ~900ms, performs once):**
+
+- The masthead rule draws itself left-to-right (a press laying a line).
+- The headline ("The fix *shouldn't* feel like a gamble") rises word-by-word
+  with a tight stagger and a slight blur-to-sharp (ink coming into focus).
+- The hero stat grid (years / rating / arrival / trip charge) counts up once,
+  briefly, then rests.
+
+**Hero atmosphere (cheap, no repaint tax):**
+
+- A **static** inked-paper grain texture on the navy hero frame so the deep
+  navy reads as inked paper, not a flat block. Static = zero runtime cost.
+- The mockup's existing radial-glow accent gets a **slow, GPU-cheap drift**
+  (transform-based) for a subtly alive feel — used instead of animated grain,
+  which would repaint constantly and cost speed.
+
+**Scroll choreography (subtle, staggered, never bouncy):**
+
+- Section eyebrows and headlines reveal with a small rise + fade as they enter.
+- The numbered service rows (I–VI) reveal in sequence — reinforces the
+  "index being set" feel.
+- A thin **reading-progress rule** pinned at the very top fills as the reader
+  scrolls (a periodical's page edge), doubling as orientation.
+
+**Micro-interactions (the "expensive" tells):**
+
+- Service rows: on hover the Roman numeral and "Read →" shift with a refined
+  ease; the underline wipes in.
+- Primary CTA: the mockup's lift, plus a quiet ink-fill on hover.
+- Nav: the scroll-spy red accent slides between items rather than snapping
+  (see below).
+
+**Reduced motion:** every effect above is gated by
+`@media (prefers-reduced-motion: reduce)` — the hero appears statically, scroll
+reveals show content immediately, counters show final values, drift/progress
+stop. Nothing essential depends on motion.
+
 ### Navigation animation & scroll polish
 
 The page is a single scroller with anchor nav (`#services`, `#about`, etc.).
