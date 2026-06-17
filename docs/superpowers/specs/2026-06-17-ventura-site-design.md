@@ -97,6 +97,31 @@ Direct port of `mockup-4-editorial.html`:
   The mockup's placeholder `(888) 555·STAR` and
   `hello@plumbingstars.example` are replaced with the real `SITE` values.
 
+### Navigation animation & scroll polish
+
+The page is a single scroller with anchor nav (`#services`, `#about`, etc.).
+Polished behavior:
+
+- **Smooth section jump** — clicking a nav/drawer link glides to the section.
+  Implemented with CSS `scroll-behavior: smooth` plus `scroll-margin-top` on
+  each section target equal to the sticky header height, so the section lands
+  just below the header instead of being hidden under it.
+- **Scroll-spy active link** — a small `'use client'` component uses
+  `IntersectionObserver` to track which section is in view and applies an
+  `active` class to the matching desktop nav link (e.g. the existing red
+  underline/number accent in the mockup), updating live as the user scrolls.
+- **Back-to-top button** — a fixed button that:
+  - is hidden at the top and **fades/slides in after the user scrolls past a
+    threshold** (~one viewport), via a scroll listener (rAF-throttled) toggling
+    a `visible` class;
+  - smooth-scrolls to the top on click;
+  - is positioned bottom-right on desktop and **offset above the fixed mobile
+    callbar** on small screens so the two never overlap;
+  - matches the editorial styling (navy/cream, square corners, serif accent).
+- **Reduced motion** — all of the above are gated by
+  `@media (prefers-reduced-motion: reduce)`: smooth scrolling falls back to
+  instant jumps and the button appears without animation, for accessibility.
+
 ### Testimonials section — no fake reviews
 
 The mockup's "Field Notes" pull-quote testimonials are **placeholders, not
