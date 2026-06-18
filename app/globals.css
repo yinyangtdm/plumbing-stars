@@ -178,68 +178,6 @@ h1, h2, h3, h4 {
   mix-blend-mode: screen;
 }
 
-/* ============================================================================
-   5. UTILITY BAR (Top Info Bar)
-   ============================================================================ */
-
-/* Container for top utility bar with emergency info */
-.util {
-  background: var(--blue-3);
-  color: #fff;
-  font-family: var(--font-body), sans-serif;
-  font-weight: 600;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  font-size: 13px;
-  position: relative;
-  overflow: hidden;
-}
-
-.util .chev {
-  opacity: .4;
-}
-
-/* Utility bar content wrapper */
-.util .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 38px;
-  position: relative;
-  z-index: 1;
-}
-
-/* Left side utility items (24/7, Licensed/Bonded) */
-.util-left {
-  display: flex;
-  gap: 18px;
-  align-items: center;
-}
-
-.util-left span {
-  display: none;
-  align-items: center;
-  gap: 6px;
-}
-
-.util-left svg {
-  width: 14px;
-  height: 14px;
-}
-
-.util a {
-  color: #fff;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-weight: 700;
-}
-
-@media (min-width: 780px) {
-  .util-left span {
-    display: inline-flex;
-  }
-}
 
 /* ============================================================================
    6. HEADER & NAVIGATION

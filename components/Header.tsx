@@ -2,7 +2,6 @@
  * Header Component
  *
  * Main navigation and branding component.
- * - Sticky top bar with utility information (24/7, licensing)
  * - Navigation with logo centered on desktop
  * - Mobile menu drawer for navigation
  */
