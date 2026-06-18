@@ -10,6 +10,7 @@ export function generateMetadata() {
   return pageMetadata(city => ({
     title: `About Us — The Plumbing Stars | ${city} Sewer & Drain`,
     description: `Family-owned drain & sewer specialists serving ${city} for ${SITE.yearsInBusiness} years. CA Contractor License #${SITE.license}. Licensed, bonded & insured.`,
+    alternates: { canonical: '/about' },
   }))
 }
 

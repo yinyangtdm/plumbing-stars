@@ -721,13 +721,13 @@ h1, h2, h3, h4 {
 
 /* ===== FOOTER ===== */
 .footer { background: var(--blue-3); color: #cfdcef; padding: 60px 0 110px; position: relative; overflow: hidden; }
-.footer::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: repeating-linear-gradient(90deg, var(--red) 0 24px, #fff 24px 48px, var(--blue) 48px 72px); }
+.footer::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: var(--sky); }
 .footer-grid { display: grid; grid-template-columns: 1fr; gap: 30px; margin-top: 14px; }
 .footer h4 { font-family: var(--font-display), sans-serif; color: #fff; font-size: 18px; letter-spacing: .08em; margin-bottom: 14px; }
 .footer a { color: #cfdcef; display: block; padding: 4px 0; font-size: 14px; }
 .footer a:hover { color: #fff; }
 .footer-brand { display: flex; align-items: center; gap: 14px; }
-.footer-logo { filter: brightness(0) invert(1); }
+.footer-logo { height: 88px; width: auto; }
 .footer-blurb { margin: 20px 0; color: #cfdcef; max-width: 300px; font-family: var(--font-body), sans-serif; }
 .footer .brand-name { font-family: var(--font-display), sans-serif; color: #fff; font-size: 30px; letter-spacing: .02em; line-height: 1; }
 .footer .brand-city { display: block; font-family: var(--font-body), sans-serif; font-weight: 700; font-size: 11px; letter-spacing: .3em; color: var(--red); margin-top: 6px; }

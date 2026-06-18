@@ -24,8 +24,8 @@ export default function Footer() {
               <Image
                 src="/logo.svg"
                 alt={SITE.name}
-                width={64}
-                height={64}
+                width={88}
+                height={88}
                 className="footer-logo"
               />
               <div className="brand-name">

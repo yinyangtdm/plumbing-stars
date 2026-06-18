@@ -8,6 +8,7 @@ export function generateMetadata() {
   return pageMetadata(city => ({
     title: `Book a Visit — The Plumbing Stars | ${city}`,
     description: `Schedule drain & sewer service in ${city}. Fast follow-up, free estimates, flat-rate pricing, and a written guarantee.`,
+    alternates: { canonical: '/booking' },
   }))
 }
 

@@ -22,30 +22,6 @@ export default function Header() {
   return (
     <>
       {/* =============================================
-          UTILITY BAR - Top info bar
-          ============================================= */}
-      <div className="util">
-        <span className="chev" />
-        <div className="container">
-          {/* Trust indicators on left side */}
-          <div className="util-left">
-            <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" />
-              </svg>
-              24/7 Emergency Dispatch
-            </span>
-            <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M3 12l4 4L21 4" />
-              </svg>
-              Licensed · Bonded · Insured
-            </span>
-          </div>
-        </div>
-      </div>
-
-      {/* =============================================
           HEADER - Main navigation
           ============================================= */}
       <header className="header">

@@ -9,6 +9,7 @@ export function generateMetadata() {
   return pageMetadata(city => ({
     title: `Drain & Sewer Services — The Plumbing Stars | ${city}`,
     description: 'Drain cleaning, sewer line repair, hydro jetting, camera inspection, pipe lining & trenchless replacement. Flat-rate pricing, written guarantee.',
+    alternates: { canonical: '/services' },
   }))
 }
 

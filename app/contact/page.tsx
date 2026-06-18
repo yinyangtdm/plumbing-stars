@@ -11,6 +11,7 @@ export function generateMetadata() {
   return pageMetadata(city => ({
     title: `Contact Us — The Plumbing Stars | ${city}`,
     description: `Get in touch with The Plumbing Stars. Call ${SITE.phone.display} for 24/7 emergency drain & sewer service in ${city} County.`,
+    alternates: { canonical: '/contact' },
   }))
 }
 

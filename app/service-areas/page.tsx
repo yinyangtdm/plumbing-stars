@@ -11,6 +11,7 @@ export function generateMetadata() {
   return pageMetadata(city => ({
     title: `Service Areas — The Plumbing Stars | ${city} County`,
     description: `The Plumbing Stars serves all of ${city} County. Drain cleaning, sewer repair, hydro jetting — same-day available.`,
+    alternates: { canonical: '/service-areas' },
   }))
 }
 
