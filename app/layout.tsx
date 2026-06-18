@@ -16,7 +16,7 @@ const manrope = Manrope({
   display: 'swap',
 })
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://plumbingstarslosangeles.com'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://theplumbingstarslosangeles.com'
 
 export function generateMetadata() {
   return pageMetadata(city => ({

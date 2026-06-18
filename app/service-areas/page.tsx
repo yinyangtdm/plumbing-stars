@@ -51,7 +51,7 @@ export default function ServiceAreasPage() {
           <div className="areas-grid">
             <div className="area-card">
               <h3>Los Angeles County</h3>
-              <div className="area-sub">plumbingstarslosangeles.com</div>
+              <div className="area-sub">theplumbingstarslosangeles.com</div>
               <ul className="area-neighborhoods">
                 {LA_AREAS.map(area => <li key={area}>{area}</li>)}
               </ul>

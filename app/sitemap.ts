@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://plumbingstarslosangeles.com'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://theplumbingstarslosangeles.com'
 
 /** Public, indexable routes. Admin and API are excluded (see robots.ts). */
 const ROUTES = ['', '/about', '/services', '/service-areas', '/contact', '/booking']
