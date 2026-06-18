@@ -11,13 +11,11 @@ export const metadata: Metadata = { title: 'Admin — The Plumbing Stars' }
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={`admin-body ${dmSerif.variable} ${manrope.variable}`}>
-        <SessionProvider>
-          <AdminSidebar />
-          <main className="admin-main">{children}</main>
-        </SessionProvider>
-      </body>
-    </html>
+    <div className={`admin-body ${dmSerif.variable} ${manrope.variable}`}>
+      <SessionProvider>
+        <AdminSidebar />
+        <main className="admin-main">{children}</main>
+      </SessionProvider>
+    </div>
   )
 }
