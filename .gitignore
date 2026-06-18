@@ -1,6 +1,8 @@
 .next/
 node_modules/
 .env.local
+*.tsbuildinfo
+next-env.d.ts
 *.db
 data/
 .DS_Store
@@ -11,3 +13,5 @@ Thumbs.db
 .playwright-mcp/
 verify-*.jpeg
 verify-*.png
+
+.vercel
