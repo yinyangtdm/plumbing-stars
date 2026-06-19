@@ -134,46 +134,38 @@ export default async function HomePage() {
               {
                 num: '01', title: 'Drain Cleaning',
                 desc: 'Kitchen, bath, laundry &amp; main lines cleared at a flat price — guaranteed 30 days or it\'s free.',
-                // water droplet over a drain grate
-                icon: <><path d="M12 3c2.5 3.5 4 6 4 8.5a4 4 0 0 1-8 0C8 9 9.5 6.5 12 3z" /><path d="M4 21h16M8 21v-2M12 21v-2M16 21v-2" /></>,
+                icon: '/icons/draincleaning.png',
               },
               {
                 num: '02', title: 'Sewer Line Repair',
                 desc: 'Spot fixes and full replacements done by techs with two decades of hands-on experience.',
-                // pipe section with a wrench
-                icon: <><path d="M3 9h9v6H3zM12 12h4" /><path d="M19 8a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3l2-2-1.5-1.5L21 11z" /></>,
+                icon: '/icons/sewerline.png',
               },
               {
                 num: '03', title: 'Hydro Jetting',
                 desc: 'High-pressure water that powers through roots, grease and scale until pipes run like new.',
-                // spray nozzle with pressurized jets
-                icon: <><path d="M3 11h7l3-2v6l-3-2H3z" /><path d="M14 9h2M14 12h4M14 15h2M20 7l1-1M21 12h1M20 17l1 1" /></>,
+                icon: '/icons/hydro.png',
               },
               {
                 num: '04', title: 'Camera Inspection',
                 desc: 'HD video down your line so you know exactly what\'s going on before any work begins.',
-                // video camera
-                icon: <><rect x="3" y="7" width="12" height="10" rx="2" /><path d="M15 10l6-3v10l-6-3z" /><circle cx="8" cy="12" r="2" /></>,
+                icon: '/icons/pipe-inspection.png',
               },
               {
-                num: '05', title: 'Pipe Lining',
-                desc: 'Trenchless CIPP lining creates a new pipe inside your old one — no excavation required.',
-                // pipe with an inner liner (concentric tube)
-                icon: <><path d="M3 7h18M3 17h18M3 7v10M21 7v10" /><path d="M7 10h10M7 14h10" /></>,
-              },
-              {
-                num: '06', title: 'Trenchless Replacement',
+                num: '05', title: 'Trenchless Replacement',
                 desc: 'No-dig pipe bursting and lining. Your lawn and driveway stay untouched.',
-                // ground surface with a pipe running underneath (no-dig)
-                icon: <><path d="M3 7h18" /><path d="M5 7v2M9 7v2M13 7v2M17 7v2M21 7v2" /><rect x="4" y="13" width="16" height="5" rx="2.5" /></>,
+                icon: '/icons/trenchless.png',
+              },
+              {
+                num: '06', title: 'Pipe Lining',
+                desc: 'Trenchless CIPP lining creates a new pipe inside your old one — no excavation required.',
+                icon: '/icons/pipelining.png',
               },
             ].map(svc => (
               <article className="service-card" key={svc.num}>
                 <span className="svc-num">SVC {svc.num}</span>
                 <div className="ico">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    {svc.icon}
-                  </svg>
+                  <img src={svc.icon} alt={svc.title} width={80} height={80} />
                 </div>
                 <h3>{svc.title}</h3>
                 <p dangerouslySetInnerHTML={{ __html: svc.desc }} />

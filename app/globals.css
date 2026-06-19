@@ -506,7 +506,7 @@ h1, h2, h3, h4 {
   color: #fff; background: var(--blue); padding: 4px 8px; letter-spacing: .1em;
 }
 .service-card .ico {
-  width: 60px; height: 60px; border-radius: 6px;
+  width: 96px; height: 96px; border-radius: 6px;
   background: var(--blue); color: #fff;
   display: flex; align-items: center; justify-content: center;
   margin-bottom: 18px; position: relative;
@@ -517,6 +517,7 @@ h1, h2, h3, h4 {
   background: repeating-linear-gradient(135deg, transparent 0 8px, rgba(255,255,255,.08) 8px 9px);
 }
 .service-card .ico svg { width: 30px; height: 30px; position: relative; }
+.service-card .ico img { width: 80px; height: 80px; position: relative; object-fit: contain; }
 .service-card:nth-child(even) .ico { background: var(--red); }
 .service-card h3 { font-size: 24px; color: var(--blue); margin-bottom: 6px; }
 .service-card p { color: #3e4a66; font-size: 15px; margin: 0 0 14px; }
