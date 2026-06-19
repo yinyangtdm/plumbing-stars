@@ -31,21 +31,12 @@ export default function ServiceAreasPage() {
     <>
       <HeaderWrapper />
 
-      <section className="page-hero">
-        <div className="chev" />
-        <div className="container">
-          <div className="eyebrow eyebrow-light">Los Angeles County</div>
-          <h1>We Come <span className="out">To</span><br />You.</h1>
-          <p className="page-hero-sub">Serving {city.name} County — same-day available, no extra charge for most zip codes.</p>
-        </div>
-      </section>
-
       <section className="section lt">
         <div className="container">
           <div className="section-head">
             <div className="eyebrow">Coverage Area</div>
-            <h2>{city.name} <span className="accent">Service Areas.</span></h2>
-            <p>We serve all neighborhoods in {city.name} County. Call to confirm same-day availability in your city.</p>
+            <h1>{city.name} <span className="accent">Service Areas.</span></h1>
+            <p>We serve all neighborhoods in {city.name} County — same-day available, no extra charge for most zip codes.</p>
           </div>
 
           <div className="areas-grid">

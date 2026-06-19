@@ -1,16 +1,6 @@
 'use client'
 import { useEffect, useRef } from 'react'
-
-const LA_COUNTY: [number, number][] = [
-  [34.82, -118.95], [34.82, -118.20], [34.60, -117.65], [34.05, -117.65],
-  [33.70, -117.90], [33.70, -118.15], [33.73, -118.50], [33.80, -118.82],
-  [34.02, -118.95],
-]
-
-const VENTURA_COUNTY: [number, number][] = [
-  [34.82, -119.72], [34.82, -118.95], [34.02, -118.95],
-  [34.02, -119.12], [34.18, -119.48], [34.42, -119.72], [34.65, -120.00],
-]
+import { LA_COUNTY_GEO, VENTURA_COUNTY_GEO } from '@/lib/countyBorders'
 
 export default function ServiceAreaMap() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -29,9 +19,7 @@ export default function ServiceAreaMap() {
       if (container._leaflet_id) delete container._leaflet_id
 
       const map = L.map(containerRef.current!, {
-        center: [34.35, -119.05],
-        zoom: 9,
-        zoomControl: false,
+        zoomControl: true,
         scrollWheelZoom: false,
         attributionControl: true,
       })
@@ -42,19 +30,18 @@ export default function ServiceAreaMap() {
         maxZoom: 14,
       }).addTo(map)
 
-      L.polygon(LA_COUNTY, {
-        color: '#1D4B91',
-        fillColor: '#1D4B91',
-        fillOpacity: 0.28,
-        weight: 2,
-      }).addTo(map).bindTooltip('Los Angeles County', { permanent: false, className: 'map-tooltip' })
+      const la = L.geoJSON(LA_COUNTY_GEO as GeoJSON.GeoJsonObject, {
+        style: { color: '#1D4B91', fillColor: '#1D4B91', fillOpacity: 0.28, weight: 2 },
+      }).addTo(map).bindTooltip('Los Angeles County', { sticky: true, className: 'map-tooltip' })
 
-      L.polygon(VENTURA_COUNTY, {
-        color: '#B81F2A',
-        fillColor: '#B81F2A',
-        fillOpacity: 0.12,
-        weight: 1,
-      }).addTo(map).bindTooltip('Ventura County', { permanent: false, className: 'map-tooltip' })
+      const ventura = L.geoJSON(VENTURA_COUNTY_GEO as GeoJSON.GeoJsonObject, {
+        style: { color: '#B81F2A', fillColor: '#B81F2A', fillOpacity: 0.12, weight: 1 },
+      }).addTo(map).bindTooltip('Ventura County', { sticky: true, className: 'map-tooltip' })
+
+      // Auto-frame both counties (data is mainland-only, so no offshore
+      // islands drag the view out to sea).
+      const bounds = la.getBounds().extend(ventura.getBounds())
+      map.fitBounds(bounds, { padding: [20, 20] })
 
       mapRef.current = map
     })
