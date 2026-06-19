@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useRef } from 'react'
-import { LA_COUNTY_GEO, VENTURA_COUNTY_GEO } from '@/lib/countyBorders'
+import { SERVICE_AREA_GEO } from '@/lib/serviceArea'
 
 export default function ServiceAreaMap() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -30,18 +30,11 @@ export default function ServiceAreaMap() {
         maxZoom: 14,
       }).addTo(map)
 
-      const la = L.geoJSON(LA_COUNTY_GEO as GeoJSON.GeoJsonObject, {
-        style: { color: '#1D4B91', fillColor: '#1D4B91', fillOpacity: 0.28, weight: 2 },
-      }).addTo(map).bindTooltip('Los Angeles County', { sticky: true, className: 'map-tooltip' })
+      const area = L.geoJSON(SERVICE_AREA_GEO as GeoJSON.GeoJsonObject, {
+        style: { color: '#1D4B91', fillColor: '#1D4B91', fillOpacity: 0.22, weight: 2 },
+      }).addTo(map).bindTooltip('The Plumbing Stars — Service Area', { sticky: true, className: 'map-tooltip' })
 
-      const ventura = L.geoJSON(VENTURA_COUNTY_GEO as GeoJSON.GeoJsonObject, {
-        style: { color: '#B81F2A', fillColor: '#B81F2A', fillOpacity: 0.12, weight: 1 },
-      }).addTo(map).bindTooltip('Ventura County', { sticky: true, className: 'map-tooltip' })
-
-      // Auto-frame both counties (data is mainland-only, so no offshore
-      // islands drag the view out to sea).
-      const bounds = la.getBounds().extend(ventura.getBounds())
-      map.fitBounds(bounds, { padding: [20, 20] })
+      map.fitBounds(area.getBounds(), { padding: [24, 24] })
 
       mapRef.current = map
     })
@@ -57,8 +50,7 @@ export default function ServiceAreaMap() {
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
       <div ref={containerRef} className="service-map" />
       <div className="map-legend">
-        <span className="legend-dot legend-dot--la" /> Los Angeles County
-        <span className="legend-dot legend-dot--ventura" /> Ventura County
+        <span className="legend-dot legend-dot--la" /> The Plumbing Stars service area — north of the 10, west of the 110
       </div>
     </div>
   )

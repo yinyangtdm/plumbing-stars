@@ -40,7 +40,7 @@ export default async function HomePage() {
                 <span className="hero-line">Sewer <span className="accent">Pros.</span></span>
               </h1>
               <p className="lede">
-                Licensed technicians with 25 years on the job. We show up fast, quote flat rates, and back every job with a written guarantee.
+                Licensed technicians with 20 years on the job. We show up fast, quote flat rates, and back every job with a written guarantee.
               </p>
               <div className="hero-cta">
                 <a href={SITE.phone.href} className="btn btn-red">
@@ -69,7 +69,7 @@ export default async function HomePage() {
                   </li>
                   <li>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M3 12l4 4L21 4" /></svg>
-                    25+ Years Serving {city.name}
+                    20+ Years Serving {city.name}
                   </li>
                   <li>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M3 12l4 4L21 4" /></svg>
@@ -105,7 +105,7 @@ export default async function HomePage() {
               <div className="l">Highly Rated on Google</div>
             </div>
             <div className="stat-item">
-              <div className="n">25+</div>
+              <div className="n">20+</div>
               <div className="l">Years in Business</div>
             </div>
             <div className="stat-item">

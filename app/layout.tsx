@@ -23,7 +23,7 @@ export function generateMetadata() {
     metadataBase: new URL(SITE_URL),
     title: `The Plumbing Stars — Drain & Sewer Experts | ${city}`,
     description:
-      `Licensed drain and sewer specialists serving ${city}. 25+ years experience, ` +
+      `Licensed drain and sewer specialists serving ${city}. 20+ years experience, ` +
       '24/7 emergency service, flat-rate pricing, written guarantee on every job.',
     alternates: { canonical: '/' },
     openGraph: {

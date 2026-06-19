@@ -887,6 +887,7 @@ h1, h2, h3, h4 {
 /* ===== SERVICE AREAS PAGE ===== */
 .areas-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
 @media(min-width:760px) { .areas-grid { grid-template-columns: 1fr 1fr; } }
+@media(min-width:1040px) { .areas-grid { grid-template-columns: repeat(3, 1fr); } }
 .area-card { background: #fff; border: 1px solid #dde4f0; border-top: 5px solid var(--blue); padding: 32px; border-radius: 4px; }
 .area-card:nth-child(even) { border-top-color: var(--red); }
 .area-card h3 { font-size: 28px; color: var(--blue); margin-bottom: 6px; }

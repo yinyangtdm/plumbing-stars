@@ -10,18 +10,29 @@ import { SITE } from '@/lib/site'
 export function generateMetadata() {
   return pageMetadata(city => ({
     title: `Service Areas — The Plumbing Stars | ${city} County`,
-    description: `The Plumbing Stars serves all of ${city} County. Drain cleaning, sewer repair, hydro jetting — same-day available.`,
+    description: `The Plumbing Stars covers the San Fernando Valley, the Westside, and east to Pasadena. Drain cleaning, sewer repair, hydro jetting — same-day available.`,
     alternates: { canonical: '/service-areas' },
   }))
 }
 
-const LA_AREAS = [
-  'Los Angeles', 'Hollywood', 'Burbank', 'Glendale', 'Pasadena',
-  'Sherman Oaks', 'Studio City', 'Van Nuys', 'Northridge', 'Encino',
-  'Woodland Hills', 'Reseda', 'North Hollywood', 'Culver City', 'Santa Monica',
-  'West Hollywood', 'Silver Lake', 'Atwater Village', 'Eagle Rock', 'Alhambra',
-  'Arcadia', 'Monrovia', 'Long Beach', 'Torrance', 'El Monte',
-  'Covina', 'West Covina', 'Whittier', 'Norwalk', 'Downey',
+const VALLEY_AREAS = [
+  'Woodland Hills', 'West Hills', 'Calabasas', 'Hidden Hills', 'Canoga Park',
+  'Winnetka', 'Chatsworth', 'Northridge', 'Porter Ranch', 'Granada Hills',
+  'North Hills', 'Reseda', 'Lake Balboa', 'Tarzana', 'Encino',
+  'Van Nuys', 'Sherman Oaks', 'Studio City', 'Valley Village', 'North Hollywood',
+  'Sunland-Tujunga',
+]
+
+const WEST_AREAS = [
+  'Santa Monica', 'Brentwood', 'Westwood', 'Bel Air', 'Beverly Hills',
+  'West Los Angeles', 'Mar Vista', 'Palms', 'Culver City', 'West Hollywood',
+  'Hollywood', 'Los Feliz', 'Silver Lake', 'Echo Park', 'Hancock Park',
+  'Koreatown', 'Mid-Wilshire', 'Mid-City',
+]
+
+const EAST_AREAS = [
+  'Burbank', 'Glendale', 'La Cañada Flintridge', 'La Crescenta', 'Altadena',
+  'Atwater Village', 'Eagle Rock', 'Highland Park', 'Pasadena', 'South Pasadena',
 ]
 
 export default function ServiceAreasPage() {
@@ -36,15 +47,29 @@ export default function ServiceAreasPage() {
           <div className="section-head">
             <div className="eyebrow">Coverage Area</div>
             <h1>{city.name} <span className="accent">Service Areas.</span></h1>
-            <p>We serve all neighborhoods in {city.name} County — same-day available, no extra charge for most zip codes.</p>
+            <p>Based in the San Fernando Valley, we cover the whole Valley plus everything north of the 10 and west of the 110 — the Westside, Central LA, and east to Pasadena. Same-day available, no extra charge for most zip codes.</p>
           </div>
 
           <div className="areas-grid">
             <div className="area-card">
-              <h3>Los Angeles County</h3>
-              <div className="area-sub">theplumbingstarslosangeles.com</div>
+              <h3>San Fernando Valley</h3>
+              <div className="area-sub">Our home base — same-day service</div>
               <ul className="area-neighborhoods">
-                {LA_AREAS.map(area => <li key={area}>{area}</li>)}
+                {VALLEY_AREAS.map(area => <li key={area}>{area}</li>)}
+              </ul>
+            </div>
+            <div className="area-card">
+              <h3>Westside &amp; Central LA</h3>
+              <div className="area-sub">Beverly Hills, Hollywood &amp; the Westside</div>
+              <ul className="area-neighborhoods">
+                {WEST_AREAS.map(area => <li key={area}>{area}</li>)}
+              </ul>
+            </div>
+            <div className="area-card">
+              <h3>Eastside &amp; Pasadena</h3>
+              <div className="area-sub">Glendale, Burbank &amp; the foothills</div>
+              <ul className="area-neighborhoods">
+                {EAST_AREAS.map(area => <li key={area}>{area}</li>)}
               </ul>
               <p className="area-note">
                 Don&apos;t see your city? Call us — our coverage is always expanding.

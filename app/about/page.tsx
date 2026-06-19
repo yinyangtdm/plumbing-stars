@@ -23,9 +23,9 @@ export default function AboutPage() {
       <section className="page-hero">
         <div className="chev" />
         <div className="container">
-          <div className="eyebrow eyebrow-light">Est. 2001 · {city.name}</div>
+          <div className="eyebrow eyebrow-light">Est. 2006 · {city.name}</div>
           <h1>The Stars <span className="out">Behind</span><br />The Drain.</h1>
-          <p className="page-hero-sub">Family-owned. California-licensed. 25 years fixing the drains other plumbers won&apos;t touch.</p>
+          <p className="page-hero-sub">Family-owned. California-licensed. 20 years fixing the drains other plumbers won&apos;t touch.</p>
         </div>
       </section>
 
@@ -38,13 +38,13 @@ export default function AboutPage() {
                 Built on the <span className="text-red">streets of LA.</span>
               </h2>
               <p className="story-text">
-                The Plumbing Stars started in 2001 with one truck and one promise: show up on time, fix it right, and never leave a homeowner guessing about the price. Two and a half decades later, that&apos;s still how we run every job.
+                The Plumbing Stars started in 2006 with one truck and one promise: show up on time, fix it right, and never leave a homeowner guessing about the price. Two decades later, that&apos;s still how we run every job.
               </p>
               <p className="story-text">
                 We specialize in drain and sewer work — the dirty jobs most plumbers would rather skip. It&apos;s not glamorous, but when your main line backs up at midnight, you want someone who has seen it a thousand times. We have.
               </p>
               <p className="story-text mb-24">
-                We bring the same licensed, flat-rate, guarantee-backed service that has made us a trusted name across LA.
+                These days we&apos;re the drain and sewer specialists LA homeowners call first — a reputation built almost entirely on referrals from the neighbors we&apos;ve already helped.
               </p>
               <div className="btn-row">
                 <a href={SITE.phone.href} className="btn btn-red">Call {SITE.phone.display}</a>
@@ -59,7 +59,7 @@ export default function AboutPage() {
                     {[
                       `CA Contractor License #${SITE.license}`,
                       'Licensed & Bonded — State of California',
-                      `25+ Years Serving ${city.name}`,
+                      `20+ Years Serving ${city.name}`,
                       '24/7 Emergency Dispatch',
                       'Family-Owned &amp; Operated',
                       'Flat-Rate Pricing — No Surprises',
@@ -120,7 +120,7 @@ export default function AboutPage() {
             Let the Stars handle it.
           </h2>
           <p className="cta-sub">
-            Call for same-day service or book online. We serve all of Los Angeles and Ventura County.
+            Call for same-day service or book online. We serve all of Los Angeles County.
           </p>
           <div className="btn-row-center">
             <a href={SITE.phone.href} className="btn btn-red">Call {SITE.phone.display}</a>
