@@ -232,7 +232,7 @@ h1, h2, h3, h4 {
 
 /* Logo image - constrained to fixed height */
 .emblem img {
-  height: 80px !important;
+  height: 96px !important;
   width: auto !important;
   max-width: 100%;
 }
