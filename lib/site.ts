@@ -31,7 +31,5 @@ export const SITE = {
   hours: '24 / 7 · 365 Days a Year',
 
   /** Social proof metrics (kept in one place for consistency) */
-  rating: '4.9',
-  reviewCount: '2,400+',
   yearsInBusiness: '25+',
 } as const

@@ -53,8 +53,8 @@ export default async function HomePage() {
               </div>
               <div className="hero-stats">
                 <div><div className="n">25+</div><div className="l">Years Experience</div></div>
-                <div><div className="n">2.4K</div><div className="l">5-Star Reviews</div></div>
-                <div><div className="n">60 min</div><div className="l">Avg. Arrival</div></div>
+                <div><div className="n">24/7</div><div className="l">Emergency Dispatch</div></div>
+                <div><div className="n">Flat</div><div className="l">Rate Pricing</div></div>
               </div>
             </div>
 
@@ -87,8 +87,7 @@ export default async function HomePage() {
                 <div className="cred-rating">
                   <div className="stars">★★★★★</div>
                   <div className="info">
-                    <strong>4.9</strong>
-                    2,400+ Google Reviews
+                    Highly Rated on Google
                   </div>
                 </div>
               </div>
@@ -103,7 +102,7 @@ export default async function HomePage() {
           <div className="stats-row">
             <div className="stat-item">
               <div className="n"><span className="gold">★★★★★</span></div>
-              <div className="l">4.9 / 2,400 Reviews</div>
+              <div className="l">Highly Rated on Google</div>
             </div>
             <div className="stat-item">
               <div className="n">25+</div>
@@ -114,8 +113,8 @@ export default async function HomePage() {
               <div className="l">Emergency Dispatch</div>
             </div>
             <div className="stat-item">
-              <div className="n">A+</div>
-              <div className="l">BBB Accredited</div>
+              <div className="n">CA</div>
+              <div className="l">Licensed &amp; Bonded</div>
             </div>
           </div>
         </div>
@@ -207,7 +206,7 @@ export default async function HomePage() {
           <div className="section-head">
             <div className="eyebrow">Why Choose Us</div>
             <h2>Four reasons Los Angeles <span className="accent">calls us first</span>.</h2>
-            <p>We&apos;ve been the first call for drain and sewer problems across the greater LA area since 1998.</p>
+            <p>We&apos;ve been the first call for drain and sewer problems across the greater LA area for over two decades.</p>
           </div>
           <div className="reasons-grid">
             <div className="reason-card">

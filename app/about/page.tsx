@@ -44,7 +44,7 @@ export default function AboutPage() {
                 We specialize in drain and sewer work — the dirty jobs most plumbers would rather skip. It&apos;s not glamorous, but when your main line backs up at midnight, you want someone who has seen it a thousand times. We have.
               </p>
               <p className="story-text mb-24">
-                Now expanding into Ventura County, we bring the same licensed, flat-rate, guarantee-backed service that made us a household name across LA.
+                We bring the same licensed, flat-rate, guarantee-backed service that has made us a trusted name across LA.
               </p>
               <div className="btn-row">
                 <a href={SITE.phone.href} className="btn btn-red">Call {SITE.phone.display}</a>
@@ -61,7 +61,7 @@ export default function AboutPage() {
                       'Licensed & Bonded — State of California',
                       `25+ Years Serving ${city.name}`,
                       '24/7 Emergency Dispatch',
-                      'BBB Accredited — A+ Rating',
+                      'Family-Owned &amp; Operated',
                       'Flat-Rate Pricing — No Surprises',
                       '5-Year Written Guarantee',
                     ].map(item => (
@@ -76,8 +76,7 @@ export default function AboutPage() {
                   <div className="cred-rating">
                     <div className="stars">★★★★★</div>
                     <div className="info">
-                      <strong>4.9</strong>
-                      2,400+ Google Reviews
+                      Highly Rated on Google
                     </div>
                   </div>
                 </div>
