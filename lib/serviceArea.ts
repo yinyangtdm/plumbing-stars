@@ -20,7 +20,7 @@ export const SERVICE_AREA_GEO = {
   geometry: {
     type: 'Polygon',
     coordinates: [[
-      [-118.6335, 34.2696], // West Hills / Chatsworth — LA/Ventura county line (NW corner)
+      [-118.6509, 34.3205], // LA/Ventura county line — top of the west edge (meets the north rim)
       [-118.600, 34.300], // Chatsworth / Porter Ranch — north Valley rim
       [-118.500, 34.310], // Granada Hills / Mission Hills — north Valley rim
       [-118.420, 34.310], // Sylmar / San Fernando — NE Valley rim
@@ -35,12 +35,15 @@ export const SERVICE_AREA_GEO = {
       [-118.195, 34.105], // Highland Park — along the 110
       [-118.225, 34.075], // Mount Washington — descending the 110
       [-118.255, 34.045], // Cypress Park — along the 110
-      [-118.270, 34.035], // Downtown — the 10/110 interchange
-      [-118.340, 34.030], // Arlington Heights — along the 10
-      [-118.400, 34.025], // Mid-City — along the 10
-      [-118.430, 34.020], // Culver City — along the 10
-      [-118.480, 34.005], // Santa Monica — south end (Ocean Park), where the 10 meets the coast
-      [-118.530, 34.018], // Santa Monica — beachfront
+      [-118.270, 34.035], // Downtown — near the 10/110 interchange
+      [-118.345, 34.028], // Arlington Heights — meet the existing line, then dip south
+      [-118.380, 34.018], // Mid-City / West Adams
+      [-118.395, 34.000], // Culver City — east edge
+      [-118.405, 33.987], // Culver City — south edge
+      [-118.445, 33.984], // Mar Vista / Marina del Rey edge
+      [-118.470, 33.988], // Venice
+      [-118.495, 34.010], // Santa Monica — Ocean Park
+      [-118.525, 34.022], // Santa Monica — beachfront
       [-118.580, 34.038], // Pacific Palisades / Topanga — coast
       [-118.680, 34.033], // Malibu — Civic Center / pier
       [-118.800, 34.000], // Point Dume / Zuma — Malibu
@@ -48,7 +51,8 @@ export const SERVICE_AREA_GEO = {
       [-118.941, 34.0748], // County Line Beach — LA/Ventura county line (coast)
       [-118.7889, 34.1682], // county line through the Santa Monica Mountains
       [-118.6682, 34.1682], // county line — jog east
-      [-118.6335, 34.2696], // up the county line to the NW corner — close ring
+      [-118.6335, 34.2696], // county line — up past Calabasas / West Hills
+      [-118.6509, 34.3205], // close ring at the top of the county line
     ]],
   },
 } as const
