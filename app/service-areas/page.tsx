@@ -26,7 +26,7 @@ const VALLEY_AREAS = [
 ]
 
 const WEST_AREAS = [
-  'Pacific Palisades', 'Brentwood', 'Santa Monica', 'Westwood', 'Bel Air',
+  'Malibu', 'Topanga', 'Pacific Palisades', 'Brentwood', 'Santa Monica', 'Westwood', 'Bel Air',
   'Holmby Hills', 'Beverly Hills', 'Century City', 'West Los Angeles', 'Sawtelle',
   'Rancho Park', 'Cheviot Hills', 'Palms', 'Culver City', 'Mar Vista',
   'West Hollywood', 'Hollywood', 'East Hollywood', 'Los Feliz', 'Silver Lake',

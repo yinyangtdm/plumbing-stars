@@ -4,11 +4,12 @@
  * The owner's rule of thumb: "north of the 10, west of the 110." The northern
  * edge is capped at the San Gabriel foothill line — La Crescenta, La Cañada
  * Flintridge, Altadena, Pasadena — and the polygon then sweeps west to cover
- * everything past that: the whole San Fernando Valley, south over the Santa
- * Monica Mountains to the Westside coast, and the Central-LA / NE-LA corridor.
- * The southern edge tracks the 10 freeway; the eastern edge tracks the 110; the
- * northwest edge snaps to the real LA/Ventura county line (the shared vertices
- * from countyBorders.ts: [-118.6335, 34.2696] → [-118.6682, 34.1682]).
+ * everything past that: the whole San Fernando Valley, the Santa Monica
+ * Mountains, and the Central-LA / NE-LA corridor. The eastern edge tracks the
+ * 110; the southern edge follows the coast from Santa Monica west through
+ * Malibu to County Line Beach; the western edge then snaps to the real
+ * LA/Ventura county line (the shared vertices from countyBorders.ts:
+ * [-118.941, 34.0748] → [-118.6682, 34.1682] → [-118.6335, 34.2696]).
  *
  * Coordinates are [lng, lat] (GeoJSON order) and are intentionally approximate —
  * this is a marketing coverage illustration, not a survey boundary.
@@ -39,18 +40,14 @@ export const SERVICE_AREA_GEO = {
       [-118.400, 34.025], // Mid-City — along the 10
       [-118.430, 34.020], // Culver City — along the 10
       [-118.480, 34.005], // Santa Monica — south end (Ocean Park), where the 10 meets the coast
-      [-118.525, 34.020], // Santa Monica — beachfront / Palisades Park
-      [-118.565, 34.045], // Pacific Palisades — coast
-      [-118.580, 34.080], // Palisades highlands — the hills above Santa Monica
-      [-118.545, 34.110], // Santa Monica Mountains crest toward the Sepulveda Pass
-      [-118.500, 34.140], // Encino — back into the Valley
-      [-118.560, 34.160], // Tarzana
-      [-118.610, 34.163], // Woodland Hills
-      [-118.700, 34.150], // Calabasas
-      [-118.780, 34.140], // Agoura Hills
-      [-118.820, 34.130], // Westlake Village — LA side of the county line
-      [-118.7889, 34.1682], // LA/Ventura county line — SW (real census vertex)
-      [-118.6682, 34.1682], // county line — jog east (real census vertex)
+      [-118.530, 34.018], // Santa Monica — beachfront
+      [-118.580, 34.038], // Pacific Palisades / Topanga — coast
+      [-118.680, 34.033], // Malibu — Civic Center / pier
+      [-118.800, 34.000], // Point Dume / Zuma — Malibu
+      [-118.875, 34.028], // western Malibu — coast
+      [-118.941, 34.0748], // County Line Beach — LA/Ventura county line (coast)
+      [-118.7889, 34.1682], // county line through the Santa Monica Mountains
+      [-118.6682, 34.1682], // county line — jog east
       [-118.6335, 34.2696], // up the county line to the NW corner — close ring
     ]],
   },
