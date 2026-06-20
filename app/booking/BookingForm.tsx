@@ -11,7 +11,7 @@ const SERVICES = [
   'Epoxy Brush Coating',
   'Camera Inspection',
   'Trenchless Replacement',
-  'Water Heater',
+  'Water Heater Replacement',
   'Other / Not Sure',
 ]
 

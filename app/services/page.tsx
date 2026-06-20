@@ -56,6 +56,13 @@ const SERVICES = [
     how: 'A hydraulic bursting head is pulled through the old pipe, shattering it outward while simultaneously pulling a new HDPE pipe into place behind it. The new pipe is seamless, corrosion-proof, and rated for 100+ years. Entry and exit pits at each end of the run are the only excavation required — your lawn, driveway, and concrete stay intact.',
     tags: ['No-Dig Replacement', 'HDPE Pipe (100-yr rated)', 'Lawn & Driveway Safe'],
   },
+  {
+    num: '07',
+    title: 'Water Heater Replacement',
+    intro: 'Old, leaking, or undersized water heater? We replace tank and tankless units — same-day, hauled away, and installed to code.',
+    how: 'We help you size the right unit (tank or tankless) for your home, then handle the full swap: draining and removing the old heater, installing the new one with fresh connections, a code-compliant seismic strap, and a proper T&P relief line. We test for leaks and correct operation before we leave, and the old unit goes with us.',
+    tags: ['Tank & Tankless', 'Same-Day Available', 'Old Unit Hauled Away'],
+  },
 ]
 
 export default function ServicesPage() {

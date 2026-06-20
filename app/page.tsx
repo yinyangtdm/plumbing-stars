@@ -160,6 +160,11 @@ export default async function HomePage() {
                 desc: 'Trenchless CIPP lining creates a new pipe inside your old one — no excavation required.',
                 icon: '/icons/pipelining.png',
               },
+              {
+                num: '07', title: 'Water Heater Replacement',
+                desc: 'Tank &amp; tankless units replaced same-day — old unit hauled away, new one installed to code.',
+                icon: '/icons/waterheater.png',
+              },
             ].map(svc => (
               <article className="service-card" key={svc.num}>
                 <span className="svc-num">SVC {svc.num}</span>

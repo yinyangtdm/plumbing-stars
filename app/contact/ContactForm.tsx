@@ -10,6 +10,7 @@ const SERVICES = [
   'Pipe Lining',
   'Camera Inspection',
   'Trenchless Replacement',
+  'Water Heater Replacement',
   'General Question',
   'Other / Not Sure',
 ]
