@@ -10,29 +10,33 @@ import { SITE } from '@/lib/site'
 export function generateMetadata() {
   return pageMetadata(city => ({
     title: `Service Areas — The Plumbing Stars | ${city} County`,
-    description: `The Plumbing Stars covers the San Fernando Valley, the Westside, and east to Pasadena. Drain cleaning, sewer repair, hydro jetting — same-day available.`,
+    description: `The Plumbing Stars covers everything north of the 10 and west of the 110 — the San Fernando Valley, the Westside, Central LA, and the foothills up to La Crescenta, La Cañada, Altadena and Pasadena. Drain cleaning, sewer repair, hydro jetting — same-day available.`,
     alternates: { canonical: '/service-areas' },
   }))
 }
 
 const VALLEY_AREAS = [
-  'Woodland Hills', 'West Hills', 'Calabasas', 'Hidden Hills', 'Canoga Park',
+  'Calabasas', 'Hidden Hills', 'West Hills', 'Woodland Hills', 'Canoga Park',
   'Winnetka', 'Chatsworth', 'Northridge', 'Porter Ranch', 'Granada Hills',
-  'North Hills', 'Reseda', 'Lake Balboa', 'Tarzana', 'Encino',
-  'Van Nuys', 'Sherman Oaks', 'Studio City', 'Valley Village', 'North Hollywood',
-  'Sunland-Tujunga',
+  'Mission Hills', 'North Hills', 'Sylmar', 'San Fernando', 'Pacoima',
+  'Arleta', 'Panorama City', 'Sun Valley', 'Sunland-Tujunga', 'Reseda',
+  'Lake Balboa', 'Tarzana', 'Encino', 'Van Nuys', 'Valley Glen',
+  'Sherman Oaks', 'Studio City', 'Valley Village', 'North Hollywood', 'Toluca Lake',
 ]
 
 const WEST_AREAS = [
-  'Santa Monica', 'Brentwood', 'Westwood', 'Bel Air', 'Beverly Hills',
-  'West Los Angeles', 'Mar Vista', 'Palms', 'Culver City', 'West Hollywood',
-  'Hollywood', 'Los Feliz', 'Silver Lake', 'Echo Park', 'Hancock Park',
-  'Koreatown', 'Mid-Wilshire', 'Mid-City',
+  'Pacific Palisades', 'Brentwood', 'Santa Monica', 'Westwood', 'Bel Air',
+  'Holmby Hills', 'Beverly Hills', 'Century City', 'West Los Angeles', 'Sawtelle',
+  'Rancho Park', 'Cheviot Hills', 'Palms', 'Culver City', 'Mar Vista',
+  'West Hollywood', 'Hollywood', 'East Hollywood', 'Los Feliz', 'Silver Lake',
+  'Echo Park', 'Hancock Park', 'Larchmont', 'Fairfax', 'Mid-Wilshire',
+  'Koreatown', 'Mid-City',
 ]
 
 const EAST_AREAS = [
-  'Burbank', 'Glendale', 'La Cañada Flintridge', 'La Crescenta', 'Altadena',
-  'Atwater Village', 'Eagle Rock', 'Highland Park', 'Pasadena', 'South Pasadena',
+  'Glendale', 'Burbank', 'La Cañada Flintridge', 'La Crescenta', 'Montrose',
+  'Altadena', 'Pasadena', 'South Pasadena', 'Eagle Rock', 'Highland Park',
+  'Mount Washington', 'Glassell Park', 'Cypress Park', 'Atwater Village',
 ]
 
 export default function ServiceAreasPage() {
@@ -47,7 +51,7 @@ export default function ServiceAreasPage() {
           <div className="section-head">
             <div className="eyebrow">Coverage Area</div>
             <h1>{city.name} <span className="accent">Service Areas.</span></h1>
-            <p>Based in the San Fernando Valley, we cover the whole Valley plus everything north of the 10 and west of the 110 — the Westside, Central LA, and east to Pasadena. Same-day available, no extra charge for most zip codes.</p>
+            <p>Based in the San Fernando Valley, we cover everything north of the 10 and west of the 110 — north to the foothills of La Crescenta, La Cañada Flintridge, Altadena and Pasadena, and everything west of there: the whole Valley, the Westside, and Central LA. Same-day available, no extra charge for most zip codes.</p>
           </div>
 
           <div className="areas-grid">

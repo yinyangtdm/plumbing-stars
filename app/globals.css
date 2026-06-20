@@ -841,7 +841,8 @@ h1, h2, h3, h4 {
 .service-map-wrap .leaflet-bottom,
 .service-map-wrap .leaflet-control { z-index: 1 !important; }
 .service-map { height: 380px; width: 100%; }
-.map-legend { display: flex; align-items: center; gap: 6px; padding: 12px 16px; background: #f4f7fb; font-family: var(--font-body), sans-serif; font-weight: 700; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: #4a5568; }
+.map-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; padding: 12px 16px; background: #f4f7fb; font-family: var(--font-body), sans-serif; font-weight: 700; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: #4a5568; }
+.legend-item { display: inline-flex; align-items: center; gap: 6px; }
 .legend-dot { display: inline-block; width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
 .map-tooltip { background: var(--blue-3) !important; color: #fff !important; border: none !important; font-family: var(--font-body), sans-serif; font-weight: 700; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; padding: 4px 10px !important; border-radius: 4px !important; box-shadow: 0 2px 8px rgba(0,0,0,.2) !important; }
 .map-tooltip::before { display: none !important; }
@@ -995,7 +996,8 @@ h1, h2, h3, h4 {
 .form-success-text { color: #3e4a66; font-size: 16px; }
 
 /* --- Service area map legend dots ------------------------------------------- */
-.legend-dot--la { background: var(--blue); }
+.legend-dot--la { background: var(--blue-mid); }
+.legend-dot--valley { background: var(--red); }
 .legend-dot--ventura { background: var(--red); }
 
 /* ============================================================================

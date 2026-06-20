@@ -58,6 +58,10 @@ Set in `.env.local` (gitignored — contains live secrets, not tracked). Everyth
 - `ADMIN_EMAIL` + (`ADMIN_PASSWORD_HASH` or `ADMIN_PASSWORD`) — admin login
 - `AUTH_SECRET` — required by next-auth in production
 
+## Deployment
+
+Hosted on Vercel (project `plumbing-stars`; linked locally via the gitignored `.vercel/`). The env vars above are unset in local dev unless you populate `.env.local` — production values live in the Vercel project settings, so a tier working in prod can appear unconfigured locally and vice-versa. `npm run build` mirrors the Vercel build step, so a clean local build is the pre-deploy gate.
+
 ## Conventions
 
 - Path alias `@/*` maps to the repo root (e.g. `@/lib/site`, `@/auth`).
