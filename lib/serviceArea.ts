@@ -38,10 +38,11 @@ export const SERVICE_AREA_GEO = {
       [-118.340, 34.030], // Arlington Heights — along the 10
       [-118.400, 34.025], // Mid-City — along the 10
       [-118.430, 34.020], // Culver City — along the 10
-      [-118.490, 34.010], // Santa Monica — the 10 meets the coast
-      [-118.520, 34.030], // Santa Monica — west edge at the coast
-      [-118.555, 34.055], // Pacific Palisades — coast
-      [-118.520, 34.095], // up over the Sepulveda Pass (405)
+      [-118.480, 34.005], // Santa Monica — south end (Ocean Park), where the 10 meets the coast
+      [-118.525, 34.020], // Santa Monica — beachfront / Palisades Park
+      [-118.565, 34.045], // Pacific Palisades — coast
+      [-118.580, 34.080], // Palisades highlands — the hills above Santa Monica
+      [-118.545, 34.110], // Santa Monica Mountains crest toward the Sepulveda Pass
       [-118.500, 34.140], // Encino — back into the Valley
       [-118.560, 34.160], // Tarzana
       [-118.610, 34.163], // Woodland Hills
