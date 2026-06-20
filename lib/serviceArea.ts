@@ -6,7 +6,9 @@
  * Flintridge, Altadena, Pasadena — and the polygon then sweeps west to cover
  * everything past that: the whole San Fernando Valley, south over the Santa
  * Monica Mountains to the Westside coast, and the Central-LA / NE-LA corridor.
- * The southern edge tracks the 10 freeway; the eastern edge tracks the 110.
+ * The southern edge tracks the 10 freeway; the eastern edge tracks the 110; the
+ * northwest edge snaps to the real LA/Ventura county line (the shared vertices
+ * from countyBorders.ts: [-118.6335, 34.2696] → [-118.6682, 34.1682]).
  *
  * Coordinates are [lng, lat] (GeoJSON order) and are intentionally approximate —
  * this is a marketing coverage illustration, not a survey boundary.
@@ -17,7 +19,7 @@ export const SERVICE_AREA_GEO = {
   geometry: {
     type: 'Polygon',
     coordinates: [[
-      [-118.670, 34.270], // West Hills / Calabasas — NW Valley foothills
+      [-118.6335, 34.2696], // West Hills / Chatsworth — LA/Ventura county line (NW corner)
       [-118.600, 34.300], // Chatsworth / Porter Ranch — north Valley rim
       [-118.500, 34.310], // Granada Hills / Mission Hills — north Valley rim
       [-118.420, 34.310], // Sylmar / San Fernando — NE Valley rim
@@ -43,9 +45,9 @@ export const SERVICE_AREA_GEO = {
       [-118.500, 34.140], // Encino — back into the Valley
       [-118.560, 34.160], // Tarzana
       [-118.610, 34.165], // Woodland Hills
-      [-118.660, 34.180], // Calabasas
-      [-118.670, 34.230], // West Hills — west edge
-      [-118.670, 34.270], // close ring
+      [-118.660, 34.168], // Calabasas
+      [-118.6682, 34.1682], // Calabasas west — LA/Ventura county line (SW corner)
+      [-118.6335, 34.2696], // close ring along the county line
     ]],
   },
 } as const
@@ -53,8 +55,9 @@ export const SERVICE_AREA_GEO = {
 /**
  * The San Fernando Valley — the home-base sub-region, drawn in a distinct color
  * on top of the full service area. Northern/western edges share the coverage
- * boundary above; the southern edge tracks the Santa Monica Mountains / Hollywood
- * Hills ridge and the eastern edge runs along Burbank, where the Valley ends.
+ * boundary above — the northwest edge snaps to the LA/Ventura county line — the
+ * southern edge tracks the Santa Monica Mountains / Hollywood Hills ridge, and
+ * the eastern edge runs along Burbank, where the Valley ends.
  */
 export const VALLEY_AREA_GEO = {
   type: 'Feature',
@@ -62,7 +65,7 @@ export const VALLEY_AREA_GEO = {
   geometry: {
     type: 'Polygon',
     coordinates: [[
-      [-118.670, 34.270], // West Hills — NW Valley
+      [-118.6335, 34.2696], // West Hills / Chatsworth — LA/Ventura county line (NW)
       [-118.600, 34.300], // Chatsworth / Porter Ranch — north rim
       [-118.500, 34.310], // Granada Hills / Mission Hills — north rim
       [-118.420, 34.310], // Sylmar / San Fernando — NE rim
@@ -75,9 +78,9 @@ export const VALLEY_AREA_GEO = {
       [-118.490, 34.145], // Encino — south rim
       [-118.560, 34.160], // Tarzana
       [-118.610, 34.165], // Woodland Hills
-      [-118.660, 34.180], // Calabasas
-      [-118.670, 34.230], // West Hills — west edge
-      [-118.670, 34.270], // close ring
+      [-118.660, 34.168], // Calabasas
+      [-118.6682, 34.1682], // Calabasas west — LA/Ventura county line (SW)
+      [-118.6335, 34.2696], // close ring along the county line
     ]],
   },
 } as const
