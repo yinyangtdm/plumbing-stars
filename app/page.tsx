@@ -84,12 +84,11 @@ export default async function HomePage() {
                     Flat-Rate Pricing — No Surprises
                   </li>
                 </ul>
-                <div className="cred-rating">
-                  <div className="stars">★★★★★</div>
+                <a className="cred-rating" href={SITE.yelpUrl} target="_blank" rel="noopener noreferrer">
                   <div className="info">
-                    Highly Rated on Google
+                    Read Our Reviews on Yelp →
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -100,10 +99,10 @@ export default async function HomePage() {
       <section className="stats-strip">
         <div className="container">
           <div className="stats-row">
-            <div className="stat-item">
-              <div className="n"><span className="gold">★★★★★</span></div>
-              <div className="l">Highly Rated on Google</div>
-            </div>
+            <a className="stat-item" href={SITE.yelpUrl} target="_blank" rel="noopener noreferrer">
+              <div className="n">Yelp</div>
+              <div className="l">Read Our Reviews →</div>
+            </a>
             <div className="stat-item">
               <div className="n">20+</div>
               <div className="l">Years in Business</div>
@@ -253,24 +252,9 @@ export default async function HomePage() {
             <div className="eyebrow">Customer Reviews</div>
             <h2>What your neighbors <span className="accent">are saying</span>.</h2>
           </div>
-          <div className="reviews-grid">
-            {[
-              { initials: 'MR', name: 'Maria R.', location: 'Los Angeles · Google', quote: 'Showed up 45 minutes after I called. Gave me a flat quote, showed me the camera footage of the root in my main line, and had it cleared before dinner. I will never call anyone else.' },
-              { initials: 'DK', name: 'David K.', location: 'Pasadena · Yelp', quote: 'Three other plumbers tried to sell me a $14k excavation. The Plumbing Stars hydro-jetted it for $480 and it\'s been running perfectly for two years. Genuinely honest people.' },
-              { initials: 'JL', name: 'Jennifer L.', location: 'Burbank · Google', quote: 'Saturday night, sewer backing up into the basement. They were the only company to answer. Two techs, two hours — problem completely gone. Worth every penny.' },
-            ].map(r => (
-              <article className="review-card" key={r.name}>
-                <div className="stars">★★★★★</div>
-                <p>&ldquo;{r.quote}&rdquo;</p>
-                <footer>
-                  <div className="avatar">{r.initials}</div>
-                  <div>
-                    <div className="rname">{r.name}</div>
-                    <div className="rmeta">{r.location}</div>
-                  </div>
-                </footer>
-              </article>
-            ))}
+          <div className="reviews-cta">
+            <p>We&rsquo;d rather you hear it from our customers than from us. Read our verified reviews on Yelp — every one written by a real Los Angeles homeowner.</p>
+            <a href={SITE.yelpUrl} className="btn btn-red" target="_blank" rel="noopener noreferrer">Read Our Reviews on Yelp →</a>
           </div>
         </div>
       </section>

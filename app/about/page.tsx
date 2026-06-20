@@ -73,12 +73,11 @@ export default function AboutPage() {
                       </li>
                     ))}
                   </ul>
-                  <div className="cred-rating">
-                    <div className="stars">★★★★★</div>
+                  <a className="cred-rating" href={SITE.yelpUrl} target="_blank" rel="noopener noreferrer">
                     <div className="info">
-                      Highly Rated on Google
+                      Read Our Reviews on Yelp →
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>

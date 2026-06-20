@@ -32,4 +32,11 @@ export const SITE = {
 
   /** Social proof metrics (kept in one place for consistency) */
   yearsInBusiness: '25+',
+
+  /**
+   * Link to the business's real Yelp reviews. The reviews section and any
+   * "read our reviews" link send visitors here — we never display fabricated
+   * ratings, review counts, or quotes (doing so risks a Google/Yelp ban).
+   */
+  yelpUrl: 'https://www.yelp.com/biz/the-plumbing-stars-west-hills',
 } as const
