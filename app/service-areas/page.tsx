@@ -16,7 +16,8 @@ export function generateMetadata() {
 }
 
 const VALLEY_AREAS = [
-  'Calabasas', 'Hidden Hills', 'West Hills', 'Woodland Hills', 'Canoga Park',
+  'Westlake Village', 'Agoura Hills', 'Calabasas', 'Hidden Hills', 'Bell Canyon',
+  'West Hills', 'Woodland Hills', 'Canoga Park',
   'Winnetka', 'Chatsworth', 'Northridge', 'Porter Ranch', 'Granada Hills',
   'Mission Hills', 'North Hills', 'Sylmar', 'San Fernando', 'Pacoima',
   'Arleta', 'Panorama City', 'Sun Valley', 'Sunland-Tujunga', 'Reseda',
@@ -51,13 +52,13 @@ export default function ServiceAreasPage() {
           <div className="section-head">
             <div className="eyebrow">Coverage Area</div>
             <h1>{city.name} <span className="accent">Service Areas.</span></h1>
-            <p>Based in the San Fernando Valley, we cover everything north of the 10 and west of the 110 — north to the foothills of La Crescenta, La Cañada Flintridge, Altadena and Pasadena, and everything west of there: the whole Valley, the Westside, and Central LA. Same-day available, no extra charge for most zip codes.</p>
+            <p>We cover everything north of the 10 and west of the 110 — north to the foothills of La Crescenta, La Cañada Flintridge, Altadena and Pasadena, and everything west of there to the Ventura county line: the whole San Fernando Valley, the Westside, and Central LA. Same-day available, no extra charge for most zip codes.</p>
           </div>
 
           <div className="areas-grid">
             <div className="area-card">
               <h3>San Fernando Valley</h3>
-              <div className="area-sub">Our home base — same-day service</div>
+              <div className="area-sub">Same-day service</div>
               <ul className="area-neighborhoods">
                 {VALLEY_AREAS.map(area => <li key={area}>{area}</li>)}
               </ul>

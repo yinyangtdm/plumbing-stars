@@ -44,16 +44,19 @@ export const SERVICE_AREA_GEO = {
       [-118.520, 34.095], // up over the Sepulveda Pass (405)
       [-118.500, 34.140], // Encino — back into the Valley
       [-118.560, 34.160], // Tarzana
-      [-118.610, 34.165], // Woodland Hills
-      [-118.660, 34.168], // Calabasas
-      [-118.6682, 34.1682], // Calabasas west — LA/Ventura county line (SW corner)
-      [-118.6335, 34.2696], // close ring along the county line
+      [-118.610, 34.163], // Woodland Hills
+      [-118.700, 34.150], // Calabasas
+      [-118.780, 34.140], // Agoura Hills
+      [-118.820, 34.130], // Westlake Village — LA side of the county line
+      [-118.7889, 34.1682], // LA/Ventura county line — SW (real census vertex)
+      [-118.6682, 34.1682], // county line — jog east (real census vertex)
+      [-118.6335, 34.2696], // up the county line to the NW corner — close ring
     ]],
   },
 } as const
 
 /**
- * The San Fernando Valley — the home-base sub-region, drawn in a distinct color
+ * The San Fernando Valley — drawn in a distinct color as a sub-region
  * on top of the full service area. Northern/western edges share the coverage
  * boundary above — the northwest edge snaps to the LA/Ventura county line — the
  * southern edge tracks the Santa Monica Mountains / Hollywood Hills ridge, and
