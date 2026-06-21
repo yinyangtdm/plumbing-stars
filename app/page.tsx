@@ -187,7 +187,7 @@ export default async function HomePage() {
             <div className="promo-side">
               <div className="eyebrow eyebrow-light">Special Offer</div>
               <h3>Drain cleared or<br />you <span className="accent">don&apos;t pay</span>.</h3>
-              <p>Main-line drain cleaning for just $93 — and if we can&apos;t clear it, you owe us nothing. No fine print, no trip charge, no hassle.</p>
+              <p>Main-line drain cleaning for just $63 — and if we can&apos;t clear it, you owe us nothing. No fine print, no trip charge, no hassle.</p>
               <div className="btn-row-sm">
                 <a href={SITE.phone.href} className="btn btn-red">Claim by Phone</a>
                 <Link href="/booking" className="btn btn-ghost">Book Online</Link>
@@ -197,7 +197,7 @@ export default async function HomePage() {
               <div className="ribbon">NO CLEAR = NO CHARGE</div>
               <div className="ptop">Drain Cleaning Guarantee</div>
               <h4>Main-Line Drain Cleaning</h4>
-              <div className="price">$93</div>
+              <div className="price">$63</div>
               <div className="fine">If we can&apos;t unclog your drain, you pay nothing — no service fee, no trip charge. Applies to standard main-line drain cleaning. Limit one per household.</div>
             </div>
           </div>

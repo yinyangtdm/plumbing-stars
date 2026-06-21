@@ -124,7 +124,7 @@ export default function ServicesPage() {
               <div className="ribbon">NO CLEAR = NO CHARGE</div>
               <div className="ptop">Drain Cleaning Guarantee</div>
               <h4>Main-Line Drain Cleaning</h4>
-              <div className="price">$93</div>
+              <div className="price">$63</div>
               <div className="fine">If we can&apos;t unclog your drain, you pay nothing — no service fee, no trip charge. Applies to standard main-line drain cleaning. Limit one per household.</div>
               <div className="mt-18">
                 <a href={SITE.phone.href} className="btn btn-red btn-full">Claim by Phone</a>

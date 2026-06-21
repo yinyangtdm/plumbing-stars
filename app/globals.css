@@ -893,7 +893,7 @@ h1, h2, h3, h4 {
 @media(min-width:1040px) { .areas-grid { grid-template-columns: repeat(3, 1fr); } }
 .area-card { background: #fff; border: 1px solid #dde4f0; border-top: 5px solid var(--blue); padding: 32px; border-radius: 4px; }
 .area-card:nth-child(even) { border-top-color: var(--red); }
-.area-card h3 { font-size: 28px; color: var(--blue); margin-bottom: 6px; }
+.area-card h3 { font-size: 24px; color: var(--blue); margin-bottom: 6px; white-space: nowrap; }
 .area-card .area-sub { font-family: var(--font-body), sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: .16em; font-size: 12px; color: var(--red); margin-bottom: 20px; }
 .area-neighborhoods { display: grid; grid-template-columns: 1fr 1fr; gap: 0; list-style: none; padding: 0; margin: 0; }
 .area-neighborhoods li { font-family: var(--font-body), sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: 13px; color: #3e4a66; padding: 7px 0; border-bottom: 1px solid #f0f3f9; display: flex; align-items: center; gap: 6px; }
