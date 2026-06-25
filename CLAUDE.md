@@ -16,7 +16,7 @@ There is no test suite, linter, or CI configured. `npm run build` is the only ve
 
 Marketing + lead-capture site for "The Plumbing Stars," a Los Angeles plumbing business. Next.js 15 (App Router), React 19, TypeScript. Public pages drive visitors to two conversion forms (contact + booking); a password-protected `/admin` area lets the owner review leads and edit FAQs.
 
-This was historically a multi-domain (LA + Ventura) codebase; it is now **LA-only, single repo** (see commit `76f1646`). Any auto-memory mentioning a multi-domain setup is stale — `lib/city.ts` is hardcoded to Los Angeles and is the source of truth.
+This was historically a multi-domain (LA + Ventura) codebase; it is now **LA-only, single repo** (see commit `76f1646`). Any auto-memory mentioning a multi-domain setup is stale — `lib/city.ts` is hardcoded to Los Angeles and is the source of truth. A **separate** Ventura site lives in its own repo at `C:\Users\yinya\PlumbingStarsVentura` (not this repo, not a submodule); Ventura references that remain here — e.g. `VENTURA_COUNTY_GEO` in `lib/countyBorders.ts` — are map *context*, not drift back toward multi-domain.
 
 ## Architecture
 
