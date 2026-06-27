@@ -50,7 +50,7 @@ export default function Header() {
                 ============================================= */}
             <div className="nav-mid">
               <Link href="/" className="emblem">
-                <Image src="/header-logo.png" alt="The Plumbing Stars" width={96} height={96} priority />
+                <Image src="/logo.svg" alt="The Plumbing Stars" width={96} height={96} priority />
                 <span className="emblem-city">{city}</span>
               </Link>
             </div>
@@ -94,7 +94,7 @@ export default function Header() {
 
             {/* Logo section in drawer */}
             <div className="logo-row">
-              <Image src="/header-logo.png" alt="The Plumbing Stars" width={74} height={74} />
+              <Image src="/logo.svg" alt="The Plumbing Stars" width={74} height={74} />
             </div>
 
             {/* Navigation menu items */}
