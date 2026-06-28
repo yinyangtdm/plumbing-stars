@@ -188,7 +188,7 @@ h1, h2, h3, h4 {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: #f9f8f9;
+  background: #fdfdfd;
   border-bottom: 3px solid var(--blue);
 }
 
@@ -1011,7 +1011,7 @@ h1, h2, h3, h4 {
 /* --- Service area map legend dots ------------------------------------------- */
 .legend-dot--la { background: var(--blue-mid); }
 .legend-dot--valley { background: var(--red); }
-.legend-dot--ventura { background: var(--red); }
+.legend-dot--ventura { background: #e0656f; }
 
 /* ============================================================================
    21. ADMIN UTILITIES (migrated from inline styles)

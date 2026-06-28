@@ -7,9 +7,11 @@
  * everything past that: the whole San Fernando Valley, the Santa Monica
  * Mountains, and the Central-LA / NE-LA corridor. The eastern edge tracks the
  * 110; the southern edge follows the coast from Santa Monica west through
- * Malibu to County Line Beach; the western edge then snaps to the real
- * LA/Ventura county line (the shared vertices from countyBorders.ts:
- * [-118.941, 34.0748] → [-118.6682, 34.1682] → [-118.6335, 34.2696]).
+ * Malibu all the way to County Line Beach, where the coast meets the
+ * LA/Ventura county line ([-118.9449, 34.0453] — the dotted county border on
+ * the basemap); the western edge then snaps up that real county line (the
+ * shared vertices from countyBorders.ts: [-118.941, 34.0748] →
+ * [-118.7889, 34.1682] → [-118.6682, 34.1682] → [-118.6335, 34.2696]).
  *
  * Coordinates are [lng, lat] (GeoJSON order) and are intentionally approximate —
  * this is a marketing coverage illustration, not a survey boundary.
@@ -47,11 +49,15 @@ export const SERVICE_AREA_GEO = {
       [-118.580, 34.038], // Pacific Palisades / Topanga — coast
       [-118.680, 34.033], // Malibu — Civic Center / pier
       [-118.800, 34.000], // Point Dume / Zuma — Malibu
-      [-118.875, 34.028], // western Malibu — coast
-      [-118.941, 34.0748], // County Line Beach — LA/Ventura county line (coast)
+      [-118.8547, 34.0342], // western Malibu — coast (Census shoreline)
+      [-118.8962, 34.0392], // western Malibu — coast (Census shoreline)
+      [-118.928, 34.0458], // approaching County Line Beach — coast
+      [-118.9449, 34.0453], // County Line Beach — coast meets the LA/Ventura line (dotted line terminus)
+      [-118.941, 34.0748], // up the county line from the coast
       [-118.7889, 34.1682], // county line through the Santa Monica Mountains
       [-118.6682, 34.1682], // county line — jog east
       [-118.6335, 34.2696], // county line — up past Calabasas / West Hills
+      [-118.6368, 34.2918], // county line — kink past West Hills
       [-118.6509, 34.3205], // close ring at the top of the county line
     ]],
   },
