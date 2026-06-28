@@ -866,6 +866,19 @@ h1, h2, h3, h4 {
 .service-detail-card { background: #fff; border: 1px solid #dde4f0; border-top: 5px solid var(--red); overflow: hidden; }
 .service-detail-card:nth-child(even) { border-top-color: var(--blue); }
 .service-detail-body { padding: 32px; }
+.service-detail-body .svc-detail-ico {
+  width: 96px; height: 96px; border-radius: 6px;
+  background: var(--red); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 18px; position: relative; overflow: hidden;
+}
+.service-detail-card:nth-child(even) .service-detail-body .svc-detail-ico { background: var(--blue); }
+.service-detail-body .svc-detail-ico::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(135deg, transparent 0 8px, rgba(255,255,255,.08) 8px 9px);
+}
+.service-detail-body .svc-detail-ico img { width: 80px; height: 80px; position: relative; object-fit: contain; }
 .service-detail-body .svc-num { font-family: var(--font-display), sans-serif; font-size: 13px; color: var(--red); letter-spacing: .1em; margin-bottom: 8px; display: block; }
 .service-detail-card:nth-child(even) .service-detail-body .svc-num { color: var(--blue); }
 .service-detail-body h3 { font-size: 30px; color: var(--blue); margin-bottom: 14px; }
