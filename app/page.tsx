@@ -52,7 +52,7 @@ export default async function HomePage() {
                 <Link href="/booking" className="btn btn-ghost">Book Online</Link>
               </div>
               <div className="hero-stats">
-                <div><div className="n">25+</div><div className="l">Years Experience</div></div>
+                <div><div className="n">20+</div><div className="l">Years Experience</div></div>
                 <div><div className="n">24/7</div><div className="l">Emergency Dispatch</div></div>
                 <div><div className="n">Flat</div><div className="l">Rate Pricing</div></div>
               </div>
@@ -253,7 +253,6 @@ export default async function HomePage() {
             <h2>What your neighbors <span className="accent">are saying</span>.</h2>
           </div>
           <div className="reviews-cta">
-            <p>We&rsquo;d rather you hear it from our customers than from us. Read our verified reviews on Yelp — every one written by a real Los Angeles homeowner.</p>
             <a href={SITE.yelpUrl} className="btn btn-red" target="_blank" rel="noopener noreferrer">Read Our Reviews on Yelp →</a>
           </div>
         </div>

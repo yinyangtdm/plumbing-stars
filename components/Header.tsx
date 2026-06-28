@@ -12,10 +12,8 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { SITE } from '@/lib/site'
-import { CITY } from '@/lib/city'
 
 export default function Header() {
-  const city = CITY.name
   const [drawerOpen, setDrawerOpen] = useState(false)
 
   return (
@@ -51,7 +49,6 @@ export default function Header() {
             <div className="nav-mid">
               <Link href="/" className="emblem">
                 <Image src="/logo.svg" alt="The Plumbing Stars" width={96} height={96} priority />
-                <span className="emblem-city">{city}</span>
               </Link>
             </div>
 
